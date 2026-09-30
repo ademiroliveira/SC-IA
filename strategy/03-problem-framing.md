@@ -90,7 +90,7 @@ Questions come from the Web3 and AI research question bank; wording in quotes is
 | Order | Study | Primary question | Secondary questions | Decision it informs |
 | --- | --- | --- | --- | --- |
 | 1 | Hands-on teardown of Robinhood Wallet and MetaMask Money Account | What do they show on home, earn and recovery? | Where do they already meet the positioning? | Whether the gap is real |
-| 2 | Counsel review | Is user-authored configuration enough to stay non-discretionary? | Is "account" safe to use? | Discretion model and naming |
+| 2 | Counsel review | Is user-authored configuration enough to stay non-discretionary? | Does a limited, pre-granted permission to act inside the policy still count as the user signing?; is "account" safe to use? | Discretion and execution model, and naming |
 | 3 | Generative interviews | "What would need to be true for a mainstream user to feel comfortable with self-custody?" | "What mental model do users have of where their crypto lives?"; "What prior mental models (banking, investing, gaming) do users bring?" | Whether this framing holds for the primary user |
 | 4 | Allocation home prototype | Do investors fund more when home shows allocation against target than when it shows tokens? | "How do users monitor positions over time, and what would make them feel more in control?"; the trust-threshold question: what moves the point at which they proceed? | The home screen |
 | 5 | Rules and automation prototype | Do users prefer writing their own rules over accepting a managed default, and can they write them? | "How much control do users want, and does that vary by context?"; "What would make delegation feel safe and trustworthy?" | How much the product automates |
