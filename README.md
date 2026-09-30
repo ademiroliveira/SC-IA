@@ -25,7 +25,7 @@ Research, competitive analysis, problem framing and product design strategy for 
 | 04 | [Product design strategy](strategy/04-product-design-strategy.md) | Vision, five principles, strategic bets and sequencing, success criteria, trust-critical moments, handoff |
 | — | [Decision log](decisions/decision-log.md) | What has been decided about the work and what is still open |
 | 05 | Design system strategy brief *(not yet written)* | New components: risk card, policy builder, custody map, allocation and drift views, eligibility states, transaction-state vocabulary |
-| 06 | Experience map *(not yet written)* | The seven trust-critical stages mapped in detail for the primary user |
+| 06 | [Experience map](strategy/06-experience-map.md) | The seven trust-critical stages mapped for the primary user: questions, pain today, design response, emotional curve, stress cases |
 
 Numbers are the reading order, and each doc builds on the ones before it. New docs continue the sequence (05, 06, …) in the folder that fits: `research/` for evidence, `strategy/` for framing and direction. The decision log is unnumbered because it runs alongside all of them.
 
@@ -33,7 +33,8 @@ Numbers are the reading order, and each doc builds on the ones before it. New do
 
 ```
 research/    evidence: market research and competitive analysis
-strategy/    problem framing and the design strategy that answers it
+strategy/    problem framing, the design strategy that answers it, and the experience map
+             (images in strategy/assets/)
 decisions/   decision log: decided and open
 ```
 
@@ -43,7 +44,7 @@ decisions/   decision log: decided and open
 2. Counsel review of the discretion model and the word "account".
 3. Generative interviews with brokerage-native investors.
 4. Prototype tests of the allocation home, policy authoring and the recovery drill.
-5. Write the design system strategy brief and the experience map.
+5. Write the design system strategy brief.
 
 ## Caveats
 
@@ -51,7 +52,7 @@ Claims marked "no one ships X" mean no evidence was found on public pages, not a
 
 ## Live versions
 
-The strategy, framing and competitive analysis also exist as editable Claude docs, linked from the top of each file, and copies of the framing and strategy sit in the "Secret" Claude project. Those links are private: readers without access should treat this repo as the source.
+The strategy, framing, competitive analysis and experience map also exist as editable Claude docs, linked from the top of each file, and copies of the framing and strategy sit in the "Secret" Claude project. Those links are private: readers without access should treat this repo as the source.
 
 This repo is the organized record. If a live doc changes, update the matching file here and the sync date below.
 

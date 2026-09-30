@@ -108,7 +108,7 @@ Once the phase 1 gates pass, detailed design moves to four streams, each with it
 | **Web3 execution** | Transaction states, fee display, chain abstraction, passkey and recovery flows, signing and simulation | web3-design-ux skill |
 | **Agent and automation UX** | Phase 3 assistant proposals: human-in-the-loop confirmation, action history, what the agent may do inside policy | agent-ux-design skill |
 | **Design system** | New components: risk card, policy builder, custody map, allocation and drift views, eligibility states, the shared transaction-state vocabulary | Design system strategy brief (next artifact to write) |
-| **Experience map** | The seven trust-critical stages above, mapped in detail for the primary user | Experience map (next artifact to write) |
+| **Experience map** | The seven trust-critical stages above, mapped in detail for the primary user | [Experience map](06-experience-map.md) |
 
 ## Open decisions and sources
 

@@ -6,6 +6,7 @@ What has been decided about how this work is framed, and what is still open. New
 
 | Date | Decision | Why | Where it shows |
 |---|---|---|---|
+| 2026-09-30 | Write the experience map now as a hypothesis map, with thoughts and feelings marked as inferred | The seven stages and their constraints are sourced; the emotional layer needs interviews, so it is labelled for replacement rather than left out | [06](../strategy/06-experience-map.md) |
 | 2026-09-30 | Split the work into a Problem Framing doc and a separate Product Design Strategy doc | The framing should be agreed by PM, research and leadership before solutions are debated, and it changes more slowly than the strategy | [03](../strategy/03-problem-framing.md), [04](../strategy/04-product-design-strategy.md) |
 | 2026-09-30 | Draft the strategy now, from desk research, with every claim marked as fact, inference or hypothesis | Enough evidence exists to frame the problem and set direction; the gaps stay visible instead of being smoothed over | [03 Evidence base](../strategy/03-problem-framing.md#evidence-base) |
 | 2026-09-30 | Keep five design principles (merged down from eight) | Guidance is three to five principles, each usable to settle a real design argument | [04 Principles](../strategy/04-product-design-strategy.md#design-vision-and-principles) |
