@@ -85,8 +85,8 @@ Each stage lists what the user does, where today's products fail them, what desi
 - **Doing:** checks drift, approves or lets policy run rebalances, reads statements, prepares taxes.
 - **Thinking (hypothesis):** "Do I need to do anything? Should I sell?"
 - **Pain today:** no 1099-DA for self-custody; basis breaks on transfer; trading nudges in a drawdown.
-- **Design must:** drift alerts only when action is needed; every automated action shows the rule that authorized it; incident banners that say what to do; statements and tax lots; stay-the-course framing when prices fall.
-- **Evidence:** Inference. **Signal:** share who hold their policy through a fall of 30% or more; funds lost outside policy stays at zero.
+- **Design must:** drift alerts only when action is needed; every automated action shows the rule that authorized it; incident banners that say what to do; statements and tax lots; a reminder of the target and rules they chose when prices fall, without telling them to hold or sell.
+- **Evidence:** Inference. **Signal:** exits during a fall of 30% or more are deliberate, made after viewing their own target and rules; funds lost outside policy stays at zero.
 
 ### 7. Exit or recover
 
@@ -137,6 +137,6 @@ The map should be rewritten from observed behaviour once the research plan runs;
 - [ ] Test what "account" leads people to expect at Discover and Exit (step 8).
 - [ ] Walk Robinhood Wallet and MetaMask Money Account through all seven stages (step 1) and add their actual screens to the Pain today lines.
 
-**Open decisions that change this map.** The discretion model (how much Allocate and Monitor can automate), the word "account" (Discover and Exit copy), first scope (which sleeves appear at Earn), the recovery partner (Onboard and Exit), and the primary user (who this map follows). All five are tracked in the [decision log](../decisions/decision-log.md).
+**Open decisions that change this map.** The discretion and execution model (how much Allocate and Monitor can automate, and who signs), the word "account" (Discover and Exit copy), first scope (which sleeves appear at Earn), the recovery partner (Onboard and Exit), and the primary user (who this map follows). All five are tracked in the [decision log](../decisions/decision-log.md).
 
 **Sources.** [Problem Framing](03-problem-framing.md) for users, constraints, evidence and the research plan; [Product Design Strategy](04-product-design-strategy.md) for the principles, stages and success criteria; [Competitive Analysis](../research/02-competitive-analysis.md) for competitor behaviour. Figures are as cited there. Regulatory points are not legal advice.
