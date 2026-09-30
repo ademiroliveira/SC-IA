@@ -1,6 +1,6 @@
 # Competitive Analysis — Self-Custody Investment Account
 
-As of September 30, 2026 · Live doc: https://claude.ai/code/artifact/e227448a-bbfb-459f-af30-10f78d7991f5
+As of September 30, 2026 · Author: AO · Live doc: https://claude.ai/code/artifact/e227448a-bbfb-459f-af30-10f78d7991f5
 
 ## Bottom line
 

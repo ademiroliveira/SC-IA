@@ -1,6 +1,8 @@
-# Investment-Grade Self-Custody: Industry & Opportunity Research for Product Design Strategy (US, September 2026)
+# Market and Opportunity Research — Self-Custody Investment Account
 
-> Source: the *Investment-Grade Self-Custody* doc in the "Secret" Claude project. Copied verbatim as the research baseline for everything else in this repo.
+As of September 30, 2026 · Author: AO · Source: *Investment-Grade Self-Custody: Industry & Opportunity Research for Product Design Strategy (US, September 2026)*, in the "Secret" Claude project
+
+> The body below is copied verbatim from that source as the research baseline for everything else in this repo. "Investment-grade self-custody" is the working name used in the research; the rest of the repo calls the product a self-custody investment account.
 
 An investment-focused self-custody account has a real and widening opening in the US. Demand for a "deliberate slice" of crypto is now normal behavior: allocation guidance has settled at 1–5%, holder counts are rising, and brokerages have made buying crypto cheap and familiar. Meanwhile the leading self-custody wallets are turning into trading super-apps, and exchanges are wrapping DeFi yield inside custodial or semi-custodial experiences. Nobody yet owns the job of "allocate a sized, risk-rated slice of my wealth onchain, keep my keys, and never operate DeFi myself." Winning that job depends less on yield or token breadth than on four things: legible risk, recovery the user can trust, tax-grade records, and interaction models that keep the user as the decision-maker. That last point is a regulatory necessity as well as a UX preference.
 

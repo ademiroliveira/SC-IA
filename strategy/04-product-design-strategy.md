@@ -112,12 +112,13 @@ Once the phase 1 gates pass, detailed design moves to four streams, each with it
 
 ## Open decisions and sources
 
-Five decisions remain open and should be owned before detailed design starts. They are tracked in the [decision log](../decisions/decision-log.md).
+Six decisions remain open and should be owned before detailed design starts. They are tracked in the [decision log](../decisions/decision-log.md).
 
 - [ ] Discretion model: user-authored policy only, or a registered adviser or named curator for managed parts.
 - [ ] Naming: whether "account" stays, and which alternatives go into the wording test.
 - [ ] First scope: which sleeves and which states launch first.
 - [ ] Business model: subscription, spread or another source, and how to avoid incentives that push higher-risk vaults.
 - [ ] Recovery partner: who co-signs or guards, and who bears liability if that partner fails.
+- [ ] Primary user: the brokerage-native investor, or the exchange-only holder as the early adopter. Generative interviews decide it; see the [Problem Framing](03-problem-framing.md#open-questions-and-sources).
 
 **Sources.** This strategy answers the [Problem Framing](03-problem-framing.md), which holds the evidence base, constraints and research plan. It also draws on the [market research](../research/01-market-and-opportunity-research.md) and the [competitive analysis](../research/02-competitive-analysis.md), which lists every public page used. Regulatory points are not legal advice.
