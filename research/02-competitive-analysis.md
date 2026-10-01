@@ -35,7 +35,7 @@ The set has six groups, ordered roughly by how close each sits to the target use
 | Group | Players scored | The job they compete for | Why included |
 |---|---|---|---|
 | **Brokerage crypto and ETFs** | Schwab Crypto, E\*Trade, spot ETFs (IBIT) | "Put crypto next to my stocks and bonds" | Where the target user already is; owns the allocation mental model |
-| **Integrated custodial onchain offerings** | Coinbase (Earn, Base account) | "Buy, hold and earn on crypto in one familiar app" | Largest US crypto brand; moving onchain via Morpho |
+| **Integrated onchain offerings (hybrid custody)** | Coinbase (Earn, Base account) | "Buy, hold and earn on crypto in one familiar app" | Largest US crypto brand; moving onchain via Morpho |
 | **Wallet-first challengers** | Robinhood Wallet and Earn, Kraken Wallet | "Self-custody from a brand I already trust" | Brokerage or exchange audiences with self-custody plus earn |
 | **Self-custody wallets** | MetaMask, Phantom | "Own everything onchain, and spend it" | Largest wallet user bases; now adding earn and accounts |
 | **Investor-grade custody** | Casa | "Protect a large holding from loss, theft and death" | Only product built around recovery and inheritance for serious holders |
