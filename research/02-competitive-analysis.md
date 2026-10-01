@@ -16,7 +16,7 @@ This is based on public product pages and press releases, not hands-on testing. 
 
 The statement makes five separable claims, and each competitor is scored on each one rather than on overall similarity.
 
-> For self-directed US investors who want a deliberate slice of their wealth in digital assets and onchain earning, [project] is a self-custody investment account that keeps them in control of their keys without making them a DeFi operator. Unlike exchange sleeves or raw DeFi front ends, it turns intent and allocation into the only decisions the user has to make.
+> For self-directed US investors who want a deliberate slice of their wealth in digital assets and onchain earning, [project] is a self-custody investment account that keeps them in control of their keys without making them a DeFi operator. Unlike integrated onchain offerings or raw DeFi front ends, it turns intent and allocation into the only decisions the user has to make.
 
 | # | Claim | What a competitor must ship to match it |
 |---|---|---|
@@ -35,7 +35,7 @@ The set has six groups, ordered roughly by how close each sits to the target use
 | Group | Players scored | The job they compete for | Why included |
 |---|---|---|---|
 | **Brokerage crypto and ETFs** | Schwab Crypto, E\*Trade, spot ETFs (IBIT) | "Put crypto next to my stocks and bonds" | Where the target user already is; owns the allocation mental model |
-| **Exchange sleeves and hybrids** | Coinbase (Earn, Base account) | "Buy, hold and earn on crypto in one familiar app" | Largest US crypto brand; moving onchain via Morpho |
+| **Integrated onchain offerings and hybrids** | Coinbase (Earn, Base account) | "Buy, hold and earn on crypto in one familiar app" | Largest US crypto brand; moving onchain via Morpho |
 | **Wallet-first challengers** | Robinhood Wallet and Earn, Kraken Wallet | "Self-custody from a brand I already trust" | Brokerage or exchange audiences with self-custody plus earn |
 | **Self-custody wallets** | MetaMask, Phantom | "Own everything onchain, and spend it" | Largest wallet user bases; now adding earn and accounts |
 | **Investor-grade custody** | Casa | "Protect a large holding from loss, theft and death" | Only product built around recovery and inheritance for serious holders |

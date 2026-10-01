@@ -6,7 +6,7 @@ Research, competitive analysis, problem framing and product design strategy for 
 
 ## Positioning under test
 
-> For self-directed US investors who want a deliberate slice of their wealth in digital assets and onchain earning, [project] is a self-custody investment account that keeps them in control of their keys without making them a DeFi operator. Unlike exchange sleeves or raw DeFi front ends, it turns intent and allocation into the only decisions the user has to make.
+> For self-directed US investors who want a deliberate slice of their wealth in digital assets and onchain earning, [project] is a self-custody investment account that keeps them in control of their keys without making them a DeFi operator. Unlike integrated onchain offerings or raw DeFi front ends, it turns intent and allocation into the only decisions the user has to make.
 
 ## Where things stand
 
