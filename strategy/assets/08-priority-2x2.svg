@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 546" role="img" aria-label="Thirteen assumptions are leaps of faith" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5">
+  <rect width="760" height="546" fill="#ffffff"/>
+  <text x="24" y="30" font-size="15" font-weight="600" fill="#1f2328">Thirteen assumptions are leaps of faith</text>
+  <text x="24" y="50" fill="#59636e">Rows: how much of the strategy depends on it. Columns: how much evidence exists.</text>
+  <text x="198" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2328">Little or no evidence</text>
+  <text x="562" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2328">Some evidence</text>
+  <text x="24" y="98" fill="#59636e">Much depends on it</text>
+  <text x="24" y="386" fill="#59636e">Less depends on it</text>
+  <rect x="24" y="106" width="348" height="256" rx="8" fill="#0969da" fill-opacity="0.12" stroke="#0969da" stroke-width="2"/>
+  <rect x="388" y="106" width="348" height="256" rx="8" fill="none" stroke="#8c959f" stroke-width="1.25"/>
+  <rect x="24" y="394" width="348" height="128" rx="8" fill="none" stroke="#8c959f" stroke-width="1.25"/>
+  <rect x="388" y="394" width="348" height="128" rx="8" fill="none" stroke="#8c959f" stroke-width="1.25"/>
+  <g fill="#1f2328">
+    <text x="40" y="130" font-size="13" font-weight="600">Leaps of faith: test first</text>
+    <text x="40" y="146">A1 Wants to hold their own keys</text>
+    <text x="40" y="162">A2 Thinks of crypto as a portfolio share</text>
+    <text x="40" y="178">A4 Prefers own rules to a managed service</text>
+    <text x="40" y="194">A8 Can write a policy they understand</text>
+    <text x="40" y="210">A9 Recovery drill builds confidence</text>
+    <text x="40" y="226">A3 Onchain earning beats an ETF for them</text>
+    <text x="40" y="242">A10 Seeing the source changes their choice</text>
+    <text x="40" y="258">A11 Account wording can be made honest</text>
+    <text x="40" y="274">A13 Will pay for it</text>
+    <text x="40" y="290">A14 Segment is large enough</text>
+    <text x="40" y="306">A15 We can reach them</text>
+    <text x="40" y="322">A18 Risk data can be kept current</text>
+    <text x="40" y="338">A21 Risk ratings read as information</text>
+    <text x="404" y="130" font-size="13" font-weight="600">Confirm, then rely on it</text>
+    <text x="404" y="146">A20 Own policy keeps us non-discretionary</text>
+    <text x="404" y="162">A23 No competitor ships this yet</text>
+    <text x="404" y="178">A6 Fear of losing access is the main barrier</text>
+    <text x="404" y="194">A17 Policy can be enforced onchain</text>
+    <text x="40" y="418" font-size="13" font-weight="600">Test later</text>
+    <text x="40" y="434">A12 Will share wider holdings</text>
+    <text x="40" y="450">A5 Brokerage-style records matter</text>
+    <text x="40" y="466">A7 Exchange holders will move over</text>
+    <text x="40" y="482">A16 Revenue without pushing risk</text>
+    <text x="40" y="498">A22 Enabling rules stay in force (monitor only)</text>
+    <text x="404" y="418" font-size="13" font-weight="600">Leave for now</text>
+    <text x="404" y="434">A19 A recovery partner model exists</text>
+  </g>
+</svg>

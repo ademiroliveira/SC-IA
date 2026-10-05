@@ -1,12 +1,12 @@
 # Experience Map — Self-Custody Investment Account
 
-As of September 30, 2026 · Author: AO · Live doc: https://claude.ai/code/artifact/198f11dc-76dc-4b4b-8ac0-17f756550f3d
+As of October 5, 2026 · Author: AO · Live doc: https://claude.ai/code/artifact/198f11dc-76dc-4b4b-8ac0-17f756550f3d
 
 ## Summary
 
 The brokerage-native investor's journey is won or lost in two places: onboarding, where recovery is set up, and first funding, where real money meets an irreversible system. Every later stage depends on the trust built there.
 
-This map follows the primary user through the seven trust-critical stages named in the [Product Design Strategy](04-product-design-strategy.md#trust-critical-moments): Discover, Onboard, Fund, Allocate, Earn, Monitor, and Exit or recover. For each stage it sets out what the user is trying to do, what they are likely thinking, where today's products fail them, and what the design must do, tied to the five principles.
+This map follows the primary user through the seven trust-critical stages named in the [Product Design Strategy](04-product-design-strategy.md#7-experience): Discover, Onboard, Fund, Allocate, Earn, Monitor, and Exit or recover. For each stage it sets out what the user is trying to do, what they are likely thinking, where today's products fail them, and what the design must do, tied to the five principles.
 
 **How much to trust it.** It is a hypothesis map, built from desk research only. The stages, questions and constraints come from sourced research; the thoughts, feelings and emotional curve are inferred and must be replaced with what the generative interviews (research plan step 3) actually find. Each stage carries its evidence level.
 
@@ -131,8 +131,8 @@ The happy path hides the moments where self-custody hurts most; each stress case
 The map should be rewritten from observed behaviour once the research plan runs; these are the checks that matter most.
 
 - [ ] Replace inferred thoughts and feelings with quotes from generative interviews (research plan step 3).
-- [ ] Confirm onboarding and first funding are the make-or-break moments, using drop-off in the recovery prototype (step 6).
-- [ ] Test whether allocation framing at Allocate raises funding (step 4) and whether users can write their own policy (step 5).
+- [ ] Confirm onboarding and first funding are the make-or-break moments, using drop-off in the recovery prototype (step 5).
+- [ ] Test whether allocation framing at Allocate raises funding (step 6) and whether users can write their own policy (step 4).
 - [ ] Test whether the Earn risk card changes which option people pick (step 7).
 - [ ] Test what "account" leads people to expect at Discover and Exit (step 8).
 - [ ] Walk Robinhood Wallet and MetaMask Money Account through all seven stages (step 1) and add their actual screens to the Pain today lines.

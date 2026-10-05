@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 438" role="img" aria-label="Six behaviours make a deliberate holder" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">
+  <rect width="760" height="438" fill="#ffffff"/>
+  <text x="24" y="30" font-size="15" font-weight="600" fill="#1f2328">Six behaviours make a deliberate holder</text>
+  <text x="24" y="50" font-size="11.5" fill="#59636e">Each behaviour depends on the drivers beside it; IDs point to the assumption list</text>
+  <g fill="none" stroke="#8c959f" stroke-width="1.25">
+    <path d="M174 242H194M194 92V392"/>
+    <path d="M194 92H214M414 92H454"/>
+    <path d="M194 152H214M414 152H454"/>
+    <path d="M194 212H214M414 212H454"/>
+    <path d="M194 272H214M414 272H454"/>
+    <path d="M194 332H214M414 332H454"/>
+    <path d="M194 392H214M414 392H454"/>
+  </g>
+  <rect x="24" y="210" width="150" height="64" rx="8" fill="#0969da" fill-opacity="0.12" stroke="#0969da" stroke-width="2"/>
+  <text x="99" y="238" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">Deliberate</text>
+  <text x="99" y="256" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">holders</text>
+  <g fill="none" stroke="#8c959f" stroke-width="1.25">
+    <rect x="214" y="70" width="200" height="44" rx="8"/>
+    <rect x="214" y="130" width="200" height="44" rx="8"/>
+    <rect x="214" y="190" width="200" height="44" rx="8"/>
+    <rect x="214" y="250" width="200" height="44" rx="8"/>
+    <rect x="214" y="310" width="200" height="44" rx="8"/>
+    <rect x="214" y="370" width="200" height="44" rx="8"/>
+  </g>
+  <g fill="none" stroke="#8c959f" stroke-width="1">
+    <rect x="454" y="70" width="282" height="44" rx="8"/>
+    <rect x="454" y="130" width="282" height="44" rx="8"/>
+    <rect x="454" y="190" width="282" height="44" rx="8"/>
+    <rect x="454" y="250" width="282" height="44" rx="8"/>
+    <rect x="454" y="310" width="282" height="44" rx="8"/>
+    <rect x="454" y="370" width="282" height="44" rx="8"/>
+  </g>
+  <g text-anchor="middle" font-weight="600" fill="#1f2328">
+    <text x="314" y="96">Can get back in</text>
+    <text x="314" y="156">Policy in force</text>
+    <text x="314" y="216">Funded and understood</text>
+    <text x="314" y="276">Knows what they earn</text>
+    <text x="314" y="336">Sized deliberately</text>
+    <text x="314" y="396">Stays the course</text>
+  </g>
+  <g font-size="11.5" fill="#1f2328">
+    <text x="470" y="88">Recovery feels doable (A6)</text>
+    <text x="470" y="104">A drill is worth the time (A9)</text>
+    <text x="470" y="148">Wants their own rules (A4)</text>
+    <text x="470" y="164">Can write a policy they trust (A8)</text>
+    <text x="470" y="208">Wants own keys; beats an ETF (A1, A3)</text>
+    <text x="470" y="224">Knows what we cannot do (A11)</text>
+    <text x="470" y="268">Source and risk are legible (A10)</text>
+    <text x="470" y="284">Risk data stays current (A18)</text>
+    <text x="470" y="328">Thinks in portfolio share (A2)</text>
+    <text x="470" y="344">Shares wider holdings (A12)</text>
+    <text x="470" y="388">Trusts their policy in a fall (untested)</text>
+    <text x="470" y="404">Records keep them oriented (A5)</text>
+  </g>
+</svg>

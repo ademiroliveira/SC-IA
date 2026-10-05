@@ -1,6 +1,6 @@
 # Problem Framing — Self-Custody Investment Account
 
-As of September 30, 2026 · Author: AO · Live doc: https://claude.ai/code/artifact/1cc4f4a2-8416-4231-a838-426e9321b2d2
+As of October 5, 2026 · Author: AO · Live doc: https://claude.ai/code/artifact/1cc4f4a2-8416-4231-a838-426e9321b2d2
 
 ## Problem statement
 
@@ -87,14 +87,16 @@ The must-answer question is: **what would need to be true for a brokerage-native
 
 Questions come from the Web3 and AI research question bank; wording in quotes is taken from the bank, lightly shortened or adapted to this product.
 
+The order follows the [Assumption Map](08-assumption-map.md), which ranks each assumption by how much depends on it and how little evidence exists. The rules and recovery prototypes come before the allocation home because they are the phase 1 gate. Three desk checks run alongside steps 1 and 2: how investors use rules today, segment size, and price benchmarks. A pricing study follows once there is a prototype to price.
+
 | Order | Study | Primary question | Secondary questions | Decision it informs |
 | --- | --- | --- | --- | --- |
 | 1 | Hands-on teardown of Robinhood Wallet and MetaMask Money Account | What do they show on home, earn and recovery? | Where do they already meet the positioning? | Whether the gap is real |
-| 2 | Counsel review | Is user-authored configuration enough to stay non-discretionary? | Does a limited, pre-granted permission to act inside the policy still count as the user signing?; is "account" safe to use? | Discretion and execution model, and naming |
+| 2 | Counsel review | Is user-authored configuration enough to stay non-discretionary? | Does a limited, pre-granted permission to act inside the policy still count as the user signing?; is "account" safe to use?; can risk ratings be shown as information, not advice? | Discretion and execution model, naming and the risk card |
 | 3 | Generative interviews | "What would need to be true for a mainstream user to feel comfortable with self-custody?" | "What mental model do users have of where their crypto lives?"; "What prior mental models (banking, investing, gaming) do users bring?" | Whether this framing holds for the primary user |
-| 4 | Allocation home prototype | Do investors fund more when home shows allocation against target than when it shows tokens? | "How do users monitor positions over time, and what would make them feel more in control?"; the trust-threshold question: what moves the point at which they proceed? | The home screen |
-| 5 | Rules and automation prototype | Do users prefer writing their own rules over accepting a managed default, and can they write them? | "How much control do users want, and does that vary by context?"; "What would make delegation feel safe and trustworthy?" | How much the product automates |
-| 6 | Recovery prototype | Does a rehearsed recovery drill raise willingness to deposit more than it lowers completion? | "How do users currently recover from wallet mistakes?"; "What does losing funds mean emotionally, and how does it affect future behaviour?" | The funding gate |
+| 4 | Rules and automation prototype | Do users prefer writing their own rules over accepting a managed default, and can they write them? | "How much control do users want, and does that vary by context?"; "What would make delegation feel safe and trustworthy?" | How much the product automates |
+| 5 | Recovery prototype | Does a rehearsed recovery drill raise willingness to deposit more than it lowers completion? | "How do users currently recover from wallet mistakes?"; "What does losing funds mean emotionally, and how does it affect future behaviour?" | The funding gate |
+| 6 | Allocation home prototype | Do investors fund more when home shows allocation against target than when it shows tokens? | "How do users monitor positions over time, and what would make them feel more in control?"; the trust-threshold question: what moves the point at which they proceed? | The home screen |
 | 7 | Rate and risk choice experiment | Does showing source, incentive and exit time change which option people pick? | "What is users' mental model of yield: where does it come from, and does that affect trust?"; "What risk disclosures do users actually read vs scroll past?" | The risk card |
 | 8 | Wording survey | What does "account" lead people to believe about protection and reversal? | The language question: "Does the product's language match the user's vocabulary?"; "this app has my money" versus "this contract has my money" | Naming and disclosure copy |
 
@@ -102,7 +104,7 @@ Questions come from the Web3 and AI research question bank; wording in quotes is
 
 ## Open questions and sources
 
-Five questions about the problem itself remain open. The research plan covers the first two; the next two need a sizing and pricing study that is not yet planned.
+Five questions about the problem itself remain open. The research plan covers the first two; the next two start as desk checks, and a pricing study follows once there is a prototype to price.
 
 - [ ] Is the brokerage-native investor the right primary user, or is the exchange-only holder the real early adopter?
 - [ ] Do these users think of the slice as a share of net worth, or as a dollar amount?
