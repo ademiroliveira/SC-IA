@@ -6,6 +6,8 @@ What has been decided about how this work is framed, and what is still open. New
 
 | Date | Decision | Why | Where it shows |
 |---|---|---|---|
+| 2026-10-05 | Open the research with pain discovery (assumption A0): the interviews ask what is hard today before any concept is shown, and the plan and recovery studies run as designed only if their pain appears | Every pain the strategy answers comes from studies of people who already hold crypto; no brokerage-native investor has named them yet | [09](../strategy/09-critical-research-questions.md), [08 A0](../strategy/08-assumption-map.md#a0-the-assumption-underneath) |
+| 2026-10-05 | Keep the critical research questions in one doc, each with a hypothesis, support and refute conditions, and the decision it informs | The framing, strategy and assumption map had each started to carry their own question lists | [09](../strategy/09-critical-research-questions.md), [03 Research plan](../strategy/03-problem-framing.md#research-plan) |
 | 2026-10-05 | Restore the September 30 revisions in strategy v2: execution model, granted permissions with one-tap revoke, the cost beside every return, three confirmation levels, business and counter-metrics, accessibility, and the language and disclosures stream | v2 was drafted from a copy of v1 that predated them, so it had dropped them without saying so | [04](../strategy/04-product-design-strategy.md) |
 | 2026-10-05 | Reorder the research plan to follow the assumption map: rules and recovery prototypes before the allocation home, desk checks alongside steps 1 and 2, a pricing study once there is a prototype; counsel also reviews risk ratings | The rules and recovery prototypes are the phase 1 gate, and the map ranks their assumptions (A4, A8, A9) above the allocation home's | [03 Research plan](../strategy/03-problem-framing.md#research-plan), [08](../strategy/08-assumption-map.md) |
 | 2026-10-04 | Adopt "deliberate holders" as the umbrella outcome, with six component outcomes and one in focus per phase | It counts people, not deposits, so it cannot be met by pushing money in; chosen over four alternatives, including the deep dive's "funded and understood" | [04 Outcome](../strategy/04-product-design-strategy.md#1-outcome), [07](../research/07-outcome-led-design-deep-dive.md) |
@@ -25,7 +27,7 @@ What has been decided about how this work is framed, and what is still open. New
 | Decision | Options | Blocked on | Owner |
 |---|---|---|---|
 | Discretion and execution model | Every action signed by the user; a limited, revocable onchain permission for actions inside the policy; or a registered adviser or named curator for managed parts | Counsel review (research plan step 2); blocks phase 1 | TBD |
-| Use of the word "account" | Keep with a custody map and plain disclosure; or an alternative framing | Counsel review and wording survey (steps 2 and 8) | TBD |
+| Naming | Keep "account" with a custody map and plain disclosure, or an alternative framing; "plan" and "define" in place of "policy" and "write" | Counsel review and wording survey (steps 2 and 8) | TBD |
 | First scope | Dollar earn, BTC and ETH, tokenized treasuries; which states | Policy and recovery prototype results | TBD |
 | Business model | Subscription, earn spread, reporting, or a mix | Desk checks on segment size and price benchmarks, then a pricing study once there is a prototype to price | TBD |
 | Recovery partner and liability | Guardian network, institutional co-signer, or both | Partner review and counsel | TBD |

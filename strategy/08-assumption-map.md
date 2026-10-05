@@ -6,6 +6,8 @@ As of October 5, 2026 · Author: AO · Live doc: https://claude.ai/code/artifact
 
 The strategy rests on 23 assumptions, and 13 of them are leaps of faith: a lot depends on them and there is little or no evidence. Three come before everything else, because if any one fails the positioning changes.
 
+**One assumption sits underneath all 23 and is tested before any of them: A0, that the pains we expect are the pains these investors have.** Every bet answers a pain taken from studies of existing crypto holders. If brokerage-native investors name different pains, several bets lose their reason to exist. The interviews therefore open with pain discovery, before any concept is shown. The questions are in the [Critical Research Questions](09-critical-research-questions.md) doc.
+
 1. **A1. Brokerage-native investors want to hold their own keys at all.** No evidence exists for this group.
 2. **A2. They think of crypto as a share of their portfolio.** The only support is advisor guidance, which is how professionals talk, not how individuals do.
 3. **A4. They would write their own rules instead of wanting it managed.** No evidence, and the existence of robo-advisors suggests many investors prefer to delegate.
@@ -21,6 +23,21 @@ The umbrella outcome, deliberate holders, is reached through six behaviours, and
 ![Driver tree: the umbrella outcome, deliberate holders, branches into six behaviours (can get back in, policy in force, funded and understood, knows what they earn, sized deliberately, stays the course), each with two drivers labelled by assumption ID](assets/08-driver-tree.svg)
 
 Read it left to right. The behaviours run top to bottom in journey order, so the upper ones are leading signals for the lower ones. Phase 1 focuses on funded and understood. Each driver is an assumption, listed by ID in the next section.
+
+## A0: the assumption underneath
+
+A0 is that the pains the strategy relies on are real for the primary user, and it has no evidence for that group.
+
+| | |
+| --- | --- |
+| **Assumption** | The pains we expect (fear of losing access, the burden of operating it, not understanding returns and risk, scams, no way to size it, no records, not knowing how to start) are the ones brokerage-native investors have, and are severe enough to act on |
+| **Depends** | Critical: each bet is justified by one of these pains |
+| **Evidence** | None for this group; the pains come from studies of existing holders and a general-population survey |
+| **Cheapest test** | Pain discovery at the start of the generative interviews, with open questions about real past events and no concept shown |
+| **Pass signal (proposed)** | Most of the expected pains are raised unprompted, with a workaround or a past attempt behind them |
+| **If it fails** | Drop or defer the bets whose pain did not appear; if different pains dominate, revisit the framing before any prototype |
+
+A pain raised unprompted with a workaround behind it is strong evidence; one that people only agree with when we name it is weak. The assumptions below test our answers to these pains, so they are read in light of A0's result.
 
 ## The assumptions
 
@@ -59,6 +76,8 @@ Thirteen of the 23 assumptions carry a lot of the strategy and have little or no
 ![Priority 2x2: 23 assumptions placed by how much of the strategy depends on them and how much evidence exists. Leaps of faith (much depends, little evidence): A1, A2, A4, A8, A9, A3, A10, A11, A13, A14, A15, A18, A21. Confirm, then rely on it (much depends, some evidence): A20, A23, A6, A17. Test later: A12, A5, A7, A16, A22. Leave for now: A19](assets/08-priority-2x2.svg)
 
 Inside the top-left box the order is the test order: A1, A2 and A4 can sink the positioning and are testable now, A8 and A9 decide the phase 1 scope, and the rest follow. The four in the top-right box have some support but are too important to leave unconfirmed; each has a quick check (counsel, a teardown, the interviews, a technical proof). Items are placed by quadrant only, not by exact position.
+
+A0 sits above this grid. It is not placed in a box because it is tested before any of the 23, and its result decides which of them are still worth testing.
 
 ## Tests
 
@@ -101,7 +120,7 @@ The work runs in three tracks: things that need no participants start now, inter
 
 **Then, in order.**
 
-1. **Generative interviews.** Tests A1, A2, A3, A6 and the first half of A4. If A1 fails, stop and revisit the positioning before any prototype.
+1. **Generative interviews.** They open with pain discovery (A0), before any concept is shown. Then they test A1, A2, A3, A6 and the first half of A4. If A1 fails, stop and revisit the positioning before any prototype.
 2. **Rules prototype and recovery prototype.** Tests A4, A8 and A9. Passing these is the phase 1 gate in the strategy.
 3. **Allocation home prototype.** Tests A2 in use and A12. Passing is the phase 2 gate.
 4. **Choice experiment and wording survey.** Tests A10 and A11. These refine the risk card and the naming and do not change the direction.

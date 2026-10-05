@@ -8,6 +8,8 @@ A self-directed investor who decides to hold a deliberate slice of digital asset
 
 Investors who already think in allocations, drift and rebalancing must choose between custodial brokerage sleeves (familiar, but no ownership or onchain earning) and self-custody wallets (ownership, but token-first screens, opaque signing, unrehearsed recovery and no records). The gap between them is where people stall: they say they value self-custody, and most still keep assets on exchanges.
 
+**The pains in this statement are hypotheses.** They are inferred from studies of people who already hold crypto. No brokerage-native investor has yet described them to us, and they may name different ones. The first research round opens with pain discovery for that reason.
+
 This doc frames the problem for agreement before solutions are argued. The answer to it lives in the [Product Design Strategy](04-product-design-strategy.md).
 
 **Why now.**
@@ -84,6 +86,8 @@ Data aggregation is a related risk: a product that holds portfolio and personal 
 ## Research plan
 
 The must-answer question is: **what would need to be true for a brokerage-native investor to put a deliberate slice of their wealth into self-custody?** The plan runs two cheap desk steps first, then generative interviews, then prototype tests on the riskiest hypotheses, then a survey to size what the earlier rounds find.
+
+**The critical questions live in one place.** The [Critical Research Questions](09-critical-research-questions.md) doc holds the pain-discovery question that opens the interviews, the three decision-level questions with their hypotheses, and the supporting questions for the interview round. Pain discovery comes first: it asks what is hard for these investors today before any solution is tested.
 
 Questions come from the Web3 and AI research question bank; wording in quotes is taken from the bank, lightly shortened or adapted to this product.
 

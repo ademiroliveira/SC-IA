@@ -82,6 +82,8 @@ A self-directed investor who wants a deliberate slice of digital assets has no p
 
 The market, risk and competitor facts are well sourced. Every claim about what this user wants, will choose or will pay for is a hypothesis.
 
+**The pains are hypotheses too.** The frictions this strategy answers (fear of losing access, the burden of operating it, not understanding returns and risk, missing records) come from studies of existing crypto holders. No brokerage-native investor has yet named them to us. The first study therefore opens with pain discovery before testing any solution; see the [Critical Research Questions](09-critical-research-questions.md) doc and assumption A0 in the [Assumption Map](08-assumption-map.md).
+
 ## 3. Where we play
 
 We differentiate on the investor frame and the trust layer around earning, match competitors on the basics, and concede passive exposure to ETFs.
@@ -118,6 +120,16 @@ Five bets are expected to move the umbrella outcome through its components. Each
 | **3. The policy is the core object** | Policy in force; stays the course | A4 and A8: they prefer their own rules, and can write them | Interviews, then a rules prototype | Most choose to write or edit rules over a default; 8 of 10 finish a policy and predict what it does |
 | **4. Recovery is rehearsed** | Can get back in; funded and understood | A9: a drill builds confidence more than it causes drop-off | Recovery prototype, with and without the drill | Stated deposit is higher with the drill; drop-off stays under an agreed limit |
 | **5. Records are native** | Sized deliberately; stays the course | A5: they miss brokerage-style records enough to value them here | Interviews; later a records prototype | Not yet set; lower priority |
+
+**The pain behind each bet.** A bet is only worth testing if the pain it answers is real for this user. None of these pains has been heard from the primary user yet; the pain round at the start of the interviews decides which bets go forward.
+
+| Bet | Pain it answers (expected) | Where the belief comes from | If the pain does not appear |
+| --- | --- | --- | --- |
+| **1. Allocation is the home screen** | No way to size the amount or keep it sized | Advisor guidance; assumed for individuals | Size in dollars or drop the allocation frame; the main differentiator weakens |
+| **2. Risk is shown, not hidden** | Not knowing where a return comes from or what could go wrong | Vault failures and teaser rates; inferred | Keep disclosure as a duty, stop treating it as a selling point |
+| **3. The policy is the core object** | The burden of operating it; wanting control over what happens to their money | Industry consensus among holders | Lead with a managed option; the discretion model changes |
+| **4. Recovery is rehearsed** | Fear of losing access for good | Studies of existing holders | Keep recovery for safety, stop gating funding on it |
+| **5. Records are native** | No records for tax or tracking | Tax rules; inferred | Defer; integrate a third-party tool instead |
 
 Two assumptions sit underneath all five and come first: that brokerage-native investors want to hold their own keys at all, and that they would pay for this. The first is tested by the generative interviews. The second waits for a pricing study.
 
@@ -230,6 +242,8 @@ The product automates execution, never judgement: the user decides what should h
 | Later | Pricing and sizing study | They will pay, and the segment is large enough | Business model |
 
 An interview plan was drafted in conversation and is not yet saved to a doc: three learning goals (sizing and triggers, custody beliefs, rules and delegation today), interviews about real past events, and observation of how people use their brokerage app. The full research plan and participant mix are in the [Problem Framing](03-problem-framing.md) doc, which now follows this order.
+
+The interviews open with pain discovery, before any concept is shown: open questions about real past events, with our expected pains kept out of the session until the end. This tests assumption A0, and its result decides which of the later studies still run as designed.
 
 **How a decision gets made.** A bet moves forward when its test shows the behaviour, is reworked when the result is mixed, and is dropped when the assumption fails. Progress is reviewed against the outcomes in section 1, not against what was delivered.
 
