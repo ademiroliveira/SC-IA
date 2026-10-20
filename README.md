@@ -11,8 +11,8 @@ Research, competitive analysis, problem framing and product design strategy for 
 ## Where things stand
 
 - **Earning inside self-custody is no longer white space.** Robinhood, MetaMask, Kraken and Coinbase all ship it, mostly on the same Steakhouse and Morpho curated-vault engine.
-- **The investor frame is unclaimed.** No self-custody product is built around allocation, drift and risk contribution. Everyone who has that frame (Schwab, E\*Trade, Wealthfront) is custodial.
-- **Robinhood is the closest threat.** It has a brokerage-native audience, a self-custody wallet, an earn product and its own chain.
+- **The investor frame is unclaimed in US self-custody.** No US self-custody product is built around allocation, drift and risk contribution; outside the US, Glider and Bitwise now run target allocations with automatic rebalancing in the user's own wallet. Everyone in the US who has the frame (Schwab, E\*Trade, Wealthfront, Coinbase Advisor) is custodial.
+- **Robinhood is the closest threat.** It has a brokerage-native audience, one-tap self-custody earn inside its main app, and its own chain. Robinhood and Coinbase are answering "intent is the only decision" with AI agents rather than plans (round 2).
 - **The strategic bet:** allocation is the unit of the product. The user writes a policy, the product executes it exactly, every return names its source and risk, and recovery is rehearsed before meaningful money arrives.
 - **The outcome it must move:** deliberate holders, meaning investors who hold a sized slice in their own custody, under rules they wrote, and who could recover it. It counts people, not deposits.
 - **What could sink it:** 13 of the 23 assumptions behind the strategy are leaps of faith. Three come first: that brokerage-native investors want their own keys (A1), think of crypto as a share of their portfolio (A2), and would write their own rules (A4). One round of generative interviews tests all three, and opens with pain discovery (A0), because every pain the strategy answers comes from studies of people who already hold crypto.
@@ -31,13 +31,14 @@ Research, competitive analysis, problem framing and product design strategy for 
 | 07 | [Outcome-led product design deep dive](research/07-outcome-led-design-deep-dive.md) | Where outcome-led design comes from, the main frameworks compared, how it works in practice, its critiques, and four candidate outcomes for this product |
 | 08 | [Assumption map](strategy/08-assumption-map.md) | A0 (the pains we expect are real) and the 23 assumptions behind the strategy, a driver tree, a priority 2x2, the cheapest test and pass signal for each, and the research order |
 | 09 | [Critical research questions](strategy/09-critical-research-questions.md) | Pain discovery first, then three decision-level questions (first user, defining a plan, trusting recovery) with hypotheses, conditions and what each result means; supporting interview questions |
+| 10 | [Competitive analysis, round 2](research/10-competitive-analysis-round-2.md) | What changed since round 1, a rescored C1–C5 scorecard with new entrants, the trust layer by lens, candidate new claims (C5′ to C9) and unanswered competitor claims, price benchmarks, naming and eligibility, regulation, demand and user voice |
 
 Numbers are the reading order, and each doc builds on the ones before it, with one exception: strategy v2 (04) was revised after 07, 08 and 09 and draws on them. New docs continue the sequence (05, 06, …) in the folder that fits: `research/` for evidence, `strategy/` for framing and direction. The decision log is unnumbered because it runs alongside all of them.
 
 ## Repository layout
 
 ```
-research/    evidence: market research, competitive analysis, and the outcome-led design deep dive
+research/    evidence: market research, competitive analysis (rounds 1 and 2), and the outcome-led design deep dive
 strategy/    problem framing, the design strategy that answers it, the experience map, the assumption map and the critical research questions
              (images in strategy/assets/)
 decisions/   decision log: decided and open
@@ -58,8 +59,8 @@ Claims marked "no one ships X" mean no evidence was found on public pages, not a
 
 ## Live versions
 
-The strategy, framing, competitive analysis, experience map, deep dive, assumption map and critical research questions also exist as editable Claude docs, linked from the top of each file, and copies of the framing and strategy sit in the "Secret" Claude project. Those links are private: readers without access should treat this repo as the source.
+The strategy, framing, competitive analysis (both rounds), experience map, deep dive, assumption map and critical research questions also exist as editable Claude docs, linked from the top of each file, and copies of the framing and strategy sit in the "Secret" Claude project. Those links are private: readers without access should treat this repo as the source.
 
 This repo is the organized record. If a live doc changes, update the matching file here and the sync date below.
 
-**Last synced with live docs:** 2026-10-05
+**Last synced with live docs:** 2026-10-20
