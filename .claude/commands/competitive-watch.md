@@ -16,7 +16,9 @@ Runs every Monday after AO's weekly signal report. It reports only what changed 
 
 Run `git clone --depth 1 https://github.com/ademiroliveira/weekly-signals /tmp/weekly-signals`. It is read-only: never commit or push there. Read the newest `signals/*.md` dated inside the window.
 
-For each of its items that touches a scored player, a claim (C1 to C9), a lens or an open decision, note the title, strength, URL and what it touches. Do not research those items again. If no report falls in the window, say so in the Source log and continue.
+For each of its items that touches a scored player, a claim (C1 to C9), a lens or an open decision, note the title, strength, URL and what it touches. Do not research those items again.
+
+**If no report in the repo falls in the window** (the signal run can finish without its push landing), try the live signal report artifact linked in the weekly-signals `CLAUDE.md`, using the Artifact tool's read action if it is available. If that fails too, say so in the Source log, and in Step 2 also spawn `reports-regulation` in mode `weekly` so rules and regulators are still covered.
 
 ## Step 2: Research (3 agents in parallel)
 

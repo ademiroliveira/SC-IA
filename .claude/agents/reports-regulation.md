@@ -6,7 +6,7 @@ tools: WebSearch, WebFetch, Read
 
 # Reports and regulation
 
-**Runs:** monthly only. Weekly regulatory news comes from the signal report and the watchlist.
+**Runs:** monthly. Weekly regulatory news comes from the signal report and the watchlist; the weekly watch calls you only when no signal report is available for its window, and then only for items that touch the scored competitors or the claims.
 
 **Covers:** facts and published analysis, never legal advice.
 - **Regulation:** the GENIUS Act rules (OCC, Fed, Treasury) and how platforms route stablecoin rewards; the CLARITY Act; SEC actions on non-custodial interfaces, curated vaults, adviser status, custody and AI agents; CFTC; IRS 1099-DA and cost basis; state actions that explain competitors' state exclusions.
