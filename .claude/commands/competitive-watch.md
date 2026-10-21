@@ -1,6 +1,6 @@
 # /competitive-watch — weekly
 
-Runs every Monday after AO's weekly signal report. It reports only what changed since the last watch, against the baseline, and proposes score changes without applying them. Read `CLAUDE.md` first. Work from the root of the SC-IA clone.
+Runs every Monday after the weekly signal report. It reports only what changed since the last watch, against the baseline, and proposes score changes without applying them. Read `CLAUDE.md` first. Work from the root of the SC-IA clone.
 
 ## Step 0: Set up
 
@@ -15,7 +15,7 @@ Runs every Monday after AO's weekly signal report. It reports only what changed 
 
 ## Step 1: Read the signal report
 
-Run `git clone --depth 1 https://github.com/ademiroliveira/weekly-signals /tmp/weekly-signals`. It is read-only: never commit or push there. Read the newest `signals/*.md` dated inside the window.
+The signal report lives in the `weekly-signals` repo under the same GitHub owner as this one. Run `git clone --depth 1 "$(git remote get-url origin | sed -E 's#/[^/]+$#/weekly-signals#')" /tmp/weekly-signals`. It is read-only: never commit or push there. Read the newest `signals/*.md` dated inside the window.
 
 Note the local path of the report you read (for example `/tmp/weekly-signals/signals/2026-10-26.md`). Give it to every `verifier` you spawn: its fetcher is blocked from GitHub, so it reads the local copy.
 
@@ -52,11 +52,11 @@ Spawn `verifier` in mode `draft` on the file and apply every REMOVE and FIX. The
 
 Run `python3 watch/check.py watch/*.md` (the watchlist and sources get the internal-name check too) and fix anything it flags. Then run `git add watch/ && git commit -m "watch: <window>" && git pull --rebase -q && git push`. Retry a failed push once.
 
-If the push is refused for lack of permission and the `add_repo` tool is available, call it for owner `ademiroliveira`, repo `SC-IA`, access `push`, then retry once. If it still fails, paste the whole watch file into your final message so nothing is lost, and name the failure in the summary.
+If the push is refused for lack of permission and the `add_repo` tool is available, call it with the owner and repo from `git remote get-url origin` and access `push`, then retry once. If it still fails, paste the whole watch file into your final message so nothing is lost, and name the failure in the summary.
 
 ## Step 8: Summary
 
-Send the summary as a push notification **on every run**, including weeks with no changes and runs that stopped early (skipped on the 1st, already ran, could not clone). AO wants to hear from the watch every Monday. Use the PushNotification tool with the summary in `<routine_summary>` tags, and end the final message with the same summary. The first sentence is the banner: either `No score changes this week.` or `<n> proposed score changes: <short list>.` Then include:
+Send the summary as a push notification **on every run**, including weeks with no changes and runs that stopped early (skipped on the 1st, already ran, could not clone). The owner wants to hear from the watch every Monday. Use the PushNotification tool with the summary in `<routine_summary>` tags, and end the final message with the same summary. The first sentence is the banner: either `No score changes this week.` or `<n> proposed score changes: <short list>.` Then include:
 - each proposed change id with one line
 - anything that contradicts the baseline
 - watchlist events that happened

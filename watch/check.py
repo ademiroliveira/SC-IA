@@ -4,9 +4,10 @@
 Usage: python3 watch/check.py watch/*.md
 
 Watch and rescore files get every check. Any other file (watchlist, sources,
-contract, README) gets the internal-name check only.
+contract, README) gets the internal-name and personal-data checks only.
 
-Hard errors (exit 1): an internal name, a missing section, or a proposed
+Hard errors (exit 1): an internal name, personal data (an email address, a
+social handle, a title followed by a name), a missing section, or a proposed
 score change without an id, a from → to, a source tag or a URL.
 Warnings (exit 0): universal claims that the sources rarely support.
 """
@@ -32,6 +33,15 @@ ID_PATTERN = {"weekly": r"W-\d{8}-\d+", "rescore": r"R-\d{6}-\d+"}
 
 UNIVERSAL = re.compile(r"\b(nobody|no one|no other|first ever|the only|no wallet|no product)\b", re.I)
 
+# Personal data: no emails, social handles or titled names. People appear by role only.
+PERSONAL = [
+    (re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z0-9.-]*[a-z]{2,}"), "email address"),
+    (re.compile(r"(?<![\w/.@-])@[A-Za-z0-9_]{2,}\b"), "social handle"),
+    (re.compile(r"\b(?:Commissioner|Senator|Sen\.|Rep\.|Representative|Chair|Chairman|Chairwoman|"
+                r"Comptroller|Secretary|Governor|President|CEO|CFO|CTO|COO|founder|co-founder)"
+                r"\s+(?!of\b|for\b|and\b|the\b)[A-Z][a-z]+"), "a named person"),
+]
+
 
 def kind_of(path: pathlib.Path) -> str | None:
     if re.fullmatch(r"rescore-\d{4}-\d{2}\.md", path.name):
@@ -54,6 +64,12 @@ def check(path: pathlib.Path) -> tuple[list[str], list[str]]:
     words = set(re.findall(r"[A-Za-z][A-Za-z0-9_-]+", text))
     if any(hashlib.sha256(w.lower().encode()).hexdigest() in FORBIDDEN_HASHES for w in words):
         errors.append("contains an internal name that must not be published")
+
+    for number, line in enumerate(text.splitlines(), 1):
+        for pattern, what in PERSONAL:
+            found = pattern.search(line)
+            if found:
+                errors.append(f"line {number}: {what} ({found.group()}); people appear by role only")
 
     if kind is None:
         return errors, warnings

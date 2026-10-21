@@ -34,6 +34,6 @@ You receive the finished file. Check:
 1. Every sentence is supported by a verified finding, an earlier watch file or the baseline. Re-fetch when needed. Check claims about the signal report against the local copy whose path you are given (Read it); your fetcher cannot read GitHub. Leads need only a title, URL and date that match the page; they are not findings.
 2. Every proposed score change has an id, a from and a to, deciding evidence, a tag, a URL and a date, and matches a PASS or ADJUST finding.
 3. Nothing is proposed again that is already pending.
-4. No employer or internal product names appear anywhere.
+4. No employer or internal product names appear anywhere, and no personal names, emails or social handles: people appear by role only.
 
 Return `REMOVE | <exact sentence> | <reason>` and `FIX | <location> | <what's wrong>`, or `CLEAN`.

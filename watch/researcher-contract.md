@@ -31,6 +31,7 @@ Drop any item that fails one of these; the verifier will drop it anyway.
 - [ ] The tag is copied from `CLAUDE.md` and fits the source
 - [ ] Every figure, name and date in the summary appears on the page
 - [ ] No universal claims ("nobody ships X", "first ever") unless the source makes them
+- [ ] No personal names, emails or handles: people appear by role only ("Robinhood's CEO", "an SEC commissioner")
 - [ ] A proposed score change names the deciding evidence and the score it moves from and to
 
 ## Return format

@@ -73,7 +73,7 @@ Eight boundaries, most of them regulatory and most of them open to reversal, lim
 | Constraint | Basis | What it rules out or requires |
 | --- | --- | --- |
 | **Non-discretion** | SEC staff statement of April 13, 2026 on non-custodial interfaces: no solicitation, user-customizable defaults, disclosed routing | Decisions authored by the user; every default disclosed and editable; deterministic execution |
-| **Curator and adviser exposure** | Commissioner Peirce, July 22, 2026, on curated vaults | Curator named; risk ratings presented as information, not a recommendation |
+| **Curator and adviser exposure** | An SEC commissioner, July 22, 2026, on curated vaults | Curator named; risk ratings presented as information, not a recommendation |
 | **Yield language and source** | GENIUS Act ban on issuer-paid yield; OCC presumption on affiliate-routed yield | Held stablecoins never called "interest"; the source of each return stated |
 | **Teaser rates** | MetaMask's 6% falling to 4% on October 1, 2026; Coinbase's earlier "up to 10.8%" | Base, incentive and expiry shown separately |
 | **Eligibility** | New York and Texas exclusions at Robinhood and Coinbase; qualified-purchaser limits on treasury funds | "Not available to you, and why" as a first-class state |

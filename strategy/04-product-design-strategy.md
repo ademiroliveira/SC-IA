@@ -214,7 +214,7 @@ The product automates execution, never judgement: the user decides what should h
 
 **How the product acts is still open.** Inside the policy, either the user signs every action, or the user grants the product a limited, revocable onchain permission to act within it. The second removes operator burden, but "we cannot move your funds" then holds only outside the permissions granted. Counsel must confirm that the chosen model stays within the non-custodial interface relief (section 10).
 
-**Why the line sits here.** The SEC staff statement of April 13, 2026 on non-custodial interfaces requires that the user chooses the transaction details and that defaults are disclosed and editable. Commissioner Peirce's statement of July 22, 2026 suggests that whoever selects and reallocates strategies may be acting as an adviser. Both are non-binding and reversible, and neither is legal advice; counsel must confirm the model.
+**Why the line sits here.** The SEC staff statement of April 13, 2026 on non-custodial interfaces requires that the user chooses the transaction details and that defaults are disclosed and editable. An SEC commissioner's statement of July 22, 2026 suggests that whoever selects and reallocates strategies may be acting as an adviser. Both are non-binding and reversible, and neither is legal advice; counsel must confirm the model.
 
 **A test for any feature.** If a request such as "move $20,000 into a diversified crypto portfolio" is answered by the product choosing the portfolio, that is discretion. If it is answered by applying a mix the user already wrote into their policy, or by a proposal the user approves, it is not. This is my reading of the guidance, for counsel to confirm.
 

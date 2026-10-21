@@ -1,6 +1,6 @@
 # /monthly-rescore — monthly
 
-Runs on the 1st of each month. Six agents re-check the whole market against the baseline and the month's weekly watch files, and propose a rescored scorecard and category matrix. Nothing is applied: AO accepts or rejects each proposal. Read `CLAUDE.md` first. Work from the root of the SC-IA clone.
+Runs on the 1st of each month. Six agents re-check the whole market against the baseline and the month's weekly watch files, and propose a rescored scorecard and category matrix. Nothing is applied: the owner accepts or rejects each proposal. Read `CLAUDE.md` first. Work from the root of the SC-IA clone.
 
 ## Step 0: Set up
 
@@ -11,7 +11,7 @@ Runs on the 1st of each month. Six agents re-check the whole market against the 
 
 ## Step 1: Read the signal reports
 
-Clone `https://github.com/ademiroliveira/weekly-signals` read-only, as in the weekly command, and read every `signals/*.md` dated inside the window. Note the items that touch a scored player, a claim, a lens or an open decision.
+Clone the `weekly-signals` repo read-only, as in Step 1 of the weekly command, and read every `signals/*.md` dated inside the window. Note the items that touch a scored player, a claim, a lens or an open decision.
 
 ## Step 2: Research (6 agents in parallel)
 

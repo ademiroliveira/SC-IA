@@ -42,7 +42,7 @@ Tag every finding with one of: `[Vendor]` `[Help doc]` `[Terms]` `[Filing]` `[Pr
 - **The source must say it.** Every figure, name and date in a summary appears on the page. Interpretation goes only in the "why it matters" line.
 - **Paraphrase.** At most one quote per source, under 15 words, only where exact wording matters (a disclosure line, a rate).
 - **Video** means title, description, chapters or transcript only. Never imply a video was watched.
-- **People.** Never name individual forum users or reviewers.
+- **No personal names or personal data.** Refer to people by role only ("Coinbase's CEO", "an SEC commissioner"), never by name, including the repo owner. Never write anyone's email address, phone number, social handle or other identifying details, and never name or quote individual forum users or reviewers. `python3 watch/check.py` flags emails, handles and titled names.
 - **Regulation.** Regulatory points are research-based readings, not legal advice.
 
 ## Competitive watch (scheduled)
@@ -53,6 +53,6 @@ Tag every finding with one of: `[Vendor]` `[Help doc]` `[Terms]` `[Filing]` `[Pr
 | Monthly rescore | The 1st of each month, 08:41 | `.claude/commands/monthly-rescore.md` | `watch/rescore-YYYY-MM.md` |
 
 - Scheduled runs write **only under `watch/`**. They never edit `research/`, `strategy/`, `decisions/`, the README or the live Claude docs.
-- Score changes are **proposals** with ids: `W-YYYYMMDD-n` from the weekly watch, `R-YYYYMM-n` from the monthly rescore. AO accepts or rejects them. Accepted proposals are applied to the baseline in a normal session and logged in the decision log with their id.
+- Score changes are **proposals** with ids: `W-YYYYMMDD-n` from the weekly watch, `R-YYYYMM-n` from the monthly rescore. The repo owner accepts or rejects them. Accepted proposals are applied to the baseline in a normal session and logged in the decision log with their id.
 - Agents are in `.claude/agents/`: six research streams and a verifier. All researchers follow `watch/researcher-contract.md`. Entry points are in `watch/sources.md`; dated events are in `watch/watchlist.md`.
-- Regulation, recovery and agentic-wallet news come first from AO's public weekly signal report (github.com/ademiroliveira/weekly-signals). Read it; never write to that repo.
+- Regulation, recovery and agentic-wallet news come first from the public weekly signal report in the `weekly-signals` repo, under the same GitHub owner as this one. Read it; never write to that repo.

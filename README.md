@@ -37,7 +37,7 @@ Numbers are the reading order, and each doc builds on the ones before it, with o
 
 ## Competitive watch
 
-Scheduled agents keep the competitive analysis current between rounds. Every Monday a weekly watch reads that morning's weekly signal report and checks the scored competitors, new entrants, prices and dated events. On the 1st of each month a rescore re-checks the whole market. Both write to `watch/` and only propose score changes; AO accepts or rejects them by id. Details are in [watch/README.md](watch/README.md), and the rules are in [CLAUDE.md](CLAUDE.md).
+Scheduled agents keep the competitive analysis current between rounds. Every Monday a weekly watch reads that morning's weekly signal report and checks the scored competitors, new entrants, prices and dated events. On the 1st of each month a rescore re-checks the whole market. Both write to `watch/` and only propose score changes, which the owner accepts or rejects by id. Details are in [watch/README.md](watch/README.md), and the rules are in [CLAUDE.md](CLAUDE.md).
 
 ## Repository layout
 

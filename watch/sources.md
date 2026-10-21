@@ -67,7 +67,7 @@ Fetch these first, then search wider. Status: **ok** = loaded in round 2 (Octobe
 
 | Topic | Entry point | Status |
 | --- | --- | --- |
-| AO's weekly signal report | https://github.com/ademiroliveira/weekly-signals (`signals/`) | ok (clone, read-only) |
+| Weekly signal report | `weekly-signals` repo under the same GitHub owner as this one (`signals/`) | ok (clone, read-only) |
 | Federal Register | https://www.federalregister.gov/ | untested here (the signal report uses its API) |
 | OCC in the Federal Register (use for the OCC) | https://www.federalregister.gov/agencies/comptroller-of-the-currency · API: https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=comptroller-of-the-currency&order=newest&per_page=20 | ok (both loaded 2026-10-21, dated newest first) |
 | SEC newsroom | https://www.sec.gov/newsroom | ok |
