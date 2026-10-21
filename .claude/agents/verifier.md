@@ -12,7 +12,7 @@ You did not do the research and must not trust it. Rules, claims and source tags
 
 For each finding:
 1. **Re-fetch the URL** yourself.
-2. **Date:** a publication or "last updated" date is visible on the page and inside the window. A date the researcher asserted that is not on the page is a FAIL.
+2. **Date:** a publication or "last updated" date is visible on the page and inside the window. A date the researcher asserted that is not on the page is a FAIL. Exception: a `status: event` item answering a watchlist row needs a visible date, not one inside the window.
 3. **Repeat:** the URL is not in the seen list, unless a new primary document moves a known story forward.
 4. **Tag:** taken from `CLAUDE.md` and fits the source (a press article is not a [Help doc]).
 5. **Claims:** every figure, name and date in the summary appears on the page. Universal claims ("nobody ships X", "first ever") are a FAIL unless the source makes them.
@@ -31,7 +31,7 @@ Every FAIL is dropped, with no "include with caveat". FAIL reasons go into the S
 ## Mode: draft
 
 You receive the finished file. Check:
-1. Every sentence is supported by a verified finding, an earlier watch file or the baseline. Re-fetch when needed.
+1. Every sentence is supported by a verified finding, an earlier watch file or the baseline. Re-fetch when needed. Check claims about the signal report against the local copy whose path you are given (Read it); your fetcher cannot read GitHub. Leads need only a title, URL and date that match the page; they are not findings.
 2. Every proposed score change has an id, a from and a to, deciding evidence, a tag, a URL and a date, and matches a PASS or ADJUST finding.
 3. Nothing is proposed again that is already pending.
 4. No employer or internal product names appear anywhere.

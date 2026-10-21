@@ -7,6 +7,7 @@ Runs every Monday after AO's weekly signal report. It reports only what changed 
 - **Today** is the run date in Europe/Dublin.
 - **Skip on the 1st.** If today is the 1st of the month, stop: the monthly rescore covers this week. End with `<routine_summary>Weekly watch skipped: the monthly rescore runs today.</routine_summary>`.
 - **Window.** From the day after the window end recorded in the Source log of the newest `watch/YYYY-MM-DD.md` or `watch/rescore-YYYY-MM.md`, through today, inclusive, at most 7 days. With no watch files yet, start the day after the baseline's as-of date. If the last file is older than 7 days, use today − 6 through today and note the gap in the Source log.
+- **Already ran.** If that window would start after today, the window is already covered (a re-run or a manual fire on the same day). Do not write or overwrite a watch file. Skip to Step 8 and send `Already ran for this window: <newest watch file>. Nothing new to research.`
 - **Baseline.** The highest-numbered `research/*competitive-analysis*.md`, plus the newest `watch/rescore-*.md` if it is newer.
 - **Seen list.** Every URL in `watch/*.md` and in the baseline's Sources section.
 - **Pending proposals.** Every id matching `W-YYYYMMDD-n` or `R-YYYYMM-n` in `watch/*.md` that does not appear in `decisions/decision-log.md`.
@@ -15,6 +16,8 @@ Runs every Monday after AO's weekly signal report. It reports only what changed 
 ## Step 1: Read the signal report
 
 Run `git clone --depth 1 https://github.com/ademiroliveira/weekly-signals /tmp/weekly-signals`. It is read-only: never commit or push there. Read the newest `signals/*.md` dated inside the window.
+
+Note the local path of the report you read (for example `/tmp/weekly-signals/signals/2026-10-26.md`). Give it to every `verifier` you spawn: its fetcher is blocked from GitHub, so it reads the local copy.
 
 For each of its items that touches a scored player, a claim (C1 to C9), a lens or an open decision, note the title, strength, URL and what it touches. Do not research those items again.
 
@@ -25,6 +28,8 @@ For each of its items that touches a scored player, a claim (C1 to C9), a lens o
 Spawn `direct-threats`, `wallet-challengers` and `pricing-naming` at once, in mode `weekly`. Give each: today, the window, the seen list, the pending proposals, and the signal-report items already covered. Give `pricing-naming` the due events as well.
 
 For each hand-off URL that no agent returned as a finding, fetch it and write it up in the contract's format yourself, or drop it if it fails the self-check.
+
+Collect every agent's **Leads** (relevant items dated before the window and not in the seen list) and any hand-off dropped only because its date is before the window. They go in the Leads section, not in Other changes, and are never the basis of a proposal.
 
 ## Step 3: Verify
 
@@ -45,13 +50,13 @@ Spawn `verifier` in mode `draft` on the file and apply every REMOVE and FIX. The
 
 ## Step 7: Commit and push
 
-Run `git add watch/ && git commit -m "watch: <window>" && git pull --rebase -q && git push`. Retry a failed push once.
+Run `python3 watch/check.py watch/*.md` (the watchlist and sources get the internal-name check too) and fix anything it flags. Then run `git add watch/ && git commit -m "watch: <window>" && git pull --rebase -q && git push`. Retry a failed push once.
 
 If the push is refused for lack of permission and the `add_repo` tool is available, call it for owner `ademiroliveira`, repo `SC-IA`, access `push`, then retry once. If it still fails, paste the whole watch file into your final message so nothing is lost, and name the failure in the summary.
 
 ## Step 8: Summary
 
-End with the summary in `<routine_summary>` tags. The first sentence is the banner: either `No score changes this week.` or `<n> proposed score changes: <short list>.` Then include:
+Send the summary as a push notification **on every run**, including weeks with no changes and runs that stopped early (skipped on the 1st, already ran, could not clone). AO wants to hear from the watch every Monday. Use the PushNotification tool with the summary in `<routine_summary>` tags, and end the final message with the same summary. The first sentence is the banner: either `No score changes this week.` or `<n> proposed score changes: <short list>.` Then include:
 - each proposed change id with one line
 - anything that contradicts the baseline
 - watchlist events that happened
@@ -100,6 +105,12 @@ End with the summary in `<routine_summary>` tags. The first sentence is the bann
 - <id>: <one line>, proposed <date>
 
 (or "None.")
+
+## Leads for the rescore
+
+- **<Title>** · <player> · may affect <claims or lenses> · <dated before the window / press only, needs a first-party page>: <one line from the page>. [tag] [link](url) · <date>
+
+(or "None." Leads are not verified findings and move no score.)
 
 ## Source log
 

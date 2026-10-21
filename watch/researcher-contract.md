@@ -17,14 +17,16 @@ Every research agent in the competitive watch follows this file. Each agent's ow
 4. **Report changes, not restatements.** A finding counts when it would move a score, contradicts the baseline, confirms something the baseline marked unverified, or adds a player, claim, risk or dated event.
 5. **Stay open to new claims.** Report competitor promises the positioning does not answer, and dimensions users clearly care about that C1 to C9 miss.
 6. **Stay in your lane.** List anything for another agent under Hand-offs with its URL.
-7. **Prefer first-party sources.** For a product change, find the company's own page before any coverage of it.
+7. **Prefer first-party sources.** For a product change, find the company's own page before any coverage of it. For a date (earnings, launch, deadline), fetch the original wire release or the company's investor-relations page before any repost.
+
+**Watchlist events are the one date exception.** A `status: event` item answering a watchlist row (it happened, moved, or now has a date) needs a visible date on the page, not one inside the window: the announcement often comes before the event.
 8. **Budget.** Weekly: about 12 searches and fetches. Monthly: about 25. Stop early when your area is covered. `No changes this week.` is a complete answer. The session shares one search limit across all agents, so do not overspend.
 
 ## Self-check before you return
 
 Drop any item that fails one of these; the verifier will drop it anyway.
 
-- [ ] A date is visible on the page and inside the window
+- [ ] A date is visible on the page and inside the window (for `status: event` items, visible is enough)
 - [ ] The URL is not in the seen list, or a new primary document moves a known story forward
 - [ ] The tag is copied from `CLAUDE.md` and fits the source
 - [ ] Every figure, name and date in the summary appears on the page
@@ -50,5 +52,6 @@ Drop any item that fails one of these; the verifier will drop it anyway.
 Then:
 
 - **Hand-offs:** URLs for other agents, one line each with the lane they belong to.
+- **Leads:** relevant items you found dated before the window and not in the seen list, one line each with title, URL, date and the claim they may affect. They are not findings; the monthly rescore follows them up.
 - **Source log:** one line per entry point or search tried: `source — ok / blocked (reason) / nothing new`. Flag any entry point whose status differs from `watch/sources.md`.
 - **Could not verify:** what you looked for and did not find.

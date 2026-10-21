@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Check a competitive-watch file before it is committed.
 
-Usage: python3 watch/check.py watch/2026-10-26.md [watch/rescore-2026-10.md ...]
+Usage: python3 watch/check.py watch/*.md
+
+Watch and rescore files get every check. Any other file (watchlist, sources,
+contract, README) gets the internal-name check only.
 
 Hard errors (exit 1): an internal name, a missing section, or a proposed
 score change without an id, a from → to, a source tag or a URL.
@@ -53,7 +56,6 @@ def check(path: pathlib.Path) -> tuple[list[str], list[str]]:
         errors.append("contains an internal name that must not be published")
 
     if kind is None:
-        errors.append("file name must be YYYY-MM-DD.md or rescore-YYYY-MM.md")
         return errors, warnings
 
     for heading in REQUIRED[kind]:

@@ -69,8 +69,9 @@ Fetch these first, then search wider. Status: **ok** = loaded in round 2 (Octobe
 | --- | --- | --- |
 | AO's weekly signal report | https://github.com/ademiroliveira/weekly-signals (`signals/`) | ok (clone, read-only) |
 | Federal Register | https://www.federalregister.gov/ | untested here (the signal report uses its API) |
+| OCC in the Federal Register (use for the OCC) | https://www.federalregister.gov/agencies/comptroller-of-the-currency · API: https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=comptroller-of-the-currency&order=newest&per_page=20 | ok (both loaded 2026-10-21, dated newest first) |
 | SEC newsroom | https://www.sec.gov/newsroom | ok |
-| OCC news releases | https://www.occ.gov/news-issuances/news-releases/ | blocked (404 on 2026-10-21; newsroom index has navigation only) |
+| OCC news releases | https://www.occ.gov/news-issuances/news-releases/ | blocked (404 on 2026-10-21; newsroom index has navigation only; index-news-releases.html also failed) |
 | Federal Reserve press releases | https://www.federalreserve.gov/newsevents/pressreleases.htm | untested |
 | Fed GENIUS Act proposal (R-1899) | https://govinfo.gov/content/pkg/FR-2026-09-29/html/2026-19860.htm | ok (long page; read with offset) |
 

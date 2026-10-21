@@ -7,7 +7,7 @@ Runs on the 1st of each month. Six agents re-check the whole market against the 
 - **Today** is the run date in Europe/Dublin. The file is named for the month just ended: a run on November 1, 2026 writes `watch/rescore-2026-10.md`.
 - **Window.** From the day after the window end recorded in the Source log of the newest `watch/rescore-*.md`, through today. With no rescore yet, start the day after the baseline's as-of date. At most 35 days; note any gap.
 - **Baseline, seen list, pending proposals and due events:** as in Step 0 of `.claude/commands/competitive-watch.md`.
-- **This month's weekly files.** Read every `watch/YYYY-MM-DD.md` inside the window. Their verified findings count as already covered.
+- **This month's weekly files.** Read every `watch/YYYY-MM-DD.md` inside the window. Their verified findings count as already covered. Their **Leads for the rescore** sections are starting points: give each lead to the agent whose lane it is in, to confirm on a first-party page and judge against the baseline.
 
 ## Step 1: Read the signal reports
 
@@ -29,7 +29,7 @@ Write `watch/rescore-<YYYY-MM>.md` in the format below. Number new proposals `R-
 
 ## Step 5: Check the draft
 
-Spawn `verifier` in mode `draft` on the file and apply every REMOVE and FIX. Then run `python3 watch/check.py watch/rescore-<YYYY-MM>.md` and fix anything it flags.
+Spawn `verifier` in mode `draft` on the file and apply every REMOVE and FIX. Then run `python3 watch/check.py watch/*.md` and fix anything it flags.
 
 ## Step 6: Update the watchlist and sources
 
@@ -41,7 +41,7 @@ As in Step 7 of the weekly command, with the message `rescore: <YYYY-MM>`.
 
 ## Step 8: Summary
 
-End with the summary in `<routine_summary>` tags. The first sentence is the banner: `<n> proposed changes for <month>: <short list>.` Then include the pending proposals with their recommendations, the biggest new claim or player if any, and any problem (a failed push, a blocked source, a gap in the window).
+Send the summary as a push notification on every run (PushNotification, summary in `<routine_summary>` tags), and end the final message with the same summary. The first sentence is the banner: `<n> proposed changes for <month>: <short list>.` Then include the pending proposals with their recommendations, the biggest new claim or player if any, and any problem (a failed push, a blocked source, a gap in the window).
 
 ---
 

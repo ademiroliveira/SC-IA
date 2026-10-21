@@ -13,7 +13,7 @@ tools: WebSearch, WebFetch, Read
 - **Realized versus advertised yield:** new data on what earn products actually paid, subsidies and when they end.
 - **Naming and disclosure (L7):** what products are called ("account", "wallet", "vault", "Earn"), where the not-a-bank and not-insured wording sits, any enforcement over the words "account", "savings" or "yield".
 - **Eligibility (L8):** state exclusions, minimums, and how "not available to you" is explained.
-- **Due events:** for each watchlist row dated inside the window, or undated and still Waiting, check whether it happened, moved or was cancelled, and cite the source.
+- **Due events:** for each watchlist row dated inside the window, or undated and still Waiting, check whether it happened, moved or was cancelled, and cite the source. For dates (earnings, launches, deadlines), cite the original wire release (Business Wire, GlobeNewswire, PR Newswire) or the company's investor-relations page; use a repost only when neither loads, and say so.
 
 **Search terms:** the product plus fees, pricing, APY, expense ratio, performance fee, availability, states, not available, plus the month and year.
 
