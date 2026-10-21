@@ -4,6 +4,8 @@ Dated events the runs check for, soonest first, then undated ones. A run changes
 
 | Date | Event | Why it matters | Affects | Status |
 | --- | --- | --- | --- | --- |
+| 2026-10-27 | Robinhood Q3 2026 results, after market close; call 5:00 PM ET (watch 2026-10-21, GlobeNewswire) | Roadmap hints on wallet, earn, agents or allocation | C1, C5′; Robinhood | Waiting |
+| 2026-10-29 | Coinbase Q3 2026 results, after market close; Q&A 2:00 p.m. PT on X (watch 2026-10-21, Business Wire repost) | Roadmap hints on Advisor, agent caps and earn | C1, C5′; Coinbase | Waiting |
 | By 2026-10-31 | OCC final rule under the GENIUS Act | Yield paid through affiliates; Coinbase's USDC rewards are the most exposed | C4, C6; Coinbase | Waiting |
 | 2026-11-06 | Senate returns from recess; the CLARITY Act could come back | Market structure and how long staff relief stays the basis | Regulation; reversal risk | Waiting |
 | 2026-11-30 | Comments close on the Fed's GENIUS Act proposal (Docket R-1899) | Presumption on yield via affiliates and white-label coins (MetaMask's mUSD is issued for it) | C4; MetaMask | Waiting |
@@ -17,5 +19,4 @@ Dated events the runs check for, soonest first, then undated ones. A run changes
 | Undated | Coinbase Advisor leaves beta or widens eligibility | Custodial allocation advice reaching more users | C1; Coinbase | Waiting |
 | Undated | MetaMask Money Account adds Aave or states US availability | C4 and eligibility | C4, L8; MetaMask | Waiting |
 | Undated | Coinbase One publishes what its account protection covers | Protection is a claim the positioning does not answer | Protection stance | Waiting |
-| Undated | Robinhood and Coinbase Q3 2026 earnings calls | Roadmap hints on wallet, earn, agents or allocation | C1, C5′ | Waiting (find the dates) |
 | Undated | a16z State of Crypto 2026 | Demand and ownership data | Primary user | Waiting |

@@ -7,14 +7,14 @@ Fetch these first, then search wider. Status: **ok** = loaded in round 2 (Octobe
 | Player | Entry point | Status |
 | --- | --- | --- |
 | Robinhood Earn | https://robinhood.com/us/en/support/articles/crypto-earn/ | ok |
-| Robinhood newsroom | https://robinhood.com/newsroom/ | untested (the HOOD Summit 2026 page loaded) |
+| Robinhood newsroom | https://robinhood.com/newsroom/ | ok |
 | Robinhood Strategies | https://robinhood.com/us/en/support/articles/about-strategies | ok |
 | Robinhood Earn subsidy (Merkl) | https://merkl.xyz/case-studies/robinhood | ok |
 | Coinbase USDC rewards | https://www.coinbase.com/usdc | ok |
 | Coinbase One tiers and coverage | https://www.coinbase.com/one | ok |
 | Coinbase Advisor | https://www.coinbase.com/advisor | ok |
 | Coinbase Earn | https://www.coinbase.com/Earn | ok |
-| Coinbase blog | https://www.coinbase.com/blog | untested |
+| Coinbase blog | https://www.coinbase.com/blog | ok (every post dated) |
 | Coinbase for Agents | https://www.coinbase.com/nl/blog/coinbase-for-agents | ok |
 | Coinbase Advisor Form CRS | https://reports.adviserinfo.sec.gov/crs/crs_342338.pdf | ok |
 | Kraken DeFi Earn FAQ | https://support.kraken.com/articles/defi-earn-faq | ok |
@@ -28,15 +28,15 @@ Fetch these first, then search wider. Status: **ok** = loaded in round 2 (Octobe
 
 | Player | Entry point | Status |
 | --- | --- | --- |
-| MetaMask news | https://metamask.io/news | untested (individual posts loaded) |
+| MetaMask news | https://metamask.io/news | ok (most listing items undated; fetch the post to date it) |
 | MetaMask Money Account help | https://support.metamask.io/trade/money-account/ | ok |
 | MetaMask Agent Wallet | https://metamask.io/news/introducing-metamask-agent-wallet | ok |
 | MetaMask Transaction Shield | https://support.metamask.io/manage-crypto/transactions/transaction-shield/ | ok |
-| Veda blog (Money Account and Kraken vaults) | https://www.veda.tech/blog | untested (individual posts loaded) |
+| Veda blog (Money Account and Kraken vaults) | https://www.veda.tech/blog | ok (listing shows no post URLs) |
 | Glider docs | https://docs.glider.fi/ | ok (site and terms pages returned only metadata) |
 | Phantom Cash | https://phantom.com/cash | ok |
 | Trust Wallet Stablecoin Earn | https://trustwallet.com/stablecoin-earn | ok |
-| Ledger Wallet blog | https://www.ledger.com/blog | untested (October 2026 post loaded) |
+| Ledger Wallet blog | https://www.ledger.com/blog | ok |
 | Tether wallet | https://tether.io/news/tether-launches-tether-wallet/ | ok |
 
 ## Prices, naming and eligibility (`pricing-naming`)
@@ -69,8 +69,8 @@ Fetch these first, then search wider. Status: **ok** = loaded in round 2 (Octobe
 | --- | --- | --- |
 | AO's weekly signal report | https://github.com/ademiroliveira/weekly-signals (`signals/`) | ok (clone, read-only) |
 | Federal Register | https://www.federalregister.gov/ | untested here (the signal report uses its API) |
-| SEC newsroom | https://www.sec.gov/newsroom | untested |
-| OCC news releases | https://www.occ.gov/news-issuances/news-releases/ | untested |
+| SEC newsroom | https://www.sec.gov/newsroom | ok |
+| OCC news releases | https://www.occ.gov/news-issuances/news-releases/ | blocked (404 on 2026-10-21; newsroom index has navigation only) |
 | Federal Reserve press releases | https://www.federalreserve.gov/newsevents/pressreleases.htm | untested |
 | Fed GENIUS Act proposal (R-1899) | https://govinfo.gov/content/pkg/FR-2026-09-29/html/2026-19860.htm | ok (long page; read with offset) |
 
