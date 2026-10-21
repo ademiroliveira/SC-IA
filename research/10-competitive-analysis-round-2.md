@@ -60,6 +60,36 @@ No competitor fully meets C1, and the only C5 scores above No are Partial. C5 no
 
 **Also checked, lower threat or not in the US.** Trust Wallet Earn (excludes the US), Uniswap Earn (Gauntlet vaults; US not stated), Tether's wallet (no earn), Exodus Pay (spending and rewards), Jupiter Wallet Auto-Earn (a single sweep rule), Zerion (an agent tool for developers), Nunchuk and Ready (limits and guardian recovery), Kubera (a net-worth tracker that covers wallets and brokerages, with no targets), and Parrot (a US adviser app offering Bitwise crypto models).
 
+## Category matrix, revised
+
+Eight core categories and one adjacent now compete for the target user, up from round 1's six, and none reaches Yes on both the slice (C1) and keys (C2). The three new categories all come at that gap from different sides: advice from custody, agents through a model's judgment, and automated portfolios from self-custody outside the US.
+
+Each cell shows the best score any product in the category reaches, so a row is the category's frontier, not its typical product. **By custody** means the provider solves it by holding the assets; **—** means not applicable. C5′ replaces C5, and C6 to C9 are the candidate claims under New claims.
+
+| Category and players | Job they compete for | C1 Slice | C2 Keys | C3 No ops | C4 Legible earn | C5′ Rules, exactly | C6 Cost seen | C7 Protected exits | C8 Proven recovery | C9 Records |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Brokerage crypto and ETFs** · Schwab, E\*Trade, Fidelity, spot and staking ETFs | "Put crypto next to my stocks, and earn on it with a tax form" | Partial | No | Yes | Partial | No | Partial | By custody | By custody | Partial |
+| **Advice and model portfolios** (new) · Coinbase Advisor, Wealthfront, Betterment, Parrot, Robinhood Strategies | "Tell me what to hold, and keep it on target" | Yes | No | Yes | No | Partial | Partial | By custody | By custody | Partial |
+| **Exchange apps with embedded self-custody earn** (merged) · Robinhood Earn, Coinbase lending, Kraken DeFi Earn | "Earn on my dollars in the app I already use" | No | Yes | Yes | Partial | No | Partial | No | No | No |
+| **AI agents acting inside limits** (new) · Robinhood Agents, Coinbase for Agents, MetaMask Agent Wallet | "Act for me, within limits I set" | No | Yes | Partial | No | Partial | No | Partial | No | No |
+| **Automated portfolios in self-custody, outside the US** (new) · Glider, Bitwise ATPs | "Keep my onchain portfolio on target automatically" | Partial | Partial | Yes | No | Partial | No | No | No | No |
+| **Self-custody wallets** · MetaMask Money Account, Phantom, Coinbase Wallet, Trust Wallet Earn (outside the US), Uniswap | "Own everything onchain, and trade or spend it" | No | Yes | Partial | Partial | No | No | No | No | No |
+| **Investor-grade custody** · Casa, Bitkey, Unchained, Nunchuk | "Protect a large holding from loss, theft and death" | No | Yes | Partial | No | Partial | No | Yes | Partial | No |
+| **DeFi front ends and stacks** · Aave, Morpho vaults, Ledger Wallet, Rabby, Safe | "Best rate, full control" | No | Yes | No | Partial | No | Partial | Partial | No | No |
+| **Tracking and tax tools** (adjacent) · Kubera, CoinTracker, Koinly | "See it all in one place, and file my taxes" | Partial | — | — | — | No | — | — | No | Partial |
+| **SC-IA, as positioned** (target, not shipped) | "Hold a sized slice in my own keys, under my rules" | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+
+**Reading down the columns.** C5′, C6, C8 and C9 never rise above Partial in any category, and C7 reaches Yes only in investor-grade custody, mostly for bitcoin. The custodial categories answer protected exits and recovery by holding the assets, which is the answer self-custody gives up.
+
+**What changed from round 1's six groups.**
+
+- **Merged.** "Integrated onchain offerings" and "wallet-first challengers" become one category, because Robinhood, Coinbase and Kraken all now put self-custody earn inside the main app, on an embedded or smart wallet.
+- **New.** Advice and model portfolios, AI agents acting inside limits, and automated portfolios in self-custody. Tracking and tax tools move up from adjacent, because they come closest to C1 and C9 outside custody.
+- **Moved.** Coinbase Wallet (formerly Base App) joins self-custody wallets; its direction is trading. MetaMask's Agent Wallet is counted under agents, which is where the scorecard's Partial on C5 for MetaMask comes from.
+- **Expanded.** Brokerage adds Fidelity and staking ether ETFs; investor-grade custody adds Bitkey, Unchained and Nunchuk.
+- **Rescored.** Unchained drops from Partial to No on C1: an IRA wrapper sits inside a retirement allocation but shows no target, drift or rebalancing.
+- **Watch.** Registered advisers self-custodying client crypto, if the SEC's October 1 custody proposal is adopted. Round 1's tokenized treasury and fintech stablecoin yield groups stay adjacent; reward models like PayPal's face the new stablecoin rules.
+
 ## The trust layer, by lens
 
 None of the four main competitors meets L1 (cost beside return), offers one-tap revoke (L2), or rehearses recovery (L4); the best answers on friction and recovery come from investor-grade products.
