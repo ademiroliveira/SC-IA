@@ -35,6 +35,10 @@ Research, competitive analysis, problem framing and product design strategy for 
 
 Numbers are the reading order, and each doc builds on the ones before it, with one exception: strategy v2 (04) was revised after 07, 08 and 09 and draws on them. New docs continue the sequence (05, 06, …) in the folder that fits: `research/` for evidence, `strategy/` for framing and direction. The decision log is unnumbered because it runs alongside all of them.
 
+## Competitive watch
+
+Scheduled agents keep the competitive analysis current between rounds. Every Monday a weekly watch reads that morning's weekly signal report and checks the scored competitors, new entrants, prices and dated events. On the 1st of each month a rescore re-checks the whole market. Both write to `watch/` and only propose score changes; AO accepts or rejects them by id. Details are in [watch/README.md](watch/README.md), and the rules are in [CLAUDE.md](CLAUDE.md).
+
 ## Repository layout
 
 ```
@@ -42,6 +46,9 @@ research/    evidence: market research, competitive analysis (rounds 1 and 2), a
 strategy/    problem framing, the design strategy that answers it, the experience map, the assumption map and the critical research questions
              (images in strategy/assets/)
 decisions/   decision log: decided and open
+watch/       weekly watch and monthly rescore files, the watchlist, entry points and the researcher contract
+.claude/     the watch's research agents and commands
+CLAUDE.md    rules for any session in this repo: vocabulary, claims, scores, source tags, the watch
 ```
 
 ## Next steps
