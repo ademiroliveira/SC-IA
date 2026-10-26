@@ -6,7 +6,7 @@ Dated events the runs check for, soonest first, then undated ones. A run changes
 | --- | --- | --- | --- | --- |
 | 2026-10-27 | Robinhood Q3 2026 results, after market close; call 5:00 PM ET (watch 2026-10-21, GlobeNewswire) | Roadmap hints on wallet, earn, agents or allocation | C1, C5′; Robinhood | Waiting |
 | 2026-10-29 | Coinbase Q3 2026 results, after market close; Q&A 2:00 p.m. PT on X (watch 2026-10-21, Business Wire repost) | Roadmap hints on Advisor, agent caps and earn | C1, C5′; Coinbase | Waiting |
-| By 2026-10-31 | OCC final rule under the GENIUS Act | Yield paid through affiliates; Coinbase's USDC rewards are the most exposed | C4, C6; Coinbase | Waiting |
+| By 2026-10-31 | OCC final rule under the GENIUS Act | Yield paid through affiliates; Coinbase's USDC rewards are the most exposed | C4, C6; Coinbase | Happened 2026-10-21: OCC NR 2026-92, effective 2027-01-18 (watch 2026-10-26) |
 | 2026-11-06 | Senate returns from recess; the CLARITY Act could come back | Market structure and how long staff relief stays the basis | Regulation; reversal risk | Waiting |
 | 2026-11-30 | Comments close on the Fed's GENIUS Act proposal (Docket R-1899) | Presumption on yield via affiliates and white-label coins (MetaMask's mUSD is issued for it) | C4; MetaMask | Waiting |
 | 2026-12-07 | Comments close on the SEC custody proposal | Registered advisers self-custodying client crypto: a possible new category | Category matrix | Waiting |
