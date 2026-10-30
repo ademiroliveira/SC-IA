@@ -1,6 +1,9 @@
-"""Build a single-file, offline web version of the Wallet Time Machine deck.
+"""Build the offline web version of the Wallet Time Machine decks: one page per session plus a landing page.
 
-Usage: python3 -I build.py <deck project dir> <fonts dir> <out.html>
+Usage: python3 -I build.py <fonts dir> <out dir> <session 1 deck dir> <session 2 deck dir> <session 3 deck dir>
+
+Each deck dir holds deck.json and slides/<id>.html in the Claude Slides format.
+Fonts: the unpacked Fontsource npm packages for Inter Tight (variable) and JetBrains Mono.
 """
 import base64
 import json
@@ -12,62 +15,46 @@ from bs4 import BeautifulSoup
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from details import MARKS, REPORT, resolved  # noqa: E402
 
-deck_dir, fonts_dir, out_path = map(pathlib.Path, sys.argv[1:4])
-deck = json.loads((deck_dir / "deck.json").read_text(encoding="utf-8"))
-order = deck["order"]
-total = len(order)
+REPO = "https://github.com/ademiroliveira/SC-IA/blob/main/time-machine-workshop/"
+SESSIONS = [
+    ("1-the-past", "The past", "Where wallets came from, and which next milestone we want to drive or be part of."),
+    ("2-the-futures", "The futures", "Two opposing worlds for 2040, 2035 and 2030, with our milestones inside them."),
+    ("3-the-way-back", "The way back", "From 2040 back to two or three moves we make now, each with an owner and a first step."),
+]
+
+fonts_dir, out_dir = pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2])
+deck_dirs = [pathlib.Path(p) for p in sys.argv[3:]]
+if len(deck_dirs) != len(SESSIONS):
+    sys.exit(f"expected {len(SESSIONS)} deck dirs, got {len(deck_dirs)}")
+out_dir.mkdir(parents=True, exist_ok=True)
 
 
 def font(path):
     return "data:font/woff2;base64," + base64.b64encode(path.read_bytes()).decode()
 
 
-inter = next(fonts_dir.glob("fontsource-variable-inter-tight-*/files/inter-tight-latin-wght-normal.woff2"))
-mono400 = next(fonts_dir.glob("fontsource-jetbrains-mono-*/files/jetbrains-mono-latin-400-normal.woff2"))
-mono500 = next(fonts_dir.glob("fontsource-jetbrains-mono-*/files/jetbrains-mono-latin-500-normal.woff2"))
-fonts = [
-    ["Inter Tight", font(inter), "100 900"],
-    ["JetBrains Mono", font(mono400), "400"],
-    ["JetBrains Mono", font(mono500), "500"],
+FONTS = [
+    ["Inter Tight", font(next(fonts_dir.glob("fontsource-variable-inter-tight-*/files/inter-tight-latin-wght-normal.woff2"))), "100 900"],
+    ["JetBrains Mono", font(next(fonts_dir.glob("fontsource-jetbrains-mono-*/files/jetbrains-mono-latin-400-normal.woff2"))), "400"],
+    ["JetBrains Mono", font(next(fonts_dir.glob("fontsource-jetbrains-mono-*/files/jetbrains-mono-latin-500-normal.woff2"))), "500"],
 ]
+FONT_JS = """
+for (const [family, src, weight] of DATA.fonts) {
+  const face = new FontFace(family, 'url(' + src + ')', {weight, style: 'normal', display: 'swap'});
+  document.fonts.add(face); face.load().catch(() => {});
+}
+"""
 
 marks_by_slide = {}
 for slide_id, text, key in MARKS:
     marks_by_slide.setdefault(slide_id, []).append((text, key))
 
-slides_html = []
-for index, slide_id in enumerate(order, 1):
-    soup = BeautifulSoup((deck_dir / "slides" / f"{slide_id}.html").read_text(encoding="utf-8"), "html.parser")
-    section = soup.find("section")
-    notes = section.find("aside")
-    if notes:
-        notes.decompose()
-    section["class"] = ["slide"]
-    section["data-index"] = str(index)
-    section["role"] = "region"
-    section["aria-roledescription"] = "slide"
-    section["aria-label"] = f"{index} of {total}"
-    for text, key in marks_by_slide.get(slide_id, []):
-        target = next(
-            (t for t in section.find_all(["p", "h3"]) if t.get_text(strip=True) == text),
-            None,
-        )
-        if target is None:
-            sys.exit(f"mark not found: {slide_id!r} {text!r}")
-        cell = target.parent
-        cell["data-detail"] = key
-        cell["role"] = "button"
-        cell["tabindex"] = "0"
-        cell["aria-label"] = f"More about {text}"
-        marker = soup.new_tag("span", attrs={"class": "more", "aria-hidden": "true"})
-        marker.string = "+"
-        target.append(marker)
-    slides_html.append(str(section))
 
-data = json.dumps({"details": resolved(), "report": REPORT, "fonts": fonts}, ensure_ascii=False)
-data = data.replace("</", "<\\/")
+def json_script(obj):
+    return json.dumps(obj, ensure_ascii=False).replace("</", "<\\/")
 
-CSS = """
+
+DECK_CSS = """
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:100%;height:100%;overflow:hidden;background:#0f1418}
 body{font-family:'Inter Tight',Arial,sans-serif;color:#192026;-webkit-font-smoothing:antialiased}
@@ -98,25 +85,22 @@ a{color:inherit}
 #drawer .report a{text-transform:none;letter-spacing:0;font-family:'Inter Tight',Arial,sans-serif;color:#192026}
 #chrome{position:fixed;right:16px;bottom:16px;display:flex;gap:8px;opacity:0;transition:opacity .3s ease}
 #chrome.show,#chrome:focus-within{opacity:1}
-#chrome button{width:44px;height:44px;border:0;background:rgba(25,32,38,.85);color:#EEE5D7;font-family:'JetBrains Mono','Courier New',monospace;font-size:18px;cursor:pointer}
-#chrome button:hover{background:#416AEE}
+#chrome button,#chrome a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:44px;padding:0 12px;border:0;background:rgba(25,32,38,.85);color:#EEE5D7;font-family:'JetBrains Mono','Courier New',monospace;font-size:14px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;cursor:pointer}
+#chrome button{font-size:18px;letter-spacing:0}
+#chrome button:hover,#chrome a:hover{background:#416AEE}
 body.detail-open #chrome{display:none}
 #hint{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:rgba(25,32,38,.9);color:#EEE5D7;font-family:'JetBrains Mono','Courier New',monospace;font-size:14px;padding:10px 16px;white-space:nowrap;transition:opacity .6s ease}
 #hint.gone{opacity:0;pointer-events:none}
 """
 
-JS = r"""
+DECK_JS = r"""
 const DATA = JSON.parse(document.getElementById('data').textContent);
-for (const [family, src, weight] of DATA.fonts) {
-  const face = new FontFace(family, 'url(' + src + ')', {weight, style: 'normal', display: 'swap'});
-  document.fonts.add(face); face.load().catch(() => {});
-}
+""" + FONT_JS + r"""
 const stage = document.getElementById('stage');
 const slides = [...stage.querySelectorAll('.slide')];
 const drawer = document.getElementById('drawer');
 const scrim = document.getElementById('scrim');
 let current = 0;
-
 function fit() {
   const s = Math.min(innerWidth / 1920, innerHeight / 1080);
   stage.style.transform = 'translate(-50%, -50%) scale(' + s + ')';
@@ -163,7 +147,6 @@ function closeDetail() {
   if (lastFocus) lastFocus.focus();
 }
 const isOpen = () => drawer.classList.contains('open');
-
 stage.addEventListener('click', e => {
   const cell = e.target.closest('[data-detail]');
   if (cell) openDetail(cell.dataset.detail, cell);
@@ -207,33 +190,136 @@ setTimeout(() => document.getElementById('hint').classList.add('gone'), 4500);
 fit(); fromHash();
 """
 
-page = f"""<!doctype html>
+
+def build_deck(deck_dir, slug, number, label, total_sessions):
+    deck = json.loads((deck_dir / "deck.json").read_text(encoding="utf-8"))
+    order = deck["order"]
+    parts, marks_used = [], 0
+    for index, slide_id in enumerate(order, 1):
+        soup = BeautifulSoup((deck_dir / "slides" / f"{slide_id}.html").read_text(encoding="utf-8"), "html.parser")
+        section = soup.find("section")
+        notes = section.find("aside")
+        if notes:
+            notes.decompose()
+        section["class"] = ["slide"]
+        section["data-index"] = str(index)
+        section["role"] = "region"
+        section["aria-roledescription"] = "slide"
+        section["aria-label"] = f"{index} of {len(order)}"
+        for text, key in marks_by_slide.get(slide_id, []):
+            target = next((t for t in section.find_all(["p", "h3"]) if t.get_text(strip=True) == text), None)
+            if target is None:
+                sys.exit(f"mark not found: {slug} {slide_id!r} {text!r}")
+            cell = target.parent
+            cell["data-detail"] = key
+            cell["role"] = "button"
+            cell["tabindex"] = "0"
+            cell["aria-label"] = f"More about {text}"
+            marker = soup.new_tag("span", attrs={"class": "more", "aria-hidden": "true"})
+            marker.string = "+"
+            target.append(marker)
+            marks_used += 1
+        parts.append(str(section))
+    data = json_script({"details": resolved() if marks_used else {}, "report": REPORT, "fonts": FONTS})
+    hint = "← → to move · click + for detail · F for full screen" if marks_used else "← → to move · F for full screen"
+    title = deck["title"]
+    page = f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content="Session {number} of {total_sessions} of the Wallet Time Machine futures workshop: {label.lower()}.">
+<style>{DECK_CSS}</style>
+</head>
+<body>
+<main id="stage" aria-label="{title} slides">
+{chr(10).join(parts)}
+</main>
+<div id="scrim"></div>
+<aside id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true"></aside>
+<nav id="chrome" aria-label="Slide controls">
+<a href="index.html">All sessions</a>
+<button type="button" id="prev" aria-label="Previous slide">←</button>
+<button type="button" id="next" aria-label="Next slide">→</button>
+<button type="button" id="full" aria-label="Full screen">⛶</button>
+</nav>
+<p id="hint">{hint}</p>
+<noscript><p style="position:fixed;inset:auto 0 0 0;padding:16px;background:#E74D3D;color:#EEE5D7;font-family:Arial,sans-serif">This deck needs JavaScript to move between slides.</p></noscript>
+<script type="application/json" id="data">{data}</script>
+<script>{DECK_JS}</script>
+</body>
+</html>
+"""
+    out = out_dir / f"{slug}.html"
+    out.write_text(page, encoding="utf-8")
+    print(f"wrote {out} ({out.stat().st_size // 1024} KB, {len(order)} slides, {marks_used} detail links)")
+    return len(order)
+
+
+counts = [build_deck(d, slug, n, label, len(SESSIONS)) for n, (d, (slug, label, _)) in enumerate(zip(deck_dirs, SESSIONS), 1)]
+
+LANDING_CSS = """
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#EEE5D7;color:#192026;font-family:'Inter Tight',Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding:clamp(24px,6vw,80px) clamp(16px,5vw,64px) 56px;display:flex;flex-direction:column;gap:clamp(40px,7vw,80px)}
+.mono{font-family:'JetBrains Mono','Courier New',monospace;font-size:14px;letter-spacing:1px;text-transform:uppercase}
+header{display:flex;flex-direction:column;gap:20px;border-top:2px solid #192026;padding-top:14px;position:relative}
+header .mark{position:absolute;right:0;top:14px;width:clamp(28px,4vw,48px);height:clamp(28px,4vw,48px);background:#E74D3D}
+header .mono{padding-right:clamp(44px,6vw,72px)}
+h1{font-size:clamp(44px,9vw,104px);font-weight:700;line-height:1;letter-spacing:-.03em;max-width:12ch}
+.lede{font-size:clamp(18px,2.2vw,24px);line-height:1.4;color:#4E555B;max-width:40ch}
+.line{display:grid;grid-template-columns:5fr 1fr 4fr;align-items:center;gap:6px}
+.line i{display:block;height:6px;background:#192026}.line i.today{height:16px;background:#E74D3D}.line i.future{background:#416AEE}
+.sessions{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.session{display:flex;flex-direction:column;gap:12px;border-top:2px solid #192026;padding-top:18px;text-decoration:none;color:inherit}
+.session .num{font-size:clamp(56px,8vw,96px);font-weight:700;line-height:1;letter-spacing:-.03em;color:#416AEE}
+.session h2{font-size:clamp(26px,3vw,34px);font-weight:700;line-height:1.1;letter-spacing:-.01em}
+.session p{font-size:18px;line-height:1.45;color:#4E555B}
+.session .go{margin-top:auto;padding-top:8px;color:#192026}
+.session:hover .num,.session:focus-visible .num{color:#E74D3D}
+.session:focus-visible{outline:3px solid #416AEE;outline-offset:8px}
+.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.more a{display:flex;flex-direction:column;gap:8px;border-top:2px solid #192026;padding-top:14px;text-decoration:none;color:inherit}
+.more a span:last-child{font-size:20px;font-weight:700;text-decoration:underline;text-decoration-color:#416AEE;text-decoration-thickness:2px;text-underline-offset:4px}
+footer{color:#4E555B;line-height:1.6}
+"""
+
+cards = "\n".join(
+    f"""<a class="session" href="{slug}.html"><span class="num">{n}</span><h2>{label}</h2><p>{blurb}</p><span class="mono go">{count} slides · Open →</span></a>"""
+    for n, ((slug, label, blurb), count) in enumerate(zip(SESSIONS, counts), 1)
+)
+landing = f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wallet Time Machine</title>
-<meta name="description" content="How crypto wallets evolved, and where they could go by 2030, 2035 and 2040. Slides for a two-session futures workshop.">
-<style>{CSS}</style>
+<meta name="description" content="A three-session futures workshop on crypto wallets: the past, two futures for 2030 to 2040, and the way back to moves worth making now.">
+<style>{LANDING_CSS}</style>
 </head>
 <body>
-<main id="stage" aria-label="Wallet Time Machine slides">
-{chr(10).join(slides_html)}
-</main>
-<div id="scrim"></div>
-<aside id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true"></aside>
-<nav id="chrome" aria-label="Slide controls">
-<button type="button" id="prev" aria-label="Previous slide">←</button>
-<button type="button" id="next" aria-label="Next slide">→</button>
-<button type="button" id="full" aria-label="Full screen">⛶</button>
+<div class="wrap">
+<header>
+<span class="mark" aria-hidden="true"></span>
+<p class="mono">Futures workshop · Three sessions · 60 minutes each</p>
+<h1>Wallet Time Machine</h1>
+<p class="lede">How crypto wallets evolved, where they could go by 2030, 2035 and 2040, and the moves worth making now.</p>
+</header>
+<div class="line" aria-hidden="true"><i></i><i class="today"></i><i class="future"></i></div>
+<nav class="sessions" aria-label="Sessions">
+{cards}
 </nav>
-<p id="hint">← → to move · click + for detail · F for full screen</p>
-<noscript><p style="position:fixed;inset:auto 0 0 0;padding:16px;background:#E74D3D;color:#EEE5D7;font-family:Arial,sans-serif">This deck needs JavaScript to move between slides.</p></noscript>
-<script type="application/json" id="data">{data}</script>
-<script>{JS}</script>
+<section class="more" aria-label="Background">
+<a href="{REPO}facilitation-guide.md"><span class="mono">For the facilitator</span><span>Facilitation guide</span></a>
+<a href="{REPO}wallet-evolution-research.md"><span class="mono">The evidence</span><span>Wallet evolution research</span></a>
+</section>
+<footer class="mono">Arrow keys move between slides · Each slide has its own link · Works offline once downloaded</footer>
+</div>
+<script type="application/json" id="data">{json_script({"fonts": FONTS})}</script>
+<script>const DATA = JSON.parse(document.getElementById('data').textContent);{FONT_JS}</script>
 </body>
 </html>
 """
-
-out_path.write_text(page, encoding="utf-8")
-print(f"wrote {out_path} ({out_path.stat().st_size // 1024} KB, {total} slides, {len(MARKS)} detail links)")
+(out_dir / "index.html").write_text(landing, encoding="utf-8")
+print(f"wrote {out_dir / 'index.html'} (landing)")
