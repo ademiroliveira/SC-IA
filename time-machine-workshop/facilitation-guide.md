@@ -88,15 +88,15 @@ Set all three dates and send the pre-read two days before session 1, and put up 
 
 ## Session 1: The past (60 min)
 
-Session 1 walks the room through wallet history as a series of design problems, with a guess before each big number. It then asks which next milestone the team wants to drive or be part of, and ends with three or four milestone themes on the wall.
+Session 1 walks the room through wallet history as a series of design problems, with a guess before each big number, and lets the room draw the story out of it. It then asks which next milestone the team wants to drive or be part of, and ends by writing the top theme into that story as its next line.
 
 | Minutes | Block | What happens | Output |
 | --- | --- | --- | --- |
 | 0-5 | Frame | Goal, the three sessions, ground rules | Shared starting point |
-| 5-30 | The past and the question | Four eras, three guesses, five open problems, then the question, the tags, the frame and examples | A calibrated sense of how often we are wrong |
-| 30-38 | Write | Silent writing: go wide, then rewrite the best two or three in the frame | Two or three stickies each |
-| 38-52 | Place and cluster | Three tests, then read, place by year and tag, cluster | Clusters named From ___ to ___ |
-| 52-60 | Vote and close | Silent dot vote on what we'd regret not driving, name the themes, set homework | Three or four milestone themes |
+| 5-30 | The past and the question | Timeline, four eras with three guesses, the story so far, five open problems, then the question, the frame and a real example from 2012 | A calibrated sense of how often we are wrong |
+| 30-38 | Write | Go wide (4 min), a minute on the tags, then sharpen (3 min) | Two or three sharpened stickies each |
+| 38-52 | Place and cluster | Read, place by year and tag, cluster | Clusters named From ___ to ___ |
+| 52-60 | Vote and close | Silent dot vote on what we'd regret not driving, the top theme written into the story, homework | Three or four milestone themes |
 
 ### Block 1: Frame (0-5)
 
@@ -106,44 +106,45 @@ Session 1 walks the room through wallet history as a series of design problems, 
 
 ### Block 2: The past and the question (5-30)
 
-- Present the history as problems that moved, not technology that shipped: "don't lose the file," then "write down 12 words," then "understand what you are signing," then "decide what this account, app or agent may do."
-- Walk the milestones from 2009 to 2026 in about two minutes, then the four eras: keys became portable (2012-14), the wallet became the approval layer (2016-24), accounts became programmable (2023-25), and interfaces and agents became the risk (2025-26).
+- Walk the milestones from 2009 to 2026 in about two minutes, then the four eras: keys became portable (2012-14), the wallet became the approval layer (2016-24), accounts became programmable (2023-25), and interfaces and agents became the risk (2025-26). Each era ends on the design problem it left behind.
 - Guess before each big number. Give 30 seconds to write a guess on a sticky, hear two or three, then reveal: lost bitcoin, drainer losses in 2025, agent payments on Base. The gap between the guesses and the answer is the point.
 - Read the caveats aloud: the lost-bitcoin share is an estimate, drainer losses fell mainly on lower market activity, and agent payment totals differ across trackers.
+- After the eras, pull them into the story so far: each shift moved the main design problem, from "don't lose the file" to "write down 12 words" to "understand what you are signing" to "decide what this account, app or agent may do." Pause on the last row and ask what the next line is, without taking answers yet.
 - Name the five open problems today: recovery, signing comprehension, supply chain, delegation sprawl, cross-chain complexity. Ask which one each person feels most in their own product.
 - Ask: "In 2012, which of these shifts would this room have predicted?" Expect almost none. Say: "Ours will be wrong too. The value is in the reasoning."
 - Put up the question: "Which next milestone do we want to drive or be part of? Which problem do we want to own?" A milestone is a shift in what wallets are or do, anywhere from 2027 to 2040, not a feature.
-- Explain the tags. Lead: we make it happen. Join: we ride a shift others drive, such as a new standard. Watch: it matters, but it isn't ours to move. Ask people not to tag everything Lead.
 - Show the frame: "By [year], [who] can [do what] without [what they do today]." The year is when it becomes normal, the who is a person, and the without is the burden that goes away. Hand out the milestone cards.
-- Read one weak and strong pair from the examples slide, and say they are examples, not suggestions.
-- Show the real one, written as a wallet team might have in 2012: "By 2015, anyone can restore every account from one backup, without saving each new key separately," tagged Join. It passes all three tests, and it came true, yet it moved the problem: the 12 words became the thing to protect. It is from the past on purpose, so it shows a whole sticky without giving people a future idea to copy.
+- Show the real one, written as a wallet team might have in 2012. The topic "better backups" becomes "By 2015, anyone can restore every account from one backup, without saving each new key separately," tagged Join. It passes all three tests and it came true, yet it moved the problem: the 12 words became the thing to protect. It is from the past on purpose, so it shows a whole sticky without giving people a future idea to copy.
+- Watch the clock: the eras get about 20 minutes, so keep each one moving.
 
 ### Block 3: Write (30-38)
 
-- Eight minutes of silent writing, alone, before anyone speaks, so the loudest idea does not set the agenda.
-- Call the timing out loud: one minute to read the frame and the starters, four to write as many as they can, two to rewrite the best two or three in the frame, one to add why us and a tag. Going wide first, then sharpening, gives better stickies than asking for polished ones from the start.
-- Leave the starters on screen: what comes after "decide what this account, app or agent may do"; which open problem we want to make boring, and by when; what we explain to users today that nobody will need explained in 2032; and one milestone you'd be slightly embarrassed to say out loud.
+- **Go wide, 4 minutes.** Silent writing, alone, before anyone speaks, so the loudest idea does not set the agenda. One milestone per sticky, as many as people can, rough is fine. Leave the starters on screen: what comes after "decide what this account, app or agent may do"; which open problem we want to make boring, and by when; what we explain to users today that nobody will need explained in 2032; and one milestone you'd be slightly embarrassed to say out loud.
+- **Tags, 1 minute.** Pause the writing. Lead: we make it happen. Join: we ride a shift others drive, such as a new standard. Watch: it matters, but it isn't ours to move. Ask people not to tag everything Lead.
+- **Sharpen, 3 minutes.** Back to silence. Each person picks their best two or three, rewrites them in the frame and runs the three tests: shift, not feature (could it be in a competitor's release notes?); normal, not demo (the year it becomes normal, not first shown); and the tag holds (if we stopped, would it still happen? Then it's Join or Watch). Then a tag and one line on why us.
 - Keep laptops and LLMs closed. A model's answer is the average future, the very thing the guesses taught the room to distrust. The LLM prompts come after the session.
 
 ### Block 4: Place and cluster (38-52)
 
-- Start with the three tests, one minute: shift, not feature (could it be in a competitor's release notes?); normal, not demo (the year it becomes normal, not first shown); and the tag holds (if we stopped tomorrow, would it still happen? Then it's Join or Watch). People rewrite or retag their own stickies on the spot.
 - Each person reads each sticky in one sentence, then stops, and places it on the milestone band by year and lane. No debate yet.
 - Cluster stickies that describe the same shift, not the same technology. Name each cluster From ___ to ___, the way the history moved from one problem to the next.
 - If one lane is crowded and another is empty, say so. That is a finding too.
 
 ### Block 5: Vote and close (52-60)
 
+### Outputs
+
 - Read the voting question out loud: "Which of these would we regret not driving?" Without it, some people vote for what is likely and others for what is exciting, and the result mixes the two.
 - Silent dot vote, then name the top three or four clusters as themes, each with its tag and year: 6 minutes. Rules are in Scoring and voting.
-- Say: "These themes are hypotheses. Sessions 2 and 3 will test them."
+- Write the top theme into the last row of the story, live, with its year, and read the whole line out loud, from "don't lose the file" to our theme. Say: "These themes are hypotheses. Sessions 2 and 3 will test them."
 - Close in 2 minutes: each person brings two real signals for or against the themes, and runs the stress-test prompt on one theme, about two people per theme. Set the session 2 date before people leave.
 
 ### Outputs
 
 - Every milestone on the band, by year and by Lead, Join or Watch
-- Named clusters
+- Clusters named From ___ to ___
 - Three or four themes, each with a tag and a year
+- The top theme written into the story as its next line
 
 ## Between sessions 1 and 2
 
@@ -426,7 +427,8 @@ Futures workshops usually go wrong in a handful of ways. Each has a sign to watc
 
 | Risk | Sign | Fix |
 | --- | --- | --- |
-| Stickies are topics, not milestones | "Better recovery", "AI agents" | Show the frame and the examples before writing; run the three tests before placing |
+| Stickies are topics, not milestones | "Better recovery", "AI agents" | Show the frame and the 2012 example before writing; run the three tests while sharpening |
+| The history drags | People stop guessing out loud by the third era | Keep each era to about five minutes and let the guesses carry it; the story slide is the summary, so don't summarise along the way |
 | Session 1 anchors on the near term | Milestones read like next year's features | Ask which problem we want to own, and treat the themes as hypotheses |
 | Everyone writes the same future | The same three ideas in the same words | Keep LLMs out until after writing; ask for one milestone people would be embarrassed to say out loud |
 | Teams build the world they like | Every milestone grows in both worlds | Place each team in the world least friendly to its favourite milestone |
