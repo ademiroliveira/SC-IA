@@ -13,6 +13,7 @@ Every research agent in the competitive watch follows this file. Each agent's ow
 
 1. **Know the baseline.** Read the scorecard, the category matrix and the trust-layer table in the baseline (`CLAUDE.md` says where) for the players you cover.
 2. **Start with your entry points** in `watch/sources.md`. Fetch them and look for anything that changed inside the window. Then search wider with WebSearch, adding the month and year to your terms.
+   - **If a direct fetch fails** (a permission prompt, a timeout or `PROVENANCE_REQUIRED`), do not mark the entry point blocked yet. Find the same page with WebSearch (its title, or the site plus the topic) and fetch it from the search result. In unattended runs, pages reached through a search have loaded when direct fetches of the same entry points did not. Spend at most one search per failed entry point. In the Source log, write `ok via search` or `blocked (direct and via search)`. Only the second changes a status in `watch/sources.md`.
 3. **Check each candidate.** Fetch it. Confirm a publication or "last updated" date is visible and inside the window. Check it against the seen list. Pick the tag from `CLAUDE.md`. Write the summary from the page only.
 4. **Report changes, not restatements.** A finding counts when it would move a score, contradicts the baseline, confirms something the baseline marked unverified, or adds a player, claim, risk or dated event.
 5. **Stay open to new claims.** Report competitor promises the positioning does not answer, and dimensions users clearly care about that C1 to C9 miss.
