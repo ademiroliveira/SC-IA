@@ -9,7 +9,7 @@ Three 60-minute sessions take eight people from wallet history to two or three c
 | Mode | Look back, then aim | Diverge | Converge |
 | Work | History with guess-first numbers, then milestones written in one frame and tagged Lead, Join or Watch | Two world strips for 2040, 2035 and 2030 | Backcast, wildcard, pre-mortem, vote |
 | Output | Three or four milestone themes on the wall | Two world strips with our milestones in them | Two or three committed moves with owners |
-| Deck | Wallet Time Machine 1: The past, 33 slides | Wallet Time Machine 2: The futures, 15 slides | Wallet Time Machine 3: The way back, 15 slides |
+| Deck | Wallet Time Machine 1: The past, 30 slides | Wallet Time Machine 2: The futures, 15 slides | Wallet Time Machine 3: The way back, 15 slides |
 
 **Method.** Session 1 asks which milestone we want to drive before any futures work, so the team starts from its own ambition. Session 2 starts far out, at 2040, which stops people extrapolating today. Session 3 asks what had to be true at each step back, then tests the ambition against every world.
 
@@ -100,18 +100,18 @@ Session 1 walks the room through wallet history as a series of design problems, 
 
 ### Block 1: Frame (0-5)
 
-- Say: "We are not predicting the future. Today we look back and name the milestones we want to drive. Next time we build two futures, and in the last session we walk back to the moves we make now."
-- Show the three sessions and the wall that stays up between them.
+- Say: "We are not predicting the future. Today we look back at how wallets got here, and name the next milestone we want to drive or be part of."
+- Mention in one sentence that two more sessions will test what we name today, then keep the focus on today. Deck 1 shows session 1 only; the three-session map is for you, not the room.
 - Ground rules: be specific, not clever; write before you talk; no milestone is wrong today.
 
 ### Block 2: The past and the question (5-30)
 
-- Walk the milestones from 2009 to 2026 in about two minutes, then the four eras: keys became portable (2012-14), the wallet became the approval layer (2016-24), accounts became programmable (2023-25), and interfaces and agents became the risk (2025-26). Each era ends on the design problem it left behind.
+- Walk the timeline from 2009 to 2026 in about two minutes, on one slide: a major shift every two to four years.
+- Then the four eras: keys became portable (2012-14), the wallet became the approval layer (2016-24), accounts became programmable (2023-25), and interfaces and agents became the risk (2025-26). Each era ends on the design problem it left behind.
 - Guess before each big number. Give 30 seconds to write a guess on a sticky, hear two or three, then reveal: lost bitcoin, drainer losses in 2025, agent payments on Base. The gap between the guesses and the answer is the point.
 - Read the caveats aloud: the lost-bitcoin share is an estimate, drainer losses fell mainly on lower market activity, and agent payment totals differ across trackers.
-- After the eras, pull them into the story so far: each shift moved the main design problem, from "don't lose the file" to "write down 12 words" to "understand what you are signing" to "decide what this account, app or agent may do." Pause on the last row and ask what the next line is, without taking answers yet.
+- After the eras, pull them into the story so far: each shift moved the main design problem, from "don't lose the file" to "write down 12 words" to "understand what you are signing" to "decide what this account, app or agent may do." Ask who in 2012 would have predicted the last two lines. Expect almost none, and say: "Ours will be wrong too. The value is in the reasoning." Then ask what the next line is, without taking answers yet.
 - Name the five open problems today: recovery, signing comprehension, supply chain, delegation sprawl, cross-chain complexity. Ask which one each person feels most in their own product.
-- Ask: "In 2012, which of these shifts would this room have predicted?" Expect almost none. Say: "Ours will be wrong too. The value is in the reasoning."
 - Put up the question: "Which next milestone do we want to drive or be part of? Which problem do we want to own?" A milestone is a shift in what wallets are or do, anywhere from 2027 to 2040, not a feature.
 - Show the frame: "By [year], [who] can [do what] without [what they do today]." The year is when it becomes normal, the who is a person, and the without is the burden that goes away. Hand out the milestone cards.
 - Show the real one, written as a wallet team might have in 2012. The topic "better backups" becomes "By 2015, anyone can restore every account from one backup, without saving each new key separately," tagged Join. It passes all three tests and it came true, yet it moved the problem: the 12 words became the thing to protect. It is from the past on purpose, so it shows a whole sticky without giving people a future idea to copy.

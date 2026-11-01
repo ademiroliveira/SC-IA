@@ -6,7 +6,7 @@ This folder is separate from the SC-IA research and strategy docs. It holds work
 
 | Session | Deck | What happens |
 | --- | --- | --- |
-| 1. The past | 33 slides | Wallet history as problems that moved, with a guess before each big number, adding up to a one-line story. Then each person writes milestones in one sentence frame, modelled on a real one from 2012, sharpens and tags them Lead, Join or Watch, and the room votes three or four themes. The top one becomes the story's next line |
+| 1. The past | 30 slides | Wallet history as problems that moved, with a guess before each big number, adding up to a one-line story. Then each person writes milestones in one sentence frame, modelled on a real one from 2012, sharpens and tags them Lead, Join or Watch, and the room votes three or four themes. The top one becomes the story's next line |
 | 2. The futures | 15 slides | Two teams each build the world least friendly to their favourite milestone, 2040 first, and say where the milestone sits in every column |
 | 3. The way back | 15 slides | Backcast to today, a wildcard world, a pre-mortem, then a vote that sorts moves into no-regret, bet, blind spot or hedge. Ends with owners and a sealed time capsule |
 
@@ -32,7 +32,7 @@ Print the milestone card from the last slide of deck 1, one per person. Then fil
 
 - **Online:** https://ademiroliveira.github.io/SC-IA/time-machine-workshop/web/ once GitHub Pages is turned on for this repo.
 - **Offline:** download the four HTML files in `web/` into one folder and open `index.html`, or open a single session page on its own. The fonts are built into each file; only the source links in the detail panels need a connection.
-- **Controls:** ← and → move between slides, a blue **+** opens the detail behind an item, Esc closes it, and F toggles full screen. Each slide has its own link, such as `1-the-past.html#slide-23` for the question. On a phone, swipe.
+- **Controls:** ← and → move between slides, a blue **+** opens the detail behind an item, Esc closes it, and F toggles full screen. Each slide has its own link, such as `1-the-past.html#slide-20` for the question. On a phone, swipe.
 - **Rebuilding after a deck changes:** the detail text and its sources are in `web/details.py`. From this folder, run `python3 web/build.py <fonts> web decks/1-the-past decks/2-the-futures decks/3-the-way-back`, where `<fonts>` holds the unpacked Fontsource npm packages for Inter Tight (variable) and JetBrains Mono (it needs `beautifulsoup4`).
 - **Fonts:** Inter Tight and JetBrains Mono, both under the SIL Open Font License.
 
