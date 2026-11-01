@@ -7,9 +7,9 @@ Three 60-minute sessions take eight people from wallet history to two or three c
 |  | Session 1: The past | Session 2: The futures | Session 3: The way back |
 | --- | --- | --- | --- |
 | Mode | Look back, then aim | Diverge | Converge |
-| Work | History with guess-first numbers, then milestones tagged Lead, Join or Watch | Two world strips for 2040, 2035 and 2030 | Backcast, wildcard, pre-mortem, vote |
+| Work | History with guess-first numbers, then milestones written in one frame and tagged Lead, Join or Watch | Two world strips for 2040, 2035 and 2030 | Backcast, wildcard, pre-mortem, vote |
 | Output | Three or four milestone themes on the wall | Two world strips with our milestones in them | Two or three committed moves with owners |
-| Deck | Wallet Time Machine 1: The past, 28 slides | Wallet Time Machine 2: The futures, 15 slides | Wallet Time Machine 3: The way back, 15 slides |
+| Deck | Wallet Time Machine 1: The past, 32 slides | Wallet Time Machine 2: The futures, 15 slides | Wallet Time Machine 3: The way back, 15 slides |
 
 **Method.** Session 1 asks which milestone we want to drive before any futures work, so the team starts from its own ambition. Session 2 starts far out, at 2040, which stops people extrapolating today. Session 3 asks what had to be true at each step back, then tests the ambition against every world.
 
@@ -22,6 +22,7 @@ Three 60-minute sessions take eight people from wallet history to two or three c
 - One wall that stays up for all three sessions (see The wall)
 - Sticky notes: one neutral color for session 1, then four colors, one per lens
 - Dot stickers for two votes, 3 per person each time, or votes on a digital board
+- Printed milestone cards for session 1, one per person (the last slide of deck 1)
 - Printed lens cards and world briefs, one set per team
 - A timer everyone can see
 
@@ -74,6 +75,7 @@ Set all three dates and send the pre-read two days before session 1, and put up 
 - Put up the wall: a 2027 to 2040 timeline with Lead, Join and Watch lanes in the middle, and space above and below it
 - Prepare your default-drift baseline: today's wallet extended to 2030, 2035 and 2040
 - Check the figures behind the three guess slides: lost bitcoin, drainer losses and agent payments
+- Print the milestone card, one per person
 - Neutral stickies, markers and dots for the vote
 
 **Teams and lenses.** Assign these between sessions 1 and 2, so you can give each team the world least friendly to its favourite milestone. Mix functions across the two teams where you can. Inside each team of four, give each person one lens: the person, the attacker or regulator, the builder, the business. People keep their lens in sessions 2 and 3.
@@ -91,10 +93,10 @@ Session 1 walks the room through wallet history as a series of design problems, 
 | Minutes | Block | What happens | Output |
 | --- | --- | --- | --- |
 | 0-5 | Frame | Goal, the three sessions, ground rules | Shared starting point |
-| 5-30 | The past and the question | Four eras, three guesses, five open problems, then the question and the tags | A calibrated sense of how often we are wrong |
-| 30-38 | Write | Silent writing: a milestone, a year, why us and a tag on each sticky | Two or three stickies each |
-| 38-52 | Place and cluster | Read, place by year and tag, cluster | Named clusters on the milestone band |
-| 52-60 | Vote and close | Silent dot vote, name the themes, set homework | Three or four milestone themes |
+| 5-30 | The past and the question | Four eras, three guesses, five open problems, then the question, the tags, the frame and examples | A calibrated sense of how often we are wrong |
+| 30-38 | Write | Silent writing: go wide, then rewrite the best two or three in the frame | Two or three stickies each |
+| 38-52 | Place and cluster | Three tests, then read, place by year and tag, cluster | Clusters named From ___ to ___ |
+| 52-60 | Vote and close | Silent dot vote on what we'd regret not driving, name the themes, set homework | Three or four milestone themes |
 
 ### Block 1: Frame (0-5)
 
@@ -110,25 +112,31 @@ Session 1 walks the room through wallet history as a series of design problems, 
 - Read the caveats aloud: the lost-bitcoin share is an estimate, drainer losses fell mainly on lower market activity, and agent payment totals differ across trackers.
 - Name the five open problems today: recovery, signing comprehension, supply chain, delegation sprawl, cross-chain complexity. Ask which one each person feels most in their own product.
 - Ask: "In 2012, which of these shifts would this room have predicted?" Expect almost none. Say: "Ours will be wrong too. The value is in the reasoning."
-- Close the block with the question: "Which next milestone do we want to drive or be part of? Which problem do we want to own?" A milestone is a shift in what wallets are or do, anywhere from 2027 to 2040, not a feature.
+- Put up the question: "Which next milestone do we want to drive or be part of? Which problem do we want to own?" A milestone is a shift in what wallets are or do, anywhere from 2027 to 2040, not a feature.
 - Explain the tags. Lead: we make it happen. Join: we ride a shift others drive, such as a new standard. Watch: it matters, but it isn't ours to move. Ask people not to tag everything Lead.
+- Show the frame: "By [year], [who] can [do what] without [what they do today]." The year is when it becomes normal, the who is a person, and the without is the burden that goes away. Hand out the milestone cards.
+- Read one weak and strong pair from the examples slide, and say they are examples, not suggestions.
 
 ### Block 3: Write (30-38)
 
 - Eight minutes of silent writing, alone, before anyone speaks, so the loudest idea does not set the agenda.
-- Two or three stickies each, one milestone per sticky, with the year it would be real, one line on why us, and a Lead, Join or Watch tag.
+- Call the timing out loud: one minute to read the frame and the starters, four to write as many as they can, two to rewrite the best two or three in the frame, one to add why us and a tag. Going wide first, then sharpening, gives better stickies than asking for polished ones from the start.
+- Leave the starters on screen: what comes after "decide what this account, app or agent may do"; which open problem we want to make boring, and by when; what we explain to users today that nobody will need explained in 2032; and one milestone you'd be slightly embarrassed to say out loud.
+- Keep laptops and LLMs closed. A model's answer is the average future, the very thing the guesses taught the room to distrust. The LLM prompts come after the session.
 
 ### Block 4: Place and cluster (38-52)
 
-- Each person reads each sticky in one sentence and places it on the milestone band by year and lane. No debate yet.
-- Cluster stickies that describe the same shift and give each cluster a short name.
+- Start with the three tests, one minute: shift, not feature (could it be in a competitor's release notes?); normal, not demo (the year it becomes normal, not first shown); and the tag holds (if we stopped tomorrow, would it still happen? Then it's Join or Watch). People rewrite or retag their own stickies on the spot.
+- Each person reads each sticky in one sentence, then stops, and places it on the milestone band by year and lane. No debate yet.
+- Cluster stickies that describe the same shift, not the same technology. Name each cluster From ___ to ___, the way the history moved from one problem to the next.
 - If one lane is crowded and another is empty, say so. That is a finding too.
 
 ### Block 5: Vote and close (52-60)
 
+- Read the voting question out loud: "Which of these would we regret not driving?" Without it, some people vote for what is likely and others for what is exciting, and the result mixes the two.
 - Silent dot vote, then name the top three or four clusters as themes, each with its tag and year: 6 minutes. Rules are in Scoring and voting.
 - Say: "These themes are hypotheses. Sessions 2 and 3 will test them."
-- Close in 2 minutes: each person brings two real signals for or against the themes. Set the session 2 date before people leave.
+- Close in 2 minutes: each person brings two real signals for or against the themes, and runs the stress-test prompt on one theme, about two people per theme. Set the session 2 date before people leave.
 
 ### Outputs
 
@@ -143,8 +151,10 @@ Allow up to a week. Participants look for evidence for and against the themes, a
 | Who | Task | Time |
 | --- | --- | --- |
 | Each participant | Find two real signals for or against the themes: a launch, a rule or a paper | 15 min |
-| Facilitator | Photograph the wall and fill the recap slide in deck 2 with the themes, tags and years | 15 min |
-| Facilitator | Build a short signal pack from the latest weekly signal report: regulation, recovery and agent-wallet news that bears on the themes | 20 min |
+| Each participant | Run the stress-test prompt on one theme and bring back its strongest objection; sharpen your own milestone with the sharpen prompt if you like | 15 min |
+| Facilitator | Photograph the wall, transcribe the stickies and run the cluster-check prompt | 20 min |
+| Facilitator | Fill the recap slide in deck 2 with the themes, tags and years | 10 min |
+| Facilitator | Build a short signal pack from the latest weekly signal report with the signal-pack prompt: regulation, recovery and agent-wallet news that bears on the themes | 20 min |
 | Facilitator | Place teams in the world least friendly to their favourite milestone, assign lenses and fill in the teams slide | 15 min |
 | Facilitator | Print the world briefs, lens cards and two team boards | 20 min |
 | Facilitator | Send the themes and the signal pack one day before session 2 | 10 min |
@@ -164,7 +174,7 @@ Session 2 builds two opposing worlds for 2040, 2035 and 2030, starting far out, 
 ### Block 1: Recap (0-5)
 
 - Read the three or four themes from the recap slide and point to them on the wall. Keep it to two minutes.
-- Share one or two signals from the pack that cut against a theme, so the room does not start from agreement.
+- Share the strongest objection from each stress test, and one or two signals from the pack that cut against a theme, so the room does not start from agreement.
 - Say: "Today we build two futures. In each one, we look for our milestones: do they exist, who drives them, and are they bigger, smaller or gone?"
 
 ### Block 2: Worlds, teams and lenses (5-10)
@@ -403,13 +413,21 @@ The gap between what we wanted and what holds is often the most useful finding o
 | Cluster 4 |  |  |  |  |  |  |  |  |
 | Cluster 5 |  |  |  |  |  |  |  |  |
 
+## LLM prompts
+
+Use an LLM after people write, never before. A model's answer is the average future, the very thing the guess slides teach the room to distrust. Ask it to question and argue, not to invent milestones. Stickies may touch unreleased plans, so use only an LLM your company approves.
+
+The four prompts, with who uses each and when, are in [llm-prompts.md](llm-prompts.md).
+
 ## Facilitator notes
 
 Futures workshops usually go wrong in a handful of ways. Each has a sign to watch for and a fix.
 
 | Risk | Sign | Fix |
 | --- | --- | --- |
+| Stickies are topics, not milestones | "Better recovery", "AI agents" | Show the frame and the examples before writing; run the three tests before placing |
 | Session 1 anchors on the near term | Milestones read like next year's features | Ask which problem we want to own, and treat the themes as hypotheses |
+| Everyone writes the same future | The same three ideas in the same words | Keep LLMs out until after writing; ask for one milestone people would be embarrassed to say out loud |
 | Teams build the world they like | Every milestone grows in both worlds | Place each team in the world least friendly to its favourite milestone |
 | Teams extrapolate today | The 2040 column looks like a nicer version of the current wallet | Ask "What is gone?" and compare with the default-drift baseline |
 | One lens dominates | The builder talks most while the attacker stays quiet | Rotate who speaks first in each column; the attacker speaks first on enablers |
@@ -429,6 +447,8 @@ Futures workshops usually go wrong in a handful of ways. Each has a sign to watc
 - [ ] Pre-read sent 2 days before session 1
 - [ ] All three session dates set before session 1
 - [ ] The wall up, with the milestone band, before session 1
+- [ ] Milestone cards printed, one per person
+- [ ] Stress-test themes assigned at the end of session 1, about two people per theme
 - [ ] Teams and lenses set before session 2, each team in its least friendly world
 - [ ] Recap slide and team names filled in deck 2
 - [ ] Boards, stickies, dots and printed cards ready

@@ -6,7 +6,7 @@ This folder is separate from the SC-IA research and strategy docs. It holds work
 
 | Session | Deck | What happens |
 | --- | --- | --- |
-| 1. The past | 28 slides | Wallet history as problems that moved, with a guess before each big number. Then each person names milestones to Lead, Join or Watch, and the room votes three or four themes |
+| 1. The past | 32 slides | Wallet history as problems that moved, with a guess before each big number. Then each person writes milestones in one sentence frame, tags them Lead, Join or Watch, and the room votes three or four themes |
 | 2. The futures | 15 slides | Two teams each build the world least friendly to their favourite milestone, 2040 first, and say where the milestone sits in every column |
 | 3. The way back | 15 slides | Backcast to today, a wildcard world, a pre-mortem, then a vote that sorts moves into no-regret, bet, blind spot or hedge. Ends with owners and a sealed time capsule |
 
@@ -15,13 +15,14 @@ All three sessions share one wall: the milestone band from session 1 in the midd
 | File | What it is |
 | --- | --- |
 | [web/index.html](web/index.html) | Landing page for the web version, linking the three session pages. Session 1 has research detail with sources behind each milestone, number and open problem. Works offline |
-| [facilitation-guide.md](facilitation-guide.md) | Run of show for all three sessions and the time between them: the wall, world briefs, timings, prompts, lens cards, board layouts, dot voting, the four kinds of move, scoring template, facilitator notes and what happens after |
+| [facilitation-guide.md](facilitation-guide.md) | Run of show for all three sessions and the time between them: the wall, world briefs, timings, prompts, lens cards, board layouts, dot voting, the four kinds of move, scoring template, LLM use, facilitator notes and what happens after |
 | [wallet-evolution-research.md](wallet-evolution-research.md) | Research on how wallets evolved from 2009 to October 2026. The pre-read, the source of the seed signals in the world briefs, and the source of the web deck's detail panels |
-| [decks/](decks/) | Source of the three "Wallet Time Machine" decks, one folder per session. Decks 2 and 3 end with four printable lens cards |
+| [llm-prompts.md](llm-prompts.md) | Four prompts for after session 1: sharpen a milestone, stress-test a theme, check the clusters and draft the recap, and build the signal pack |
+| [decks/](decks/) | Source of the three "Wallet Time Machine" decks, one folder per session. Deck 1 ends with a printable milestone card; decks 2 and 3 end with four printable lens cards |
 
 ## Before you run it
 
-Fill in these placeholders in the decks, then rebuild the web version:
+Print the milestone card from the last slide of deck 1, one per person. Then fill in these placeholders in the decks and rebuild the web version:
 
 - **Session 2, recap slide:** the three or four themes from the session 1 vote, each with its tag and year
 - **Session 2, teams slide:** the four names in each team
