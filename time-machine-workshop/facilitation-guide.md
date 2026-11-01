@@ -9,7 +9,7 @@ Three 60-minute sessions take eight people from wallet history to two or three c
 | Mode | Look back, then aim | Diverge | Converge |
 | Work | History with guess-first numbers, then milestones written in one frame and tagged Lead, Join or Watch | Two world strips for 2040, 2035 and 2030 | Backcast, wildcard, pre-mortem, vote |
 | Output | Three or four milestone themes on the wall | Two world strips with our milestones in them | Two or three committed moves with owners |
-| Deck | Wallet Time Machine 1: The past, 32 slides | Wallet Time Machine 2: The futures, 15 slides | Wallet Time Machine 3: The way back, 15 slides |
+| Deck | Wallet Time Machine 1: The past, 33 slides | Wallet Time Machine 2: The futures, 15 slides | Wallet Time Machine 3: The way back, 15 slides |
 
 **Method.** Session 1 asks which milestone we want to drive before any futures work, so the team starts from its own ambition. Session 2 starts far out, at 2040, which stops people extrapolating today. Session 3 asks what had to be true at each step back, then tests the ambition against every world.
 
@@ -116,6 +116,7 @@ Session 1 walks the room through wallet history as a series of design problems, 
 - Explain the tags. Lead: we make it happen. Join: we ride a shift others drive, such as a new standard. Watch: it matters, but it isn't ours to move. Ask people not to tag everything Lead.
 - Show the frame: "By [year], [who] can [do what] without [what they do today]." The year is when it becomes normal, the who is a person, and the without is the burden that goes away. Hand out the milestone cards.
 - Read one weak and strong pair from the examples slide, and say they are examples, not suggestions.
+- Show the real one, written as a wallet team might have in 2012: "By 2015, anyone can restore every account from one backup, without saving each new key separately," tagged Join. It passes all three tests, and it came true, yet it moved the problem: the 12 words became the thing to protect. It is from the past on purpose, so it shows a whole sticky without giving people a future idea to copy.
 
 ### Block 3: Write (30-38)
 

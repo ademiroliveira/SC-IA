@@ -6,7 +6,7 @@ This folder is separate from the SC-IA research and strategy docs. It holds work
 
 | Session | Deck | What happens |
 | --- | --- | --- |
-| 1. The past | 32 slides | Wallet history as problems that moved, with a guess before each big number. Then each person writes milestones in one sentence frame, tags them Lead, Join or Watch, and the room votes three or four themes |
+| 1. The past | 33 slides | Wallet history as problems that moved, with a guess before each big number. Then each person writes milestones in one sentence frame, modelled on a real one from 2012, tags them Lead, Join or Watch, and the room votes three or four themes |
 | 2. The futures | 15 slides | Two teams each build the world least friendly to their favourite milestone, 2040 first, and say where the milestone sits in every column |
 | 3. The way back | 15 slides | Backcast to today, a wildcard world, a pre-mortem, then a vote that sorts moves into no-regret, bet, blind spot or hedge. Ends with owners and a sealed time capsule |
 
