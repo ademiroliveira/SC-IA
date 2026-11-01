@@ -21,7 +21,7 @@ Fetch these first, then search wider. Status: **ok** = loaded in round 2 (Octobe
 | Kraken DeFi Earn overview | https://support.kraken.com/articles/what-is-defi-earn | ok |
 | Kraken Firelight coverage | https://support.kraken.com/articles/firelight-coverage | ok |
 | Kraken blog | https://blog.kraken.com/ | untested |
-| Schwab press room | https://pressroom.aboutschwab.com/ | untested |
+| Schwab press room | https://pressroom.aboutschwab.com/ | ok (individual releases load, 2026-11-01) |
 | Fidelity Crypto help | https://www.fidelity.com/crypto/help/account-basics/getting-started | ok |
 
 ## Wallets and new entrants (`wallet-challengers`)
