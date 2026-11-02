@@ -7,7 +7,7 @@ Fetch these first, then search wider. Status: **ok** = loaded in round 2 (Octobe
 | Player | Entry point | Status |
 | --- | --- | --- |
 | Robinhood Earn | https://robinhood.com/us/en/support/articles/crypto-earn/ | ok |
-| Robinhood newsroom | https://robinhood.com/newsroom/ | ok |
+| Robinhood newsroom | https://robinhood.com/us/en/newsroom | ok (moved; /newsroom/ did not load directly on 2026-11-02) |
 | Robinhood Strategies | https://robinhood.com/us/en/support/articles/about-strategies | ok |
 | Robinhood Earn subsidy (Merkl) | https://merkl.xyz/case-studies/robinhood | ok |
 | Coinbase USDC rewards | https://www.coinbase.com/usdc | ok |
