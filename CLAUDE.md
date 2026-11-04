@@ -45,6 +45,13 @@ Tag every finding with one of: `[Vendor]` `[Help doc]` `[Terms]` `[Filing]` `[Pr
 - **No personal names or personal data.** Refer to people by role only ("Coinbase's CEO", "an SEC commissioner"), never by name, including the repo owner. Never write anyone's email address, phone number, social handle or other identifying details, and never name or quote individual forum users or reviewers. `python3 watch/check.py` flags emails, handles and titled names.
 - **Regulation.** Regulatory points are research-based readings, not legal advice.
 
+## Reusable team skill
+
+- **Concept Notes Organiser** turns raw product, workshop and research notes into a source-faithful concept brief and extracts outcome-led milestones.
+- Use it when asked to organise notes, clarify a concept or extract milestones. It is available to Codex at `.agents/skills/concept-notes-organiser/SKILL.md` and to Claude Code at `.claude/skills/concept-notes-organiser/SKILL.md`.
+- This skill does not override this file. SC-IA vocabulary, public-repository privacy rules, evidence and source conventions, and repository write boundaries remain authoritative.
+- It is not part of the scheduled competitive watch and does not change the watch agents' scope or write permissions.
+
 ## Competitive watch (scheduled)
 
 | Run | When (Europe/Dublin) | Command | Writes |
