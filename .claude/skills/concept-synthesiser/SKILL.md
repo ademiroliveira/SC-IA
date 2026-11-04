@@ -1,6 +1,6 @@
 ---
 name: concept-synthesiser
-description: Compare and synthesise multiple opportunity or concept briefs into a coherent strategic narrative while preserving differences, contradictions and evidence status.
+description: Compare and synthesise multiple opportunity or concept briefs with the user into a coherent strategic narrative while preserving differences, contradictions and evidence status.
 ---
 
 # Concept Synthesiser
@@ -9,6 +9,32 @@ description: Compare and synthesise multiple opportunity or concept briefs into 
 Bring several related opportunity frames, concept briefs or strategy explorations into a coherent view. Identify shared themes, distinct propositions, tensions, overlaps and possible combinations without flattening meaningful differences.
 
 Synthesis is not consensus by default. It does not decide which concept wins or claim a combination is stronger without evidence.
+
+## How to work with the user
+
+This skill helps the user define the work. It does not hand over a finished answer on the first turn. The user owns the choices: who it is for, the outcome, what counts as evidence, what to keep or drop. The skill brings structure, options and challenge.
+
+**Guided mode (default).**
+1. **Start from where the user is.** If invoked with no request, ask what they are working on and offer two or three ways to start. If invoked with material, play back in two or three lines what you understood, name the gaps, and ask.
+2. **Ask a few good questions at a time.** At most three per turn, each with one line on why it matters. Where it helps, offer options with a recommended default so the user can answer quickly. Never ask for what the sources already say. Use the host's structured question tool when it has one.
+3. **Offer candidates, not conclusions.** For each choice that belongs to the user, propose two or three candidates with the trade-off between them, recommend one when useful, and let the user pick, edit or reject.
+4. **Build in steps.** Work through the checkpoints below one at a time. Confirm before moving on, and carry forward what the user decided in their own words.
+5. **Assemble at the end.** Produce the full output only once the key choices are made. Mark anything you filled in yourself.
+
+**Draft mode.** When the user asks for a straight answer (“just draft it”, “first pass”, “no questions”) or the task is fully specified, produce the output in one go. List the choices you made on the user's behalf at the top, ask them to confirm or change them, and offer to switch to guided mode.
+
+**Works on its own.** This skill can be used without any other skill in the toolkit. If an input that another skill would normally provide is missing, gather the minimum here through questions instead of sending the user elsewhere. Suggest another skill only as an optional next step.
+
+### Checkpoints for this skill
+
+1. **Decision.** What the comparison should help decide, and who decides it.
+2. **Inventory.** Show the list of inputs and how they relate (shared sources, lineage). The user confirms or corrects it.
+3. **Dimensions.** Propose the comparison dimensions; the user picks the ones that matter.
+4. **Matrix.** Show the comparison and ask the user to flag misreadings before drawing patterns.
+5. **Options.** Present keep separate, shared foundation and integrated, with trade-offs. The user chooses or asks for another.
+6. **Narrative.** Write it around the option and organising principle the user chose.
+
+Useful questions: “Are these meant to serve the same person?” · “What would make you keep them apart?” · “What would you need to see to choose?”
 
 ## Use when
 - Several teams/workstreams have overlapping concepts.

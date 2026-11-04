@@ -1,6 +1,6 @@
 ---
 name: concept-notes-organiser
-description: Organise raw product, workshop, research and strategy notes into a source-faithful concept brief. Extract a North Star, experience and enabling milestones in the team's exact “By [year], [who] can [do what] without [today's friction]” format. Use for note synthesis and concept development; do not use to claim validation or make decisions.
+description: Organise raw product, workshop, research and strategy notes into a source-faithful concept brief, working step by step with the user by default or drafting in one pass on request. Extract a North Star, experience and enabling milestones in the team's exact “By [year], [who] can [do what] without [today's friction]” format. Use for note synthesis and concept development; do not use to claim validation or make decisions.
 ---
 
 # Concept Notes Organiser
@@ -10,6 +10,32 @@ description: Organise raw product, workshop, research and strategy notes into a 
 Turn fragmented notes, workshop outputs, research observations, hypotheses and early ideas into a coherent concept brief that a team can discuss, challenge and develop.
 
 This skill organises thinking. It does not validate a market, decide strategy, settle disagreements or make commitments on behalf of the team.
+
+## How to work with the user
+
+This skill helps the user define the work. It does not hand over a finished answer on the first turn. The user owns the choices: who it is for, the outcome, what counts as evidence, what to keep or drop. The skill brings structure, options and challenge.
+
+**Guided mode (default).**
+1. **Start from where the user is.** If invoked with no request, ask what they are working on and offer two or three ways to start. If invoked with material, play back in two or three lines what you understood, name the gaps, and ask.
+2. **Ask a few good questions at a time.** At most three per turn, each with one line on why it matters. Where it helps, offer options with a recommended default so the user can answer quickly. Never ask for what the sources already say. Use the host's structured question tool when it has one.
+3. **Offer candidates, not conclusions.** For each choice that belongs to the user, propose two or three candidates with the trade-off between them, recommend one when useful, and let the user pick, edit or reject.
+4. **Build in steps.** Work through the checkpoints below one at a time. Confirm before moving on, and carry forward what the user decided in their own words.
+5. **Assemble at the end.** Produce the full output only once the key choices are made. Mark anything you filled in yourself.
+
+**Draft mode.** When the user asks for a straight answer (“just draft it”, “first pass”, “no questions”) or the task is fully specified, produce the output in one go. List the choices you made on the user's behalf at the top, ask them to confirm or change them, and offer to switch to guided mode.
+
+**Works on its own.** This skill can be used without any other skill in the toolkit. If an input that another skill would normally provide is missing, gather the minimum here through questions instead of sending the user elsewhere. Suggest another skill only as an optional next step.
+
+### Checkpoints for this skill
+
+1. **Purpose.** What the notes are for, what they should help decide, and which concept to focus on if there are several.
+2. **Grouping.** Show the proposed themes or clusters, keeping original wording. The user confirms, merges, splits or renames them. Never combine concepts without this confirmation.
+3. **Tensions.** Where the notes disagree, ask which tensions to keep open and which the user wants to settle.
+4. **Thesis and boundaries.** Offer two or three “From … to …” candidates and a draft in/out list. The user picks and edits.
+5. **Milestones, if wanted.** Offer candidate North Stars. The user supplies who and any year.
+6. **Brief.** Assemble the brief from what was agreed.
+
+Useful questions: “What should this help you decide?” · “Which of these clusters is the heart of it?” · “Is this a team belief or something someone saw or heard?”
 
 ## When to use
 
@@ -62,7 +88,7 @@ Identify:
 - Constraints, dependencies, assumptions and decisions.
 - What is explicit versus inferred or still being explored.
 
-If the material is ambiguous but usable, proceed with a labelled working interpretation and list the ambiguity. Ask at most one clarification, and only when the missing information prevents useful progress.
+If the material is ambiguous, play back your working interpretation and ask about the ambiguities that change how the notes are grouped or read. In draft mode, proceed with a labelled working interpretation and list the ambiguities.
 
 ### 2. Capture the source signals
 
@@ -180,7 +206,8 @@ Add a **Source trace** when input references, IDs, headings or evidence can be m
 
 ## Interaction behaviour
 
-- “Organise these notes” → produce the structured synthesis directly.
+- “Organise these notes” → agree the purpose and the grouping with the user first, then build the brief (guided mode).
+- “Just draft it” → produce the structured synthesis directly and list the choices made on the user's behalf (draft mode).
 - “Extract milestones” → focus on the North Star, experience and enabling hierarchy; do not generate an unnecessary full brief.
 - “Challenge this concept” → identify gaps, contradictions, unsupported assumptions and competing interpretations before recommending changes.
 - “Make it shorter” → preserve the thesis, milestone hierarchy and critical uncertainties.

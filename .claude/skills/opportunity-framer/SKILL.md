@@ -1,6 +1,6 @@
 ---
 name: opportunity-framer
-description: Frame product opportunities from research and observations without jumping to a solution. Separate evidence, interpretation, user need, opportunity and assumptions.
+description: Frame product opportunities from research and observations without jumping to a solution, working step by step with the user by default or drafting in one pass on request. Separate evidence, interpretation, user need, opportunity and assumptions.
 ---
 
 # Opportunity Framer
@@ -8,13 +8,39 @@ description: Frame product opportunities from research and observations without 
 ## Purpose
 Create an evidence-aware opportunity frame: whose situation may be improved, what is difficult today, why it matters and what remains unknown. This skill structures evidence; it does not conduct research, validate demand or choose the opportunity.
 
+## How to work with the user
+
+This skill helps the user define the work. It does not hand over a finished answer on the first turn. The user owns the choices: who it is for, the outcome, what counts as evidence, what to keep or drop. The skill brings structure, options and challenge.
+
+**Guided mode (default).**
+1. **Start from where the user is.** If invoked with no request, ask what they are working on and offer two or three ways to start. If invoked with material, play back in two or three lines what you understood, name the gaps, and ask.
+2. **Ask a few good questions at a time.** At most three per turn, each with one line on why it matters. Where it helps, offer options with a recommended default so the user can answer quickly. Never ask for what the sources already say. Use the host's structured question tool when it has one.
+3. **Offer candidates, not conclusions.** For each choice that belongs to the user, propose two or three candidates with the trade-off between them, recommend one when useful, and let the user pick, edit or reject.
+4. **Build in steps.** Work through the checkpoints below one at a time. Confirm before moving on, and carry forward what the user decided in their own words.
+5. **Assemble at the end.** Produce the full output only once the key choices are made. Mark anything you filled in yourself.
+
+**Draft mode.** When the user asks for a straight answer (“just draft it”, “first pass”, “no questions”) or the task is fully specified, produce the output in one go. List the choices you made on the user's behalf at the top, ask them to confirm or change them, and offer to switch to guided mode.
+
+**Works on its own.** This skill can be used without any other skill in the toolkit. If an input that another skill would normally provide is missing, gather the minimum here through questions instead of sending the user elsewhere. Suggest another skill only as an optional next step.
+
+### Checkpoints for this skill
+
+1. **Who and why.** Who the frame is about, and what decision it should inform.
+2. **Evidence.** List what the user has (interviews, desk research, support themes). Show coverage and gaps; ask what they know that is not written down, and label it as reported.
+3. **Themes.** Show observation themes with their sources. The user confirms or corrects the reading.
+4. **Problem statement.** Offer two or three candidates that differ in user or situation. The user picks and edits.
+5. **Opportunity areas.** Propose them solution-neutral. The user ranks them.
+6. **Unknowns.** The user ranks unknowns by how much they could change the decision; then draft discovery questions for the top ones.
+
+Useful questions: “What have you seen or heard, as opposed to believe?” · “What do people do today instead?” · “What would change your mind?”
+
 ## Use when
 - Framing a problem from interviews, research, support themes, analytics or desk research.
 - Synthesising observations into needs and opportunity areas.
 - Reviewing a problem statement for solution bias.
 - Preparing discovery questions.
 
-If the source is mostly solution ideas, say so. Do not reverse-engineer a user problem to justify a preferred solution.
+If the user has no material yet, start by asking what they have seen or heard and from whom. If the source is mostly solution ideas, say so and ask what problem the user believes they solve. Do not reverse-engineer a user problem to justify a preferred solution.
 
 ## Source discipline
 Label material claims:
