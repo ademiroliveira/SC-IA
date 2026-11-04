@@ -45,12 +45,21 @@ Tag every finding with one of: `[Vendor]` `[Help doc]` `[Terms]` `[Filing]` `[Pr
 - **No personal names or personal data.** Refer to people by role only ("Coinbase's CEO", "an SEC commissioner"), never by name, including the repo owner. Never write anyone's email address, phone number, social handle or other identifying details, and never name or quote individual forum users or reviewers. `python3 watch/check.py` flags emails, handles and titled names.
 - **Regulation.** Regulatory points are research-based readings, not legal advice.
 
-## Reusable team skill
+## Reusable team skills
 
-- **Concept Notes Organiser** turns raw product, workshop and research notes into a source-faithful concept brief and extracts outcome-led milestones.
-- Use it when asked to organise notes, clarify a concept or extract milestones. It is available to Codex at `.agents/skills/concept-notes-organiser/SKILL.md` and to Claude Code at `.claude/skills/concept-notes-organiser/SKILL.md`.
-- This skill does not override this file. SC-IA vocabulary, public-repository privacy rules, evidence and source conventions, and repository write boundaries remain authoritative.
-- It is not part of the scheduled competitive watch and does not change the watch agents' scope or write permissions.
+The Concept Development Toolkit contains five user-invoked skills. Each is mirrored for Codex and Claude Code:
+
+| Skill | Purpose | Codex | Claude Code |
+| --- | --- | --- | --- |
+| Concept Notes Organiser | Structure raw notes into a source-faithful concept brief | `.agents/skills/concept-notes-organiser/SKILL.md` | `.claude/skills/concept-notes-organiser/SKILL.md` |
+| Opportunity Framer | Frame a user problem and opportunity from evidence | `.agents/skills/opportunity-framer/SKILL.md` | `.claude/skills/opportunity-framer/SKILL.md` |
+| Concept Challenger | Stress-test value, assumptions, risks and feasibility | `.agents/skills/concept-challenger/SKILL.md` | `.claude/skills/concept-challenger/SKILL.md` |
+| Milestone Architect | Define North Star, experience and enabling outcomes | `.agents/skills/milestone-architect/SKILL.md` | `.claude/skills/milestone-architect/SKILL.md` |
+| Concept Synthesiser | Compare concepts and form a traceable strategic narrative | `.agents/skills/concept-synthesiser/SKILL.md` | `.claude/skills/concept-synthesiser/SKILL.md` |
+
+Suggested flow: Concept Notes Organiser → Opportunity Framer → Concept Challenger → Milestone Architect → Concept Synthesiser. This is guidance, not a mandatory sequence; invoke only the skill that fits the task. The Synthesiser is most useful when comparing several concepts or workstreams.
+
+These are user-invoked instruction skills, not scheduled agents. They do not conduct validation by themselves, make decisions, alter the competitive-watch workflow or gain write permissions. This file remains authoritative for SC-IA vocabulary, privacy, evidence and repository boundaries. Each mirrored pair should be kept identical.
 
 ## Competitive watch (scheduled)
 
