@@ -19,7 +19,7 @@ If current competitor, market, technical, legal or regulatory evidence is requir
 For SC-IA, read `CLAUDE.md`, `README.md` and relevant strategy, problem framing, assumption map and decision-log materials. Respect public-repository privacy and vocabulary: the user defines a plan, its parts are rules, and guardrails are spending and exit limits. The strategy is hypothesis-led and has no primary target-user research yet. Do not present assumptions as validated or silently change accepted decisions.
 
 ## Challenge lenses
-Assess each as **Strong**, **Partial**, **Weak** or **Unknown**, with evidence and rationale. Do not invent numeric scores.
+Assess each as **Strong**, **Partial**, **Weak** or **Unknown**, with evidence and rationale. These are qualitative judgements against the material reviewed, not measured performance, user validation or proof of feasibility. Do not invent numeric scores.
 
 1. **User and problem:** Is the user/context clear? Is the problem consequential? Observed, reported, inferred or assumed? What workaround exists? Who may not benefit?
 2. **Value and outcome:** What changes for the user? Is this more than feature novelty? Can the outcome be observed? Why switch, adopt or stay?
@@ -39,7 +39,7 @@ For financial/self-custody concepts, explicitly examine custody, authorisation, 
 4. **Prioritise critical assumptions** by consequence if false and uncertainty.
 5. **Construct counter-cases:** why users may not care, may choose an alternative, misunderstand the model or be harmed.
 6. **Define disconfirming evidence** for each critical assumption.
-7. **Recommend the smallest useful test** that could change a decision. Do not default to prototyping.
+7. **Recommend the smallest useful test** that could change a decision. Identify its type: discovery/research, technical feasibility, prototype/usability, commercial, operational, or legal/regulatory counsel review. State the question, method, evidence that would support or weaken the assumption, and decision informed. Do not default to prototyping.
 8. **Make a recommendation:** Proceed to next learning step / Narrow and revise / Hold pending evidence / Stop. This is advice, not a team decision.
 
 ## Default output
@@ -49,12 +49,26 @@ For financial/self-custody concepts, explicitly examine custody, authorisation, 
 4. Critical assumptions.
 5. Failure modes and unintended consequences.
 6. What would change my mind.
-7. Smallest useful next test — method, input/participants, task and decision.
+7. Smallest useful next test — type, question, method, input/participants where relevant, task, disconfirming evidence and decision informed.
 8. Recommendation and rationale.
 9. Open decisions.
 
 ## Quality check
 Represent the concept fairly; ground critique or label inference; avoid generic filler; prioritise consequential assumptions; include trust/safety/recovery/exit where relevant; propose a test that distinguishes explanations; keep recommendation proportionate to evidence.
+
+## Handoff packet
+
+When passing this output to another skill or orchestration step, include:
+- **Task and intended decision** — why this work was done and what decision it may inform.
+- **Inputs and source references** — files, links, note IDs, versions or sections reviewed; use “Not stated” where unavailable.
+- **Key findings** — main source-grounded results.
+- **Evidence status** — observed, reported, external evidence, interpretation, hypothesis or unknown.
+- **Assumptions and limitations** — what remains unproven or outside the input.
+- **Decisions** — accepted decisions, proposed recommendations and open decisions kept separate.
+- **Unresolved questions** — gaps that could change the next step.
+- **Suggested next step** — a skill or activity only when useful, with rationale.
+
+Do not upgrade a recommendation to an accepted decision during handoff. Preserve source references and meaningful disagreements. Use “Not stated” rather than filling gaps.
 
 ## Hand-offs
 - **Opportunity Framer:** problem or user is unclear.
