@@ -177,7 +177,7 @@ I would define Portfolio Studio around five distinct concepts. This is more impo
   </box>
   <icon name="arrow-down" color="secondary" size="lg" />
   <box background="surface" border radius="lg" padding={3} width="100%" align="center" gap={1}>
-    <title size="lg">04 · Authorization and policy</title>
+    <title size="lg">04 · Authorization and rules</title>
     <text textAlign="center" size="sm">What is the system allowed to do?</text>
     <text color="secondary" size="xs" textAlign="center">Limits · Allowlisted actions · Approval rules · Expiry</text>
   </box>
@@ -197,7 +197,7 @@ An **intent** is not a strategy.
 
 - **Intent:** Keep a defined amount liquid while seeking yield on eligible assets.
 - **Strategy:** Allocate a specified amount to a selected lending market, subject to defined conditions.
-- **Policy:** Do not exceed a spending limit; use approved contracts; require approval for withdrawals or other sensitive actions.
+- **Rules:** Do not exceed a spending limit; use approved contracts; require approval for withdrawals or other sensitive actions.
 - **Execution plan:** The exact sequence of transactions, amounts, contracts and expected results.
 
 Separating these objects makes the experience easier to explain, test, audit and extend.
@@ -303,7 +303,7 @@ They open Portfolio Studio and say:
   <list-item>
     **Monitor the result**
 
-    The Studio tracks the resulting position, reports meaningful changes and tells the user whether the original intent remains satisfied. Any subsequent action follows the configured authorization policy.
+    The Studio tracks the resulting position, reports meaningful changes and tells the user whether the original intent remains satisfied. Any subsequent action follows the configured authorization rules.
   </list-item>
 </list>
 
@@ -362,7 +362,7 @@ Intent-based UX and autonomous execution are two different decisions. I would ma
   </row>
 </box>
 
-Programmable accounts and delegated permissions make parts of this model technically possible today. For example, Ethereum's account-abstraction work describes more flexible account management, while Solana's spend permissions support bounded token delegation. The availability and enforcement of each policy will nevertheless depend on the chain, account implementation and operation involved. 【turn605677search8】【turn605677search12】
+Programmable accounts and delegated permissions make parts of this model technically possible today. For example, Ethereum's account-abstraction work describes more flexible account management, while Solana's spend permissions support bounded token delegation. The availability and enforcement of each permission or rule set will nevertheless depend on the chain, account implementation and operation involved. 【turn605677search8】【turn605677search12】
 
 For your product, I would begin with **Observe → Propose → User approves**. That proves the portfolio-intent model without requiring the first release to solve unrestricted agentic execution.
 
