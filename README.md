@@ -39,6 +39,17 @@ Numbers are the reading order, and each doc builds on the ones before it, with o
 
 Scheduled agents keep the competitive analysis current between rounds. Every Monday a weekly watch reads that morning's weekly signal report and checks the scored competitors, new entrants, prices and dated events. On the 1st of each month a rescore re-checks the whole market. Both write to `watch/` and only propose score changes, which the owner accepts or rejects by id. Details are in [watch/README.md](watch/README.md), and the rules are in [CLAUDE.md](CLAUDE.md).
 
+## Reusable team skill
+
+**Concept Notes Organiser** is the shared workflow for turning fragmented notes into a structured concept brief and outcome-led milestones. It preserves original thinking, separates evidence from hypotheses, and avoids turning brainstormed ideas into decisions.
+
+- Codex: `.agents/skills/concept-notes-organiser/SKILL.md`
+- Claude Code: `.claude/skills/concept-notes-organiser/SKILL.md`
+
+Example prompts: “Organise these workshop notes into a concept”, “Extract the North Star and experience milestones”, or “Challenge the assumptions behind this idea”.
+
+The two skill files are kept in sync for the two repository-level discovery locations. The skill is instruction-only; it does not run research or change product decisions by itself.
+
 ## Repository layout
 
 ```
@@ -47,7 +58,8 @@ strategy/    problem framing, the design strategy that answers it, the experienc
              (images in strategy/assets/)
 decisions/   decision log: decided and open
 watch/       weekly watch and monthly rescore files, the watchlist, entry points and the researcher contract
-.claude/     the watch's research agents and commands
+.agents/     repository-level Agent Skills for Codex
+.claude/     Claude Code project agents, commands and skills
 CLAUDE.md    rules for any session in this repo: vocabulary, claims, scores, source tags, the watch
 ```
 
