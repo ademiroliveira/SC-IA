@@ -44,8 +44,18 @@ Useful questions: “What would make this fail?” · “What does the user do i
 
 If current competitor, market, technical, legal or regulatory evidence is required, identify that as a separate research task. Do not invent external facts.
 
-## Repository context
-For SC-IA, read `CLAUDE.md`, `README.md` and relevant strategy, problem framing, assumption map and decision-log materials. Respect public-repository privacy and vocabulary: the user defines a plan, its parts are rules, and guardrails are spending and exit limits. The strategy is hypothesis-led and has no primary target-user research yet. Do not present assumptions as validated or silently change accepted decisions.
+## Project context
+
+This skill carries no project-specific rules. Each project supplies its own.
+
+1. **Read the project's rules first.** Before producing or saving anything, read the project's instruction files (`CLAUDE.md`, `AGENTS.md` or equivalent) and its README, plus any strategy, research or decision documents relevant to the task. Their rules take precedence over this skill.
+2. **Use its language and evidence rules.** Follow the project's vocabulary (including terms it marks as retired), source and citation rules, claim labels and privacy rules.
+3. **Respect its write boundaries.** Follow where drafts may be saved, which folders or records must not be changed, and which checks to run on changed files. If a check cannot be run, say so. If the project states no boundaries, do not overwrite sources, save new drafts only when asked, and say where you saved them.
+4. **Keep its decisions as they are.** Treat accepted decisions as accepted and open ones as open. Record a decision only when asked.
+5. **No project rules?** If the project has no instruction files, ask the user which vocabulary, privacy constraints and save location matter, or proceed with the generic method and say so.
+6. **Claim changes only when confirmed.** Report a file change only after the tool confirms it.
+
+Do not present a project's hypotheses as validated or silently change its accepted decisions.
 
 ## Challenge lenses
 Assess each as **Strong**, **Partial**, **Weak** or **Unknown**, with evidence and rationale. These are qualitative judgements against the material reviewed, not measured performance, user validation or proof of feasibility. Do not invent numeric scores.

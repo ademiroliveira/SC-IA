@@ -64,7 +64,16 @@ The orchestrator is a Level 1, human-guided instruction skill. It does not auton
 
 Specialist outputs use a shared handoff packet: intended decision, inputs/source references, findings, evidence status, assumptions/limitations, decisions, unresolved questions and suggested next step. Do not promote recommendations to decisions or treat repeated references to a common source as independent evidence.
 
-These are user-invoked instruction skills, not scheduled agents. They do not change watch-agent scope or write permissions. This file remains authoritative for SC-IA vocabulary, privacy, evidence and repository boundaries. Each Codex/Claude Code pair should be kept identical.
+These are user-invoked instruction skills, not scheduled agents. They do not change watch-agent scope or write permissions. Each Codex/Claude Code pair should be kept identical.
+
+**The skills are project-agnostic.** They carry no SC-IA rules and read this file for them, so it stays authoritative for vocabulary, privacy, evidence and repository boundaries. Rules for concept work in this repo:
+
+- Use the vocabulary above. Keep "policy" and "write" only when quoting or documenting historical wording.
+- Use **deliberate holders** as the umbrella outcome when a concept concerns the SC-IA product. Do not assume every new idea contributes to it; explain the connection or leave it open.
+- The strategy is hypothesis-led and has no primary research with the target user yet. Do not describe inferred pains, preferences or demand as validated.
+- A competitive "No" means no evidence found on the pages checked. Keep source tags and visible dates.
+- Do not write to `watch/`, `research/`, `strategy/` or `decisions/decision-log.md` during concept work. Save a draft under `initiatives/` only when asked, and never overwrite source material unless asked. Update the decision log only when asked to record an accepted decision.
+- Run `python3 watch/check.py <file>` on every changed file. If editing only through GitHub, say the check was not run.
 
 ## Competitive watch (scheduled)
 

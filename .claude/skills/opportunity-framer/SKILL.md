@@ -53,7 +53,18 @@ Label material claims:
 
 Preserve source wording, contradictions and minority perspectives. Never invent quotes, participants, sample sizes, prevalence or causal explanations. Cite source IDs, page/line references or URLs when available.
 
-For SC-IA, read `CLAUDE.md` and `README.md`. The strategy is hypothesis-led and has no primary research with the target user yet. Treat brokerage-native investor pains and preferences as hypotheses unless supplied evidence supports them. Use the repository vocabulary: the user defines a plan, its parts are rules, and guardrails are spending and exit limits. Never add employer/internal details or personal identifying information to this public repository.
+## Project context
+
+This skill carries no project-specific rules. Each project supplies its own.
+
+1. **Read the project's rules first.** Before producing or saving anything, read the project's instruction files (`CLAUDE.md`, `AGENTS.md` or equivalent) and its README, plus any strategy, research or decision documents relevant to the task. Their rules take precedence over this skill.
+2. **Use its language and evidence rules.** Follow the project's vocabulary (including terms it marks as retired), source and citation rules, claim labels and privacy rules.
+3. **Respect its write boundaries.** Follow where drafts may be saved, which folders or records must not be changed, and which checks to run on changed files. If a check cannot be run, say so. If the project states no boundaries, do not overwrite sources, save new drafts only when asked, and say where you saved them.
+4. **Keep its decisions as they are.** Treat accepted decisions as accepted and open ones as open. Record a decision only when asked.
+5. **No project rules?** If the project has no instruction files, ask the user which vocabulary, privacy constraints and save location matter, or proceed with the generic method and say so.
+6. **Claim changes only when confirmed.** Report a file change only after the tool confirms it.
+
+If the project says its strategy is hypothesis-led or has no primary research with its users, treat user pains and preferences as hypotheses unless supplied evidence supports them.
 
 ## Workflow
 1. **Establish the evidence base.** Record source, date/context if known, represented users, limitations, missing perspectives and possible bias. Add an evidence-coverage summary: which sources and user perspectives are represented, how direct or indirect the evidence is, what is missing, and whether the material is sufficient for the current framing. Do not use a numeric confidence score without a defensible basis.

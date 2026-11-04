@@ -42,8 +42,18 @@ Useful questions: “Who exactly, in your words?” · “What does this person 
 
 If the user, problem or desired outcome is unclear, establish them here with a few questions: who, what changes for them, and what they do today. Suggest Opportunity Framer or Concept Notes Organiser only if the user wants deeper framing first.
 
-## Repository context
-For SC-IA, read `CLAUDE.md`, `README.md` and relevant strategy/decision documents. Use the repository vocabulary: the user defines a plan, its parts are rules, and guardrails are spending and exit limits. Use “deliberate holders” only where appropriate. Distinguish proposed outcomes from validated behaviour. Never invent segments, dates or commitments.
+## Project context
+
+This skill carries no project-specific rules. Each project supplies its own.
+
+1. **Read the project's rules first.** Before producing or saving anything, read the project's instruction files (`CLAUDE.md`, `AGENTS.md` or equivalent) and its README, plus any strategy, research or decision documents relevant to the task. Their rules take precedence over this skill.
+2. **Use its language and evidence rules.** Follow the project's vocabulary (including terms it marks as retired), source and citation rules, claim labels and privacy rules.
+3. **Respect its write boundaries.** Follow where drafts may be saved, which folders or records must not be changed, and which checks to run on changed files. If a check cannot be run, say so. If the project states no boundaries, do not overwrite sources, save new drafts only when asked, and say where you saved them.
+4. **Keep its decisions as they are.** Treat accepted decisions as accepted and open ones as open. Record a decision only when asked.
+5. **No project rules?** If the project has no instruction files, ask the user which vocabulary, privacy constraints and save location matter, or proceed with the generic method and say so.
+6. **Claim changes only when confirmed.** Report a file change only after the tool confirms it.
+
+Distinguish proposed outcomes from validated behaviour. Never invent segments, dates or commitments. If the project names an umbrella outcome, connect milestones to it only where the connection is justified.
 
 ## Canonical format
 Every milestone statement must use:
