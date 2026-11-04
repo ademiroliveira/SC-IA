@@ -1,6 +1,6 @@
 ---
 name: concept-development-orchestrator
-description: Coordinate concept-development work by selecting and sequencing specialist skills, preserving evidence and decisions, and assembling human-reviewable outputs.
+description: Coordinate concept-development work with the user by agreeing which specialist skills to use and in what order, preserving evidence and decisions, and assembling human-reviewable outputs.
 ---
 
 # Concept Development Orchestrator
@@ -31,6 +31,31 @@ These repository files are instruction skills, not a guaranteed multi-agent runt
 - Do not claim background monitoring, autonomous collaboration, shared memory or repository writes unless the host actually performed them.
 - Keep a useful static plan when orchestration features are unavailable.
 
+## How to work with the user
+
+This skill helps the user define the work. It does not hand over a finished answer on the first turn. The user owns the choices: who it is for, the outcome, what counts as evidence, what to keep or drop. The skill brings structure, options and challenge.
+
+**Guided mode (default).**
+1. **Start from where the user is.** If invoked with no request, ask what they are working on and offer two or three ways to start. If invoked with material, play back in two or three lines what you understood, name the gaps, and ask.
+2. **Ask a few good questions at a time.** At most three per turn, each with one line on why it matters. Where it helps, offer options with a recommended default so the user can answer quickly. Never ask for what the sources already say. Use the host's structured question tool when it has one.
+3. **Offer candidates, not conclusions.** For each choice that belongs to the user, propose two or three candidates with the trade-off between them, recommend one when useful, and let the user pick, edit or reject.
+4. **Build in steps.** Work through the checkpoints below one at a time. Confirm before moving on, and carry forward what the user decided in their own words.
+5. **Assemble at the end.** Produce the full output only once the key choices are made. Mark anything you filled in yourself.
+
+**Draft mode.** When the user asks for a straight answer (“just draft it”, “first pass”, “no questions”) or the task is fully specified, produce the output in one go. List the choices you made on the user's behalf at the top, ask them to confirm or change them, and offer to switch to guided mode.
+
+**Works on its own.** This skill can be used without any other skill in the toolkit. If an input that another skill would normally provide is missing, gather the minimum here through questions instead of sending the user elsewhere. Suggest another skill only as an optional next step.
+
+### Checkpoints for this skill
+
+1. **Intake.** Play back the request, ask what it should help decide and what material exists.
+2. **Route.** Propose the minimum route, with why each skill is in or out. The user confirms or changes it before any specialist runs.
+3. **Each specialist.** Run it in guided mode, so the user makes that skill's choices.
+4. **Each handoff.** Show the handoff packet; the user decides what carries forward.
+5. **Assembly.** Assemble only what the user asked for.
+
+If the user wants one skill only, route straight to it. Every specialist works on its own.
+
 ## When to use
 
 Use for multi-step concept development, routing decisions, coordination of multiple specialist outputs, or review of a previous concept-development run.
@@ -48,7 +73,7 @@ Identify:
 6. **Evidence condition:** source-backed, reported, hypothesis-led, mixed or unknown.
 7. **Requested output:** analysis, opportunity frame, challenge, milestones, comparison or another artifact.
 
-If information is missing but useful work can proceed, state a working interpretation and label the gap. Ask only when missing information prevents meaningful progress. Do not ask users to repeat information already in the sources.
+Run intake as a short conversation: play back what you understood, ask what the work should help decide and what the user already has, and agree the route before starting. Do not ask users to repeat information already in the sources. In draft mode, state a working interpretation, label the gaps and proceed.
 
 ## Routing decision tree
 
@@ -76,7 +101,7 @@ Choose the **minimum useful set**. Skills may be skipped, repeated or revisited.
 
 ### 1. State the plan
 
-Summarise the request, sources, selected skills, order and expected outputs. Explain why each skill is needed and what is skipped. For a clear single-skill request, keep this brief.
+Summarise the request, sources, selected skills, order and expected outputs. Explain why each skill is needed and what is skipped. For a clear single-skill request, keep this brief. Ask the user to confirm or change the route before running any specialist.
 
 ### 2. Preserve the source record
 
@@ -90,7 +115,7 @@ Do not invent authors, dates, sample sizes, participant attributes or versions. 
 
 ### 3. Run specialist work
 
-Use the selected skill's method and output structure. Preserve findings, claim labels, contradictions and minority views.
+Use the selected skill's method and output structure, in guided mode unless the user asked for a draft, so the user makes that skill's choices. Preserve findings, claim labels, contradictions and minority views.
 
 If the platform cannot execute the skill, provide its path and a ready-to-use prompt with the request, relevant sources and handoff packet.
 
@@ -128,7 +153,7 @@ Pause when:
 - Proposed milestones or dates could be mistaken for commitments.
 - A repository write, overwrite or decision-log update is requested.
 
-Do not require approval for every routine handoff. Continue reversible analysis while labelling recommendations.
+In guided mode, show each handoff and let the user decide what carries forward. In draft mode, do not require approval for every routine handoff; continue reversible analysis while labelling recommendations.
 
 ### 7. Assemble the requested output
 
@@ -201,7 +226,8 @@ Outside SC-IA, use the relevant project's vocabulary, privacy and evidence rules
 ## Interaction behaviour
 
 - “Which skill should I use?” → recommend the minimum useful route.
-- “Develop this concept” → state a short plan, route and coordinate available outputs.
+- “Develop this concept” → propose a short plan, agree it with the user, then work through each skill in guided mode.
+- “I only want one skill” → route straight to it; every specialist works on its own.
 - “Challenge this” → Challenger directly unless the concept is too fragmented to understand.
 - “Compare these concepts” → Synthesiser; organise inputs only if needed.
 - “Extract milestones” → Milestone Architect if direction is clear; otherwise state what's missing.

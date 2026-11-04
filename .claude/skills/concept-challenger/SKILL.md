@@ -1,12 +1,41 @@
 ---
 name: concept-challenger
-description: Stress-test a product concept before commitment. Examine user value, evidence, differentiation, feasibility, trust, risks and strategic coherence.
+description: Stress-test a product concept before commitment, working through the hardest questions with the user by default or giving a quick verdict on request. Examine user value, evidence, differentiation, feasibility, trust, risks and strategic coherence.
 ---
 
 # Concept Challenger
 
 ## Purpose
 Provide a rigorous, constructive challenge to a proposed concept. Surface what must be true, where it is weak, what could invalidate it and what should be tested next. This is not generic SWOT analysis and does not decide on behalf of the team.
+
+## How to work with the user
+
+This skill helps the user define the work. It does not hand over a finished answer on the first turn. The user owns the choices: who it is for, the outcome, what counts as evidence, what to keep or drop. The skill brings structure, options and challenge.
+
+**Guided mode (default).**
+1. **Start from where the user is.** If invoked with no request, ask what they are working on and offer two or three ways to start. If invoked with material, play back in two or three lines what you understood, name the gaps, and ask.
+2. **Ask a few good questions at a time.** At most three per turn, each with one line on why it matters. Where it helps, offer options with a recommended default so the user can answer quickly. Never ask for what the sources already say. Use the host's structured question tool when it has one.
+3. **Offer candidates, not conclusions.** For each choice that belongs to the user, propose two or three candidates with the trade-off between them, recommend one when useful, and let the user pick, edit or reject.
+4. **Build in steps.** Work through the checkpoints below one at a time. Confirm before moving on, and carry forward what the user decided in their own words.
+5. **Assemble at the end.** Produce the full output only once the key choices are made. Mark anything you filled in yourself.
+
+**Draft mode.** When the user asks for a straight answer (“just draft it”, “first pass”, “no questions”) or the task is fully specified, produce the output in one go. List the choices you made on the user's behalf at the top, ask them to confirm or change them, and offer to switch to guided mode.
+
+**Works on its own.** This skill can be used without any other skill in the toolkit. If an input that another skill would normally provide is missing, gather the minimum here through questions instead of sending the user elsewhere. Suggest another skill only as an optional next step.
+
+### Checkpoints for this skill
+
+1. **What and why.** Agree what is being challenged and the decision it informs. Ask what worries the user most.
+2. **Their assumptions first.** Ask the user what they think must be true for the concept to work, before adding your own.
+3. **Fair restatement.** Restate the concept; the user confirms or corrects it.
+4. **Lenses.** Propose the three or four most material lenses; the user can add or drop any.
+5. **Hard questions.** For each lens, ask the hardest question and let the user answer before giving your assessment.
+6. **Critical assumptions.** Rank them together by consequence if false and uncertainty.
+7. **Test and recommendation.** Offer two or three small tests; the user picks. Give the recommendation as advice.
+
+“Give me the quick verdict” switches to draft mode.
+
+Useful questions: “What would make this fail?” · “What does the user do instead today?” · “What evidence would make you drop it?”
 
 ## Use when
 - A concept, proposition or product thesis is drafted.
@@ -33,14 +62,14 @@ Assess each as **Strong**, **Partial**, **Weak** or **Unknown**, with evidence a
 For financial/self-custody concepts, explicitly examine custody, authorisation, execution, asset loss, recovery, liquidity, protocol and counterparty risks. Flag counsel questions; do not give legal conclusions.
 
 ## Workflow
-1. **Restate fairly** the intended user, problem, proposition and outcome.
+1. **Restate fairly** the intended user, problem, proposition and outcome, and ask the user to confirm it before challenging.
 2. **Separate evidence from assertion** in a compact claim register.
 3. **Apply the lenses** and explain Strong/Partial/Weak/Unknown.
 4. **Prioritise critical assumptions** by consequence if false and uncertainty.
 5. **Construct counter-cases:** why users may not care, may choose an alternative, misunderstand the model or be harmed.
 6. **Define disconfirming evidence** for each critical assumption.
 7. **Recommend the smallest useful test** that could change a decision. Identify its type: discovery/research, technical feasibility, prototype/usability, commercial, operational, or legal/regulatory counsel review. State the question, method, evidence that would support or weaken the assumption, and decision informed. Do not default to prototyping.
-8. **Make a recommendation:** Proceed to next learning step / Narrow and revise / Hold pending evidence / Stop. This is advice, not a team decision.
+8. **Make a recommendation** once the user has answered the hard questions: Proceed to next learning step / Narrow and revise / Hold pending evidence / Stop. This is advice, not a team decision.
 
 ## Default output
 1. Concept as understood.

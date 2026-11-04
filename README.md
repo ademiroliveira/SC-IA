@@ -54,6 +54,8 @@ A coordinated set of reusable skills for moving from raw material to a considere
 
 ### How to use the toolkit
 
+Every skill works **with you** by default: it plays back what it understood, asks a few questions at a time, offers candidates for the choices that are yours (who, outcome, evidence, what to keep) and builds the output in steps. Say “just draft it” for a one-pass draft that lists the choices it made for you. Each skill also works on its own; none requires another to run first.
+
 Start with the **Concept Development Orchestrator** when work spans several stages or the right skill is unclear. It selects the minimum useful set of specialists and coordinates handoffs. For a focused task, invoke the relevant specialist directly.
 
 A common route is:

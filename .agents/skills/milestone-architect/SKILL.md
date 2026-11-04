@@ -1,6 +1,6 @@
 ---
 name: milestone-architect
-description: Translate a product direction into North Star, experience and enabling outcomes using the exact “By [year], [who] can [do what] without [today's friction]” format.
+description: Work with the user to translate a product direction into North Star, experience and enabling outcomes using the exact “By [year], [who] can [do what] without [today's friction]” format.
 ---
 
 # Milestone Architect
@@ -8,13 +8,39 @@ description: Translate a product direction into North Star, experience and enabl
 ## Purpose
 Translate a sufficiently clear product direction into an outcome hierarchy. Make progression understandable without turning milestones into feature backlogs or invented delivery roadmaps. This skill does not set dates, commit teams or replace product planning.
 
+## How to work with the user
+
+This skill helps the user define the work. It does not hand over a finished answer on the first turn. The user owns the choices: who it is for, the outcome, what counts as evidence, what to keep or drop. The skill brings structure, options and challenge.
+
+**Guided mode (default).**
+1. **Start from where the user is.** If invoked with no request, ask what they are working on and offer two or three ways to start. If invoked with material, play back in two or three lines what you understood, name the gaps, and ask.
+2. **Ask a few good questions at a time.** At most three per turn, each with one line on why it matters. Where it helps, offer options with a recommended default so the user can answer quickly. Never ask for what the sources already say. Use the host's structured question tool when it has one.
+3. **Offer candidates, not conclusions.** For each choice that belongs to the user, propose two or three candidates with the trade-off between them, recommend one when useful, and let the user pick, edit or reject.
+4. **Build in steps.** Work through the checkpoints below one at a time. Confirm before moving on, and carry forward what the user decided in their own words.
+5. **Assemble at the end.** Produce the full output only once the key choices are made. Mark anything you filled in yourself.
+
+**Draft mode.** When the user asks for a straight answer (“just draft it”, “first pass”, “no questions”) or the task is fully specified, produce the output in one go. List the choices you made on the user's behalf at the top, ask them to confirm or change them, and offer to switch to guided mode.
+
+**Works on its own.** This skill can be used without any other skill in the toolkit. If an input that another skill would normally provide is missing, gather the minimum here through questions instead of sending the user elsewhere. Suggest another skill only as an optional next step.
+
+### Checkpoints for this skill
+
+1. **Who and what changes.** Confirm the user, the change they should experience, and what they do today. If the sources do not settle these, ask.
+2. **North Star.** Offer two or three candidates with the trade-off between them. The user picks or rewrites one. Years come only from the user.
+3. **Experience milestones.** Walk the user's journey stage by stage. Ask which abilities matter, draft a few at a time, and ask the user to confirm each “without” friction from what they know.
+4. **Enabling milestones.** Propose the actors and outcomes the experience depends on; the user keeps or drops each.
+5. **Sequence and signals.** Ask whether stages are wanted at all, then agree how progress would be observed. No invented targets.
+6. **Milestone set.** Assemble the agreed set.
+
+Useful questions: “Who exactly, in your words?” · “What does this person do today instead?” · “How would you know it happened?”
+
 ## Use when
 - A product thesis or concept direction is clear enough to express outcomes.
 - A team needs a North Star and supporting milestones.
 - Milestones need grouping, de-duplication or sequencing.
 - A roadmap mixes user outcomes with features and engineering tasks.
 
-If user, problem or desired outcome is unclear, use Opportunity Framer or Concept Notes Organiser first.
+If the user, problem or desired outcome is unclear, establish them here with a few questions: who, what changes for them, and what they do today. Suggest Opportunity Framer or Concept Notes Organiser only if the user wants deeper framing first.
 
 ## Repository context
 For SC-IA, read `CLAUDE.md`, `README.md` and relevant strategy/decision documents. Use the repository vocabulary: the user defines a plan, its parts are rules, and guardrails are spending and exit limits. Use “deliberate holders” only where appropriate. Distinguish proposed outcomes from validated behaviour. Never invent segments, dates or commitments.
@@ -37,7 +63,7 @@ Every milestone statement must use:
 - **Enabling:** outcomes required from an identifiable user, operator, provider or system-facing actor to make the experience dependable (e.g. reliable data, intelligible risk, recovery readiness, enforceable permissions, execution verification). The statement must describe a meaningful change that actor can achieve and the friction it removes. If the only wording is an engineering activity (for example, “integrate transaction simulation”), keep it in the dependency/delivery list, not as a milestone.
 
 ## Workflow
-1. **Confirm source direction:** user, problem, thesis, outcome, constraints and accepted decisions. Flag conflicts.
+1. **Confirm source direction:** user, problem, thesis, outcome, constraints and accepted decisions. Flag conflicts, and ask the user to settle or supply what the sources do not.
 2. **Draft North Star:** ensure it is a user outcome, not a product capability.
 3. **Decompose experience outcomes:** work backwards from the North Star and forwards through the user's journey. Keep each milestone distinct.
 4. **Identify enabling outcomes:** include only what is necessary to support the experience.
