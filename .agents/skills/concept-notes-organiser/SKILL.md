@@ -61,20 +61,18 @@ Do not use as a substitute for primary user research, market validation, competi
 9. **Do not over-prescribe.** Recommendations remain recommendations until accepted by the team.
 10. **Keep the original intact.** Do not overwrite source notes or existing strategy documents unless explicitly asked.
 
-## Repository-specific rules for SC-IA
+## Project context
 
-When used inside the SC-IA repository:
+This skill carries no project-specific rules. Each project supplies its own.
 
-1. Read `CLAUDE.md` and `README.md` before producing or saving repository content. Their rules take precedence over this skill.
-2. Follow the repository vocabulary: the user **defines** a **plan**; its parts are **rules**; **guardrails** are spending and exit limits. Do not introduce the older terms “policy” or “write” as current product language. Preserve an old term only when quoting or documenting historical wording.
-3. Use **deliberate holders** as the umbrella outcome when the concept concerns the SC-IA product. Do not assume every new idea contributes to it; explain the connection or leave it open.
-4. Treat the strategy as hypothesis-led. The repository has no primary research with its target users yet. Do not describe inferred needs, pains or preferences as validated findings.
-5. Follow the source, citation and claim rules in `CLAUDE.md` when external research is part of the input. A claim copied from notes is not independently verified by being organised.
-6. The repository is public. Never add employer names, internal product names or plans from other work, personal names, contact details or identifying information. Use role descriptions. Run `python3 watch/check.py <file>` on each changed file when working in a local clone.
-7. Do not write synthesis into `watch/`, competitive research, the strategy baseline or `decisions/decision-log.md` by default. A new initiative brief may be proposed under `initiatives/` when the user asks to save it. Do not update the decision log unless explicitly asked to record an accepted decision.
-8. This is a user-invoked synthesis skill, not part of the scheduled competitive watch. It does not change watch agents' scope or write permissions.
+1. **Read the project's rules first.** Before producing or saving anything, read the project's instruction files (`CLAUDE.md`, `AGENTS.md` or equivalent) and its README, plus any strategy, research or decision documents relevant to the task. Their rules take precedence over this skill.
+2. **Use its language and evidence rules.** Follow the project's vocabulary (including terms it marks as retired), source and citation rules, claim labels and privacy rules.
+3. **Respect its write boundaries.** Follow where drafts may be saved, which folders or records must not be changed, and which checks to run on changed files. If a check cannot be run, say so. If the project states no boundaries, do not overwrite sources, save new drafts only when asked, and say where you saved them.
+4. **Keep its decisions as they are.** Treat accepted decisions as accepted and open ones as open. Record a decision only when asked.
+5. **No project rules?** If the project has no instruction files, ask the user which vocabulary, privacy constraints and save location matter, or proceed with the generic method and say so.
+6. **Claim changes only when confirmed.** Report a file change only after the tool confirms it.
 
-Outside SC-IA, use the vocabulary and constraints of the relevant project and source material; do not import SC-IA assumptions.
+A claim copied from notes is not independently verified by being organised. Keep a retired term only when quoting or documenting historical wording. If the project names an umbrella outcome, do not assume every new idea contributes to it; explain the connection or leave it open. This is a user-invoked skill; it does not change any scheduled or automated workflow in the project.
 
 ## Workflow
 
@@ -166,7 +164,7 @@ Before presenting, check:
 - Are milestones distinct and sequenced by dependency or maturity?
 - Have unsupported claims, invented capabilities and premature commitments been removed?
 - Has the original source been left intact?
-- If saving to the public SC-IA repository, have privacy and validation checks been followed?
+- If saving into a project, have its privacy rules and file checks been followed?
 
 ## Handoff packet
 

@@ -189,19 +189,18 @@ Check:
 
 If a gate fails, identify the gap and recommend the smallest corrective step. Do not silently fill it.
 
-## Repository rules for SC-IA
+## Project context
 
-1. Read README.md and CLAUDE.md. CLAUDE.md is authoritative for privacy, vocabulary, evidence, claims and repository boundaries.
-2. The repository is public. Never add employer names, internal product names/plans from other work, personal names, contact details or identifying information.
-3. Vocabulary: the user defines a plan; its parts are rules; guardrails are spending and exit limits. Do not introduce “policy” or “write” as current product language.
-4. Treat strategy as hypothesis-led. Do not describe inferred pains, preferences or demand as validated findings.
-5. Competitive “No” means no evidence found on checked public pages, not proof of absence. Retain source tags and visible dates.
-6. Do not write to watch/, research/, strategy/ or decisions/decision-log.md during ordinary concept orchestration. Do not alter competitive-watch scope or permissions.
-7. A new initiative brief may be proposed under initiatives/ only when asked. Do not overwrite source material unless explicitly asked.
-8. Run python3 watch/check.py <file> on each changed file in a local clone. If editing only through GitHub, state that the local check was not run.
-9. Claim a repository change only after the tool confirms it.
+This skill carries no project-specific rules. Each project supplies its own.
 
-Outside SC-IA, use the relevant project's vocabulary, privacy and evidence rules.
+1. **Read the project's rules first.** Before producing or saving anything, read the project's instruction files (`CLAUDE.md`, `AGENTS.md` or equivalent) and its README, plus any strategy, research or decision documents relevant to the task. Their rules take precedence over this skill.
+2. **Use its language and evidence rules.** Follow the project's vocabulary (including terms it marks as retired), source and citation rules, claim labels and privacy rules.
+3. **Respect its write boundaries.** Follow where drafts may be saved, which folders or records must not be changed, and which checks to run on changed files. If a check cannot be run, say so. If the project states no boundaries, do not overwrite sources, save new drafts only when asked, and say where you saved them.
+4. **Keep its decisions as they are.** Treat accepted decisions as accepted and open ones as open. Record a decision only when asked.
+5. **No project rules?** If the project has no instruction files, ask the user which vocabulary, privacy constraints and save location matter, or proceed with the generic method and say so.
+6. **Claim changes only when confirmed.** Report a file change only after the tool confirms it.
+
+Do not alter any scheduled or automated workflow in the project, or its scope or permissions, during concept orchestration.
 
 ## Test scenarios
 

@@ -74,7 +74,7 @@ The orchestrator is a Level 1, human-guided instruction skill. It plans and coor
 - “Extract a North Star and supporting experience and enabling milestones. Do not invent years.”
 - “Compare these three concept briefs and show what should stay separate.”
 
-All specialist skills use a common handoff packet covering the intended decision, source references, findings, evidence status, assumptions, decisions and unresolved questions. Their repository-specific rules defer to `CLAUDE.md`.
+All specialist skills use a common handoff packet covering the intended decision, source references, findings, evidence status, assumptions, decisions and unresolved questions. The skills are project-agnostic: they carry no SC-IA rules and read them from `CLAUDE.md` (Codex reaches it through `AGENTS.md`), so the same files can be copied into another repo.
 
 ## Repository layout
 
@@ -87,6 +87,7 @@ watch/       weekly watch and monthly rescore files, the watchlist, entry points
 .agents/     repository-level Agent Skills for Codex
 .claude/     Claude Code project agents, commands and skills
 CLAUDE.md    rules for any session in this repo: vocabulary, claims, scores, source tags, the watch
+AGENTS.md    points Codex to CLAUDE.md
 ```
 
 ## Next steps
