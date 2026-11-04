@@ -34,7 +34,7 @@ Every milestone statement must use:
 ## Milestone types
 - **North Star:** overarching user/customer outcome. Normally one; show alternatives if source contains competing outcomes.
 - **Experience:** user-facing abilities that contribute to the North Star.
-- **Enabling:** outcomes required from an operator, provider or system-facing actor to make the experience dependable (e.g. reliable data, intelligible risk, recovery readiness, enforceable permissions, execution verification). Keep internal technical deliverables in a dependency list, not as user milestones.
+- **Enabling:** outcomes required from an identifiable user, operator, provider or system-facing actor to make the experience dependable (e.g. reliable data, intelligible risk, recovery readiness, enforceable permissions, execution verification). The statement must describe a meaningful change that actor can achieve and the friction it removes. If the only wording is an engineering activity (for example, “integrate transaction simulation”), keep it in the dependency/delivery list, not as a milestone.
 
 ## Workflow
 1. **Confirm source direction:** user, problem, thesis, outcome, constraints and accepted decisions. Flag conflicts.
@@ -71,7 +71,21 @@ Use a companion map: Outcome milestone | Enabling capability/dependency | Delive
 8. What is not yet a commitment.
 
 ## Quality check
-Every statement follows the canonical format; user, outcome and friction are supported or labelled; milestones are distinct; enablers are separate from internal deliverables; dates and sequence are grounded; progress is observable without invented targets.
+Every statement follows the canonical format; user, outcome and friction are supported or labelled; milestones are distinct; enablers identify an actor and meaningful outcome, and remain separate from internal deliverables; dates and sequence are grounded; progress is observable without invented targets.
+
+## Handoff packet
+
+When passing this output to another skill or orchestration step, include:
+- **Task and intended decision** — why this work was done and what decision it may inform.
+- **Inputs and source references** — files, links, note IDs, versions or sections reviewed; use “Not stated” where unavailable.
+- **Key findings** — main source-grounded results.
+- **Evidence status** — observed, reported, external evidence, interpretation, hypothesis or unknown.
+- **Assumptions and limitations** — what remains unproven or outside the input.
+- **Decisions** — accepted decisions, proposed recommendations and open decisions kept separate.
+- **Unresolved questions** — gaps that could change the next step.
+- **Suggested next step** — a skill or activity only when useful, with rationale.
+
+Do not upgrade a recommendation to an accepted decision during handoff. Preserve source references and meaningful disagreements. Use “Not stated” rather than filling gaps.
 
 ## Hand-offs
 - **Opportunity Framer:** user/problem unclear.
