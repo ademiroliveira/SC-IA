@@ -124,6 +124,8 @@ For each milestone include:
 
 **Sequencing:** Group milestones into stages only when the source supports a genuine maturity progression. A possible progression is “Understand and define”, “Compose and control”, “Delegate and maintain”. This is optional, not a default roadmap. Do not force dates, stage names or linear progression onto the material; state when ordering is only a recommendation.
 
+This skill captures candidate milestones that are visible in the source. When the task requires a fully developed milestone hierarchy, dependency map, observable signals and sequencing, hand the candidate set to Milestone Architect rather than duplicating that deeper analysis here.
+
 ### 5. Quality-check the synthesis
 
 Before presenting, check:
@@ -139,6 +141,21 @@ Before presenting, check:
 - Have unsupported claims, invented capabilities and premature commitments been removed?
 - Has the original source been left intact?
 - If saving to the public SC-IA repository, have privacy and validation checks been followed?
+
+## Handoff packet
+
+When this output is passed to another skill or an orchestration step, include a compact handoff packet:
+
+- **Task and intended decision** — why this work was done and what decision it may inform.
+- **Inputs and source references** — files, links, note IDs, versions or sections reviewed; use “Not stated” where unavailable.
+- **Key findings** — the main source-grounded results, not a second full report.
+- **Evidence status** — distinguish observed, reported, external evidence, interpretation, hypothesis and unknown as applicable.
+- **Assumptions and limitations** — what remains unproven or outside the input.
+- **Decisions** — separate accepted decisions, proposed recommendations and open decisions.
+- **Unresolved questions** — gaps that could change the next step.
+- **Suggested next step** — a skill or activity only when it is useful; explain why.
+
+Do not upgrade a recommendation to an accepted decision during handoff. Preserve source references and meaningful disagreements. Use “Not stated” rather than filling gaps.
 
 ## Default output structure
 
