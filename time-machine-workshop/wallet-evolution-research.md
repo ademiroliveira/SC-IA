@@ -43,6 +43,8 @@ The wallet has turned from a key file into a programmable account with rules. Ea
 | 2025 | Bybit ~$1.46B (Feb 21); Pectra/EIP-7702 (May 7); Stripe buys Privy (Jun 11); GENIUS Act enacted; Base App rebrand (Jul); Fireblocks buys Dynamic (Oct 23); Fusaka/EIP-7951 passkey precompile (Dec 3); Trust Wallet extension compromise (Dec 24) | Upgrade-in-place smart accounts; WaaS consolidation; supply-chain risk |
 | 2026 | Coinbase Agentic Wallets (Feb 11); Phantom MCP server (Feb 18); Trust Wallet Agent Kit (Mar 26); ERC-7730 v2 (Apr); EF Clear Signing launch (May 12); Grok/Bankrbot prompt-injection theft (May 4); Ledger pauses IPO (May); x402 Foundation under Linux Foundation (Jul 14); MetaMask Agent Wallet GA (Aug 6); Base App reverts to Coinbase Wallet (Sep 10); OCC GENIUS final rule (Oct) | Agent permissions, clear-signing standardization, regulatory clarity for self-custody |
 
+This table lists incidents (hacks and collapses such as Mt. Gox, FTX and Bybit) alongside milestones. The workshop deck keeps them apart: an incident is an event, and the milestone is the shift it pushed. The October 2026 Binance hack is covered in the addendum below.
+
 ---
 
 ## Details
@@ -214,6 +216,14 @@ The **MAU figures are not comparable.** The MetaMask "30M" figure is old and una
 
 ---
 
+## Addendum, November 2026: the Binance hack
+
+- [Report] On October 29, 2026, attackers drained Binance's hot wallets on ten chains, most of it in about 20 minutes. TRM Labs values the theft at about USD 6.36 billion at the time of each transfer, calls it the largest crypto theft on record, and attributes it with high confidence to TraderTraitor, a North Korean unit. On Ethereum, a Binance hot wallet signed 50 EIP-7702 authorizations that pointed it at an attacker-controlled sweeper contract; on the other chains the funds left through ordinary signed transfers. TRM's assessment is that the attacker most likely controlled Binance's hot-wallet signing system across chains; Binance had not published a root cause. (TRM Labs, October 29, 2026)
+  - Why it matters: like Bybit, the target was the signing system rather than a key, and a programmable-account feature, EIP-7702, was used against its owner.
+- [Press] Binance paused withdrawals across several networks the same day and said user funds were safe. (TechCrunch, October 29, 2026)
+- [Press] Binance said it had covered 90% of the stolen amount from its Secure Asset Fund for Users, its futures insurance fund and its corporate treasury, and expected withdrawals to resume on November 1. (The National, October 31, 2026, updated November 1)
+  - Why it matters: customers of a custodial exchange were covered by the exchange's own funds, which is a different outcome from Mt. Gox and FTX. It is an incident, not a milestone; the deck shows it on the incidents slide.
+
 ## Sources
 
 Citations from the research task. Three of the task's sources were left out because their addresses contain a personal name or social handle.
@@ -310,3 +320,6 @@ Citations from the research task. Three of the task's sources were left out beca
 - [libertify](https://www.libertify.com/interactive-library/chainalysis-crypto-crime-report/)
 - [cornfordandcross](https://cornfordandcross.com/financial-technology/how-to-keep-ai-agent-delegation-from-becoming-a-security-problem)
 - [ledger](https://www.ledger.com/academy/topics/agentic-ai/ai-agents-best-practices)
+- [trmlabs](https://www.trmlabs.com/resources/blog/north-korea-steals-usd-6-36-billion-from-binance-in-the-largest-hack-in-history)
+- [techcrunch](https://techcrunch.com/2026/10/29/binance-pauses-withdrawals-as-hackers-suspected-of-stealing-billions-in-crypto/)
+- [thenationalnews](https://www.thenationalnews.com/business/2026/10/31/binance-covers-90-per-cent-of-assets-stolen-in-security-incident/)

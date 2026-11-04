@@ -23,6 +23,8 @@ S = {
     "twak": ("Trust Wallet: introducing the Agent Kit", "https://trustwallet.com/blog/company/introducing-the-trust-wallet-agent-kit-twak-your-ai-agent-can-now-act-on-crypto"),
     "bankless": ("Bankless: MetaMask launches agent wallets", "https://www.bankless.com/read/news/metamask-launches-agent-wallets"),
     "bnc": ("BraveNewCoin: x402 records 138.5M transactions", "https://bravenewcoin.com/insights/coinbases-x402-records-138-5m-transactions-chainalysis-shows-ai-agents-reshaping-crypto-payments"),
+    "trm": ("TRM Labs: North Korea steals USD 6.36 billion from Binance", "https://www.trmlabs.com/resources/blog/north-korea-steals-usd-6-36-billion-from-binance-in-the-largest-hack-in-history"),
+    "national": ("The National: Binance covers 90 per cent of assets stolen", "https://www.thenationalnews.com/business/2026/10/31/binance-covers-90-per-cent-of-assets-stolen-in-security-incident/"),
     "coincentralx402": ("CoinCentral: x402 passes 138 million transactions", "https://coincentral.com/ai-agents-gain-ground-as-x402-passes-138-million-transactions214628-2"),
 }
 
@@ -45,12 +47,12 @@ DETAILS = {
         ],
         "sources": [],
     },
-    "m2014": {
-        "eyebrow": "2014",
-        "title": "Hardware wallets and Mt. Gox",
+    "mtgox": {
+        "eyebrow": "2014 · Incident",
+        "title": "Mt. Gox collapses",
         "body": [
-            "Trezor shipped the first commercial hardware wallet in 2014, and Ledger followed with secure-element devices. Keys left the computer.",
-            "The same year Mt. Gox collapsed, and “not your keys, not your coins” became the ethos of the next decade.",
+            "Mt. Gox collapsed in 2014, and “not your keys, not your coins” became the ethos of the next decade.",
+            "An incident, not a milestone: the shift it pushed was toward wallets people control themselves, and hardware wallets shipped the same year.",
         ],
         "sources": [],
     },
@@ -82,8 +84,8 @@ DETAILS = {
         "sources": ["walletconnect"],
     },
     "m2022": {
-        "eyebrow": "2022",
-        "title": "FTX",
+        "eyebrow": "2022 · Incident",
+        "title": "FTX collapses",
         "body": [
             "FTX’s collapse in November 2022 took self-custody from a niche preference to a mainstream argument, and drove hardware wallet sales and withdrawals.",
         ],
@@ -98,14 +100,24 @@ DETAILS = {
         ],
         "sources": ["turnkey"],
     },
-    "m2025": {
+    "eip7702": {
         "eyebrow": "2025",
-        "title": "EIP-7702 and Bybit",
+        "title": "EIP-7702",
         "body": [
             "EIP-7702 went live with Ethereum’s Pectra upgrade on May 7, 2025. It lets an existing address act as a smart account without changing address.",
-            "Earlier that year, on February 21, Bybit lost about $1.46B through a tampered signing interface and blind signing on hardware wallets.",
+            "The same power cuts both ways: in the October 2026 Binance hack, a hot wallet signed EIP-7702 delegations to an attacker’s sweeper contract.",
         ],
-        "sources": ["turnkey", "fireblocks"],
+        "sources": ["turnkey", "trm"],
+    },
+    "binance": {
+        "eyebrow": "October 2026 · Incident",
+        "title": "Binance: about $6.3B",
+        "body": [
+            "On October 29, 2026, attackers drained Binance’s hot wallets on ten chains, most of it in about 20 minutes. TRM Labs puts it at about USD 6.36 billion, the largest crypto theft on record, and attributes it with high confidence to North Korea’s TraderTraitor unit.",
+            "On Ethereum a hot wallet signed EIP-7702 delegations to the attacker’s contract; elsewhere the funds left through ordinary signed transfers. TRM reads this as control of the hot-wallet signing system; Binance had not published a root cause.",
+            "Binance paused withdrawals and said it had covered 90% of the stolen amount from its own funds, with withdrawals expected to resume on November 1.",
+        ],
+        "sources": ["trm", "national"],
     },
     "m2026": {
         "eyebrow": "2026",
@@ -256,12 +268,15 @@ DETAILS = {
 MARKS = [
     ("milestones", "2009", "m2009"),
     ("milestones", "2012–13", "seed"),
-    ("milestones", "2014", "m2014"),
+    ("milestones", "2014", "hardware"),
     ("milestones", "2016–18", "login"),
-    ("milestones", "2022", "m2022"),
     ("milestones", "2023", "erc4337"),
-    ("milestones", "2025", "m2025"),
+    ("milestones", "2025", "eip7702"),
     ("milestones", "2026", "m2026"),
+    ("incidents", "2014", "mtgox"),
+    ("incidents", "2022", "m2022"),
+    ("incidents", "2025", "bybit"),
+    ("incidents", "2026", "binance"),
     ("keys", "Seed phrases", "seed"),
     ("keys", "Hardware wallets", "hardware"),
     ("keys", "Exchange failures", "exchanges"),
