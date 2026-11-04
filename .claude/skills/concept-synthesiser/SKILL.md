@@ -25,7 +25,7 @@ For SC-IA, read `CLAUDE.md`, `README.md` and relevant strategy/decision document
 ## Principles
 1. Compare before combining.
 2. Preserve provenance: connect every shared theme or proposed combination to its source.
-3. Keep evidence status visible: repeated hypotheses are not validated user evidence.
+3. Keep evidence status visible: repeated hypotheses are not validated user evidence. Repetition across documents is not independent corroboration when documents derive from the same original source, workshop or assumption; record source lineage and distinguish repeated mention from independent support.
 4. Respect differences in users, jobs, risk profiles, operating models and value propositions.
 5. Expose trade-offs rather than hiding them in a smooth narrative.
 6. Do not mistake frequency in documents for stakeholder agreement.
@@ -33,8 +33,8 @@ For SC-IA, read `CLAUDE.md`, `README.md` and relevant strategy/decision document
 8. Preserve source documents.
 
 ## Workflow
-1. **Inventory inputs:** title, author/team if supplied, date/version, user, problem, proposition, outcome, capabilities, assumptions, constraints, dependencies and decisions. Mark missing fields “Not stated”.
-2. **Compare:** user/actor; situation/job; problem/evidence; outcome; proposition; model/capabilities; trust/control/risk; dependencies/operating model; differentiation/alternatives; assumptions/open decisions.
+1. **Inventory inputs:** assign a stable reference to each input and record title, author/team if supplied, date/version, user, problem, proposition, outcome, capabilities, assumptions, constraints, dependencies and decisions. Mark missing fields “Not stated”. Where documents share an underlying source, record that relationship so repeated claims are not counted as independent evidence.
+2. **Compare:** user/actor; situation/job; problem/evidence; outcome; proposition; model/capabilities; trust/control/risk; dependencies/operating model; differentiation/alternatives; assumptions/open decisions. For material claims, preserve source references and note whether supporting sources are independent or share a common origin.
 3. **Identify patterns:** shared, overlapping, complementary, conflicting and unique elements; gaps; duplicates versus shared components.
 4. **Develop options** where appropriate:
    - **Keep separate:** distinct propositions remain distinct.
@@ -46,7 +46,7 @@ For SC-IA, read `CLAUDE.md`, `README.md` and relevant strategy/decision document
 
 ## Default output
 1. Executive synthesis — what connects and what does not.
-2. Source inventory — documents and versions reviewed.
+2. Source inventory — stable source references, document versions and known source relationships.
 3. Comparison matrix.
 4. Convergence and divergence.
 5. Synthesis options, where useful.
@@ -58,6 +58,20 @@ For SC-IA, read `CLAUDE.md`, `README.md` and relevant strategy/decision document
 
 ## Quality check
 Represent each source fairly; preserve contradictions; trace synthesis claims; distinguish hypotheses from evidence; ensure combinations make sense for users, not only technically; identify new assumptions; show alternatives and trade-offs; preserve source files.
+
+## Handoff packet
+
+When passing this output to another skill or orchestration step, include:
+- **Task and intended decision**
+- **Inputs and source references**
+- **Key findings**
+- **Evidence status** — observed, reported, external evidence, interpretation, hypothesis or unknown
+- **Assumptions and limitations**
+- **Decisions** — accepted, proposed and open, kept separate
+- **Unresolved questions**
+- **Suggested next step** — only when useful, with rationale
+
+Do not upgrade a recommendation to an accepted decision during handoff. Preserve source references and disagreements. Use “Not stated” rather than filling gaps.
 
 ## Hand-offs
 - **Opportunity Framer:** problem frames unclear or inconsistent.
