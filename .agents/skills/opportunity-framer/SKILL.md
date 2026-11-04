@@ -30,7 +30,7 @@ Preserve source wording, contradictions and minority perspectives. Never invent 
 For SC-IA, read `CLAUDE.md` and `README.md`. The strategy is hypothesis-led and has no primary research with the target user yet. Treat brokerage-native investor pains and preferences as hypotheses unless supplied evidence supports them. Use the repository vocabulary: the user defines a plan, its parts are rules, and guardrails are spending and exit limits. Never add employer/internal details or personal identifying information to this public repository.
 
 ## Workflow
-1. **Establish the evidence base.** Record source, date/context if known, represented users, limitations, missing perspectives and possible bias.
+1. **Establish the evidence base.** Record source, date/context if known, represented users, limitations, missing perspectives and possible bias. Add an evidence-coverage summary: which sources and user perspectives are represented, how direct or indirect the evidence is, what is missing, and whether the material is sufficient for the current framing. Do not use a numeric confidence score without a defensible basis.
 2. **Extract observations.** Group by situation, behaviour, workaround, consequence, motivation, concern and context. Do not merge distinct user groups just because comments sound similar.
 3. **Frame the problem.** Identify who, situation, current behaviour, friction or unmet need, and evidenced consequence. Keep what happens separate from why you think it happens.
 4. **Write a problem statement.** Use: “[User/actor] needs a way to [need] when [situation], because [evidenced consequence].” Mark unsupported parts as hypotheses or leave gaps.
@@ -39,7 +39,7 @@ For SC-IA, read `CLAUDE.md` and `README.md`. The strategy is hypothesis-led and 
 
 ## Default output
 1. **Opportunity frame** — user and context.
-2. **Evidence base** — sources, scope and limitations.
+2. **Evidence base** — sources, scope and limitations, including source coverage, represented and missing perspectives, evidence directness and sufficiency.
 3. **Observation themes** — traceable references.
 4. **Problem statement** — with claim status.
 5. **Opportunity areas** — outcome-led and solution-neutral.
@@ -57,6 +57,20 @@ Use a table when helpful: Claim/theme | Source | Status | Confidence | Unknowns.
 - Are contradictions and evidence limitations visible?
 - Does each opportunity describe user progress rather than a feature?
 - Are learning steps tied to decisions?
+
+## Handoff packet
+
+When passing this output to another skill or orchestration step, include:
+- **Task and intended decision** — why this work was done and what decision it may inform.
+- **Inputs and source references** — files, links, note IDs, versions or sections reviewed; use “Not stated” where unavailable.
+- **Key findings** — main source-grounded results.
+- **Evidence status** — observed, reported, external evidence, interpretation, hypothesis or unknown.
+- **Assumptions and limitations** — what remains unproven or outside the input.
+- **Decisions** — accepted decisions, proposed recommendations and open decisions kept separate.
+- **Unresolved questions** — gaps that could change the next step.
+- **Suggested next step** — a skill or activity only when useful, with rationale.
+
+Do not upgrade a recommendation to an accepted decision during handoff. Preserve source references and meaningful disagreements. Use “Not stated” rather than filling gaps.
 
 ## Hand-offs
 - **Concept Notes Organiser:** structure a broader body of raw notes.
