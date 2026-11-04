@@ -13,7 +13,7 @@ Research, competitive analysis, problem framing and product design strategy for 
 - **Earning inside self-custody is no longer white space.** Robinhood, MetaMask, Kraken and Coinbase all ship it, mostly on the same Steakhouse and Morpho curated-vault engine.
 - **The investor frame is unclaimed in US self-custody.** No US self-custody product is built around allocation, drift and risk contribution; outside the US, Glider and Bitwise now run target allocations with automatic rebalancing in the user's own wallet. Everyone in the US who has the frame (Schwab, E\*Trade, Wealthfront, Coinbase Advisor) is custodial.
 - **Robinhood is the closest threat.** It has a brokerage-native audience, one-tap self-custody earn inside its main app, and its own chain. Robinhood and Coinbase are answering "intent is the only decision" with AI agents rather than plans (round 2).
-- **The strategic bet:** allocation is the unit of the product. The user writes a policy, the product executes it exactly, every return names its source and risk, and recovery is rehearsed before meaningful money arrives.
+- **The strategic bet:** allocation is the unit of the product. The user defines a plan and its rules; the product follows those rules, every return names its source and risk, and recovery is rehearsed before meaningful money arrives.
 - **The outcome it must move:** deliberate holders, meaning investors who hold a sized slice in their own custody, under rules they wrote, and who could recover it. It counts people, not deposits.
 - **What could sink it:** 13 of the 23 assumptions behind the strategy are leaps of faith. Three come first: that brokerage-native investors want their own keys (A1), think of crypto as a share of their portfolio (A2), and would write their own rules (A4). One round of generative interviews tests all three, and opens with pain discovery (A0), because every pain the strategy answers comes from studies of people who already hold crypto.
 
@@ -26,7 +26,7 @@ Research, competitive analysis, problem framing and product design strategy for 
 | 03 | [Problem framing](strategy/03-problem-framing.md) | Problem statement, users and job to be done, evidence levels, constraints, research plan |
 | 04 | [Product design strategy (v2)](strategy/04-product-design-strategy.md) | Umbrella outcome and its six components, where we play, five bets with their riskiest assumptions, principles and trust checklist, product model (incomplete), experience, automation stance, research order, open decisions |
 | — | [Decision log](decisions/decision-log.md) | What has been decided about the work and what is still open |
-| 05 | Design system strategy brief *(not yet written)* | New components: risk card, policy builder, custody map, allocation and drift views, eligibility states, transaction-state vocabulary |
+| 05 | Design system strategy brief *(not yet written)* | New components: risk card, plan and rules builder, custody map, allocation and drift views, eligibility states, transaction-state vocabulary |
 | 06 | [Experience map](strategy/06-experience-map.md) | The seven trust-critical stages mapped for the primary user: questions, pain today, design response, emotional curve, stress cases |
 | 07 | [Outcome-led product design deep dive](research/07-outcome-led-design-deep-dive.md) | Where outcome-led design comes from, the main frameworks compared, how it works in practice, its critiques, and four candidate outcomes for this product |
 | 08 | [Assumption map](strategy/08-assumption-map.md) | A0 (the pains we expect are real) and the 23 assumptions behind the strategy, a driver tree, a priority 2x2, the cheapest test and pass signal for each, and the research order |
@@ -41,30 +41,38 @@ Scheduled agents keep the competitive analysis current between rounds. Every Mon
 
 ## Concept Development Toolkit
 
-A coordinated set of reusable skills for moving from raw material to a considered product direction. Each skill is available to Codex and Claude Code.
+A coordinated set of reusable skills for moving from raw material to a considered product direction. The toolkit has one human-guided orchestrator and five specialist skills, each available to Codex and Claude Code.
 
 | Skill | Use it for | Codex | Claude Code |
 | --- | --- | --- | --- |
+| **Concept Development Orchestrator** | Route work, coordinate handoffs, preserve evidence and decisions, and assemble outputs | [Open](.agents/skills/concept-development-orchestrator/SKILL.md) | [Open](.claude/skills/concept-development-orchestrator/SKILL.md) |
 | **Concept Notes Organiser** | Structure raw notes into a source-faithful concept brief | [Open](.agents/skills/concept-notes-organiser/SKILL.md) | [Open](.claude/skills/concept-notes-organiser/SKILL.md) |
 | **Opportunity Framer** | Frame a user problem and opportunity from evidence | [Open](.agents/skills/opportunity-framer/SKILL.md) | [Open](.claude/skills/opportunity-framer/SKILL.md) |
 | **Concept Challenger** | Red-team a concept's value, assumptions, risks and feasibility | [Open](.agents/skills/concept-challenger/SKILL.md) | [Open](.claude/skills/concept-challenger/SKILL.md) |
 | **Milestone Architect** | Translate direction into North Star, experience and enabling outcomes | [Open](.agents/skills/milestone-architect/SKILL.md) | [Open](.claude/skills/milestone-architect/SKILL.md) |
-| **Concept Synthesiser** | Compare multiple concepts and form a traceable strategic narrative | [Open](.agents/skills/concept-synthesiser/SKILL.md) | [Open](.claude/skills/concept-synthesiser/SKILL.md) |
+| **Concept Synthesiser** | Compare concepts and form a traceable strategic narrative | [Open](.agents/skills/concept-synthesiser/SKILL.md) | [Open](.claude/skills/concept-synthesiser/SKILL.md) |
 
-### Recommended workflow
+### How to use the toolkit
 
-`Concept Notes Organiser → Opportunity Framer → Concept Challenger → Milestone Architect → Concept Synthesiser`
+Start with the **Concept Development Orchestrator** when work spans several stages or the right skill is unclear. It selects the minimum useful set of specialists and coordinates handoffs. For a focused task, invoke the relevant specialist directly.
 
-This is a flexible sequence, not a mandatory stage gate. Start with the skill that matches the material and decision at hand. The Synthesiser is especially useful when several concepts or workstreams need to be compared; it does not have to be the final step in every project.
+A common route is:
+
+`Concept Notes Organiser → Opportunity Framer → Concept Challenger → Milestone Architect`
+
+Use **Concept Synthesiser** when comparing multiple concepts or workstreams; it can be used before, after or instead of other stages. This is a flexible route, not a mandatory sequence.
+
+The orchestrator is a Level 1, human-guided instruction skill. It plans and coordinates, but it does not automatically execute sibling skills unless the host platform explicitly supports that. Where automatic invocation is unavailable, it provides the next skill, context and handoff packet for the user to invoke. It does not make decisions, validate concepts or change the scheduled competitive watch's scope or permissions.
 
 **Example prompts**
+- “Help me choose the right skill and plan the work.”
 - “Organise these workshop notes into a concept brief.”
 - “Frame the opportunity from these research findings. Keep observations separate from hypotheses.”
 - “Challenge this proposition. What would make it fail?”
 - “Extract a North Star and supporting experience and enabling milestones. Do not invent years.”
 - “Compare these three concept briefs and show what should stay separate.”
 
-The skills are instruction-only. They do not conduct validation by themselves, make product decisions, or change the scheduled competitive watch's scope. Their repository-specific rules defer to `CLAUDE.md`.
+All specialist skills use a common handoff packet covering the intended decision, source references, findings, evidence status, assumptions, decisions and unresolved questions. Their repository-specific rules defer to `CLAUDE.md`.
 
 ## Repository layout
 
