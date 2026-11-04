@@ -47,19 +47,24 @@ Tag every finding with one of: `[Vendor]` `[Help doc]` `[Terms]` `[Filing]` `[Pr
 
 ## Reusable team skills
 
-The Concept Development Toolkit contains five user-invoked skills. Each is mirrored for Codex and Claude Code:
+The Concept Development Toolkit contains one human-guided orchestrator and five specialist skills. Each is mirrored for Codex and Claude Code.
 
 | Skill | Purpose | Codex | Claude Code |
 | --- | --- | --- | --- |
+| Concept Development Orchestrator | Route work, coordinate handoffs, preserve evidence and decisions, assemble outputs | `.agents/skills/concept-development-orchestrator/SKILL.md` | `.claude/skills/concept-development-orchestrator/SKILL.md` |
 | Concept Notes Organiser | Structure raw notes into a source-faithful concept brief | `.agents/skills/concept-notes-organiser/SKILL.md` | `.claude/skills/concept-notes-organiser/SKILL.md` |
 | Opportunity Framer | Frame a user problem and opportunity from evidence | `.agents/skills/opportunity-framer/SKILL.md` | `.claude/skills/opportunity-framer/SKILL.md` |
 | Concept Challenger | Stress-test value, assumptions, risks and feasibility | `.agents/skills/concept-challenger/SKILL.md` | `.claude/skills/concept-challenger/SKILL.md` |
 | Milestone Architect | Define North Star, experience and enabling outcomes | `.agents/skills/milestone-architect/SKILL.md` | `.claude/skills/milestone-architect/SKILL.md` |
 | Concept Synthesiser | Compare concepts and form a traceable strategic narrative | `.agents/skills/concept-synthesiser/SKILL.md` | `.claude/skills/concept-synthesiser/SKILL.md` |
 
-Suggested flow: Concept Notes Organiser → Opportunity Framer → Concept Challenger → Milestone Architect → Concept Synthesiser. This is guidance, not a mandatory sequence; invoke only the skill that fits the task. The Synthesiser is most useful when comparing several concepts or workstreams.
+Start with the orchestrator for multi-step work or when routing is unclear. For a focused task, invoke the relevant specialist directly. A common route is Concept Notes Organiser → Opportunity Framer → Concept Challenger → Milestone Architect. Concept Synthesiser is used when multiple concepts need comparison and can be inserted wherever useful; the sequence is guidance, not a mandatory stage gate.
 
-These are user-invoked instruction skills, not scheduled agents. They do not conduct validation by themselves, make decisions, alter the competitive-watch workflow or gain write permissions. This file remains authoritative for SC-IA vocabulary, privacy, evidence and repository boundaries. Each mirrored pair should be kept identical.
+The orchestrator is a Level 1, human-guided instruction skill. It does not autonomously invoke sibling skills unless the host platform explicitly supports that capability. When it cannot execute another skill, it provides the recommended path and a ready-to-use handoff. It does not conduct validation, make product decisions or alter the competitive-watch workflow.
+
+Specialist outputs use a shared handoff packet: intended decision, inputs/source references, findings, evidence status, assumptions/limitations, decisions, unresolved questions and suggested next step. Do not promote recommendations to decisions or treat repeated references to a common source as independent evidence.
+
+These are user-invoked instruction skills, not scheduled agents. They do not change watch-agent scope or write permissions. This file remains authoritative for SC-IA vocabulary, privacy, evidence and repository boundaries. Each Codex/Claude Code pair should be kept identical.
 
 ## Competitive watch (scheduled)
 
