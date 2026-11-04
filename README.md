@@ -39,16 +39,32 @@ Numbers are the reading order, and each doc builds on the ones before it, with o
 
 Scheduled agents keep the competitive analysis current between rounds. Every Monday a weekly watch reads that morning's weekly signal report and checks the scored competitors, new entrants, prices and dated events. On the 1st of each month a rescore re-checks the whole market. Both write to `watch/` and only propose score changes, which the owner accepts or rejects by id. Details are in [watch/README.md](watch/README.md), and the rules are in [CLAUDE.md](CLAUDE.md).
 
-## Reusable team skill
+## Concept Development Toolkit
 
-**Concept Notes Organiser** is the shared workflow for turning fragmented notes into a structured concept brief and outcome-led milestones. It preserves original thinking, separates evidence from hypotheses, and avoids turning brainstormed ideas into decisions.
+A coordinated set of reusable skills for moving from raw material to a considered product direction. Each skill is available to Codex and Claude Code.
 
-- Codex: `.agents/skills/concept-notes-organiser/SKILL.md`
-- Claude Code: `.claude/skills/concept-notes-organiser/SKILL.md`
+| Skill | Use it for | Codex | Claude Code |
+| --- | --- | --- | --- |
+| **Concept Notes Organiser** | Structure raw notes into a source-faithful concept brief | [Open](.agents/skills/concept-notes-organiser/SKILL.md) | [Open](.claude/skills/concept-notes-organiser/SKILL.md) |
+| **Opportunity Framer** | Frame a user problem and opportunity from evidence | [Open](.agents/skills/opportunity-framer/SKILL.md) | [Open](.claude/skills/opportunity-framer/SKILL.md) |
+| **Concept Challenger** | Red-team a concept's value, assumptions, risks and feasibility | [Open](.agents/skills/concept-challenger/SKILL.md) | [Open](.claude/skills/concept-challenger/SKILL.md) |
+| **Milestone Architect** | Translate direction into North Star, experience and enabling outcomes | [Open](.agents/skills/milestone-architect/SKILL.md) | [Open](.claude/skills/milestone-architect/SKILL.md) |
+| **Concept Synthesiser** | Compare multiple concepts and form a traceable strategic narrative | [Open](.agents/skills/concept-synthesiser/SKILL.md) | [Open](.claude/skills/concept-synthesiser/SKILL.md) |
 
-Example prompts: “Organise these workshop notes into a concept”, “Extract the North Star and experience milestones”, or “Challenge the assumptions behind this idea”.
+### Recommended workflow
 
-The two skill files are kept in sync for the two repository-level discovery locations. The skill is instruction-only; it does not run research or change product decisions by itself.
+`Concept Notes Organiser → Opportunity Framer → Concept Challenger → Milestone Architect → Concept Synthesiser`
+
+This is a flexible sequence, not a mandatory stage gate. Start with the skill that matches the material and decision at hand. The Synthesiser is especially useful when several concepts or workstreams need to be compared; it does not have to be the final step in every project.
+
+**Example prompts**
+- “Organise these workshop notes into a concept brief.”
+- “Frame the opportunity from these research findings. Keep observations separate from hypotheses.”
+- “Challenge this proposition. What would make it fail?”
+- “Extract a North Star and supporting experience and enabling milestones. Do not invent years.”
+- “Compare these three concept briefs and show what should stay separate.”
+
+The skills are instruction-only. They do not conduct validation by themselves, make product decisions, or change the scheduled competitive watch's scope. Their repository-specific rules defer to `CLAUDE.md`.
 
 ## Repository layout
 
