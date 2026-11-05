@@ -19,6 +19,7 @@ All three sessions share one wall: the milestone band from session 1 in the midd
 | [wallet-evolution-research.md](wallet-evolution-research.md) | Research on how wallets evolved from 2009 to October 2026. The pre-read, the source of the seed signals in the world briefs, and the source of the web deck's detail panels |
 | [llm-prompts.md](llm-prompts.md) | Four prompts for after session 1: sharpen a milestone, stress-test a theme, check the clusters and draft the recap, and build the signal pack |
 | [decks/](decks/) | Source of the three "Wallet Time Machine" decks, one folder per session. Deck 1 ends with a printable milestone card; decks 2 and 3 end with four printable lens cards |
+| [film/wallet-time-machine-session-1.mp4](film/wallet-time-machine-session-1.mp4) | A narrated film of session 1's history, from the first wallets to the question, in the deck's look. 6 minutes, 1080p, with sound |
 
 ## Before you run it
 
@@ -41,6 +42,16 @@ Print the milestone card from the last slide of deck 1, one per person. Then fil
 Each folder in `decks/` holds one deck. `deck.json` sets the slide order and sections, and each file in `slides/` is one slide, written for a 1920 by 1080 canvas with inline styles only. The decks were built for the Claude Slides artifact type, where `deck.json` and `slides/` sit under a `project/` folder, and they are not PowerPoint files. To change a slide, edit its HTML file and keep its id in `deck.json`, then rebuild the web version.
 
 The look: a cream, ink, blue and red palette (`#EEE5D7`, `#192026`, `#416AEE`, `#E74D3D`), Swiss-style grid and rules, Inter Tight for text and JetBrains Mono for labels.
+
+## The session 1 film
+
+The film covers deck 1 from the cover to the question (slides 1 to 21): the milestones, the incidents, the four eras with their design problems, the story so far and the five open problems. It can replace the facilitator's walk-through of the history: introduce the workshop, play the film, then carry on from the sentence frame.
+
+- **Guesses:** each of the three guesses holds for 10 seconds with a countdown. Pause the film there to hear two or three guesses before the answer.
+- **The end:** the film stops on the question card, so the facilitator takes over from it.
+- **Sources:** every number keeps its source line and the deck's caveats.
+- **Sound:** a narrator over a quiet ambient bed. Set the room's volume by the narration.
+- **Credits:** the narration voice was generated with ElevenLabs (elevenlabs.io). The film was rendered from code with Inter Tight and JetBrains Mono, both under the SIL Open Font License.
 
 ## Worlds in one line each
 
