@@ -32,6 +32,7 @@ Research, competitive analysis, problem framing and product design strategy for 
 | 08 | [Assumption map](strategy/08-assumption-map.md) | A0 (the pains we expect are real) and the 23 assumptions behind the strategy, a driver tree, a priority 2x2, the cheapest test and pass signal for each, and the research order |
 | 09 | [Critical research questions](strategy/09-critical-research-questions.md) | Pain discovery first, then three decision-level questions (first user, defining a plan, trusting recovery) with hypotheses, conditions and what each result means; supporting interview questions |
 | 10 | [Competitive analysis, round 2](research/10-competitive-analysis-round-2.md) | What changed since round 1, a rescored C1–C5 scorecard with new entrants, a revised category matrix, the trust layer by lens, candidate new claims (C5′ to C9) and unanswered competitor claims, price benchmarks, naming and eligibility, regulation, demand and user voice |
+| 11 | [Account abstraction deep dive](research/11-account-abstraction-deep-dive.md) | Where smart accounts, EIP-7702 upgrades, permissions, fee payment and passkeys stand in November 2026, what shipping wallets do, the security record, native account abstraction timing, and what it means for the execution model, guardrails, recovery and one-tap revoke |
 
 Numbers are the reading order, and each doc builds on the ones before it, with one exception: strategy v2 (04) was revised after 07, 08 and 09 and draws on them. New docs continue the sequence (05, 06, …) in the folder that fits: `research/` for evidence, `strategy/` for framing and direction. The decision log is unnumbered because it runs alongside all of them.
 
@@ -79,7 +80,7 @@ All specialist skills use a common handoff packet covering the intended decision
 ## Repository layout
 
 ```
-research/    evidence: market research, competitive analysis (rounds 1 and 2), and the outcome-led design deep dive
+research/    evidence: market research, competitive analysis (rounds 1 and 2), the outcome-led design deep dive and the account abstraction deep dive
 strategy/    problem framing, the design strategy that answers it, the experience map, the assumption map and the critical research questions
              (images in strategy/assets/)
 decisions/   decision log: decided and open
