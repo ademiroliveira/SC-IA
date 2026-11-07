@@ -4,8 +4,9 @@ Templates for a delivery loop where agents write most of the code and people app
 
 - **Structure:** Anthropic's AI-native SDLC playbook (intent → spec → plan → review) and GitHub Spec Kit's templates (constitution, spec, plan, tasks). Spec Kit's mandatory section names are kept, so these can replace its templates.
 - **What's added:** neither source has UX gates, user evidence or accessibility. This pack adds them, following NN/g's "The Role of UX in Agentic Software Factories" (October 2026).
+- **Agents and skills:** three agent roles (planner, builder, reviewer) for OpenCode, GitHub Copilot and Claude Code, and the five skills they load.
 
-Fill the `{{placeholders}}` in `constitution.md` and `ux-risk.yaml` once per product. The other templates are filled once per change.
+Fill the `{{placeholders}}` in `constitution.md`, `ux-risk.yaml` and the agent files once per product. The other templates are filled once per change.
 
 ## Files
 
@@ -34,6 +35,35 @@ Only the plan and tasks reach the executor. Keep them short: together with AGENT
 6. **Review.** AI review runs the passes in `REVIEW.md`. It can raise UX flags but never clear them. People approve.
 7. **Maintain.** Technical alerts become intents. User-failure signals become research triggers, not intents.
 
+## Agents and skills
+
+Three agents run the loop. Each one loads a skill for the step it is on, so the agent files stay short and the know-how lives in skills every host can read.
+
+| Agent | Model | Can edit | Loads | Never |
+|---|---|---|---|---|
+| planner | Frontier | `.harness/intents/`, `specs/`, `plans/`, `tasks/` | `intent-author`, `spec-writer`, `plan-writer` | Writes code, marks a document accepted, invents evidence |
+| builder | Cheaper or open-weight | Source code, except protected paths | The build skill the plan names, `ux-escalate` | Updates visual baselines, edits protected paths, judges UX |
+| reviewer | Frontier, fresh session | `.harness/ux-escalations/` only | `ux-review` | Approves, edits code, says the UX is fine |
+
+No agent decides UX risk. A script classifies the diff and a person decides. Write the build skill yourself, because it depends on the stack, for example "migrate a screen to tokens".
+
+| Folder in this pack | Copy to |
+|---|---|
+| `skills/` | `.agents/skills/` (OpenCode, GitHub Copilot, Codex) and `.claude/skills/` (Claude Code). Keep the two copies identical |
+| `agents/opencode/` | `.opencode/agents/` |
+| `agents/github-copilot/` | `.github/agents/` |
+| `agents/claude-code/` | `.claude/agents/` |
+
+The skills are project-agnostic. They read `.harness/constitution.md` and the templates for every rule, so the same five skills work for any product.
+
+**Enforcement differs by host.**
+- OpenCode agent files limit edit paths and shell commands directly. They use the V1 `permission:` and `steps:` fields, which OpenCode 2 still reads but marks as deprecated.
+- GitHub Copilot agent files limit only tool types (read, search, edit, execute). Path limits need a `preToolUse` hook, CODEOWNERS and a CI protected-path check.
+- Claude Code agent files limit tools. Path limits need hooks in `.claude/settings.json`.
+- On every host, CODEOWNERS and CI are the backstop, because a shell command can get around an edit deny.
+
+**Check before use.** Tool names and model names in `agents/github-copilot/` vary between VS Code, the Copilot CLI and the cloud agent. Match them to what your surface shows.
+
 ## Wire-up
 
 AGENTS.md needs one stop rule, not a section of UX rules:
@@ -52,6 +82,7 @@ CODEOWNERS:
 /.harness/ux-risk.yaml      {{design-lead}}
 /.harness/intents/          {{product-owner}} {{design-lead}}
 /.harness/templates/        {{design-lead}}
+/.agents/skills/            {{design-lead}} {{eng-lead}}
 /REVIEW.md                  {{tech-lead}} {{design-lead}}
 /research/insights/         {{research-lead}}
 {{visual-baseline-path}}    {{design-lead}}
