@@ -10,7 +10,7 @@ They sit apart from the SC-IA research. Nothing here feeds the claims, the score
 | 02 | [Design harness without MCP](02-research-without-mcp.md) | The same goal when MCP and Claude Code aren't available: open-weight models (GLM 5.3) in OpenCode, GitHub Copilot credits and the Figma agent. Includes an addendum on Flutter's official and package skills |
 | 03 | [Implementation spec pack](03-implementation-spec-pack.md) | Seven buildable specs, a 22-step runbook, a send-flow test plan, governance rules and ready-to-paste prompts for OpenCode, GitHub Copilot and the Figma agent |
 
-| — | [AI SDLC templates with UX gates](templates/README.md) | Stack-agnostic templates for an agent-built delivery loop: constitution, UX risk rules, intent, spec, plan, tasks, review policy, UX escalation, research trigger and research insight. Adds the UX gates that the AI-native SDLC playbooks leave out |
+| — | [AI SDLC templates with UX gates](templates/README.md) | Stack-agnostic templates for an agent-built delivery loop: constitution, UX risk rules, intent, spec, plan, tasks, review rules, UX escalation, research trigger and research insight. Also three agent roles (planner, builder, reviewer) for OpenCode, GitHub Copilot and Claude Code, and the five skills they load. Adds the UX gates that the AI-native SDLC playbooks leave out |
 
 Read 01 for the model, 02 for the evidence when MCP is off the table, and 03 to build. Copy `templates/` into a product repo to run the loop.
 
