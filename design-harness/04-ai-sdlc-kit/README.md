@@ -1,6 +1,6 @@
-# AI SDLC templates with UX gates (stack-agnostic)
+# AI SDLC kit with UX gates (stack-agnostic)
 
-Templates for a delivery loop where agents write most of the code and people approve at gates. They work with any stack and any agent host (OpenCode, GitHub Copilot, Claude Code, Spec Kit).
+Templates, agents and skills for a delivery loop where agents write most of the code and people approve at gates. They work with any stack and any agent host (OpenCode, GitHub Copilot, Claude Code, Spec Kit).
 
 - **Structure:** Anthropic's AI-native SDLC playbook (intent → spec → plan → review) and GitHub Spec Kit's templates (constitution, spec, plan, tasks). Spec Kit's mandatory section names are kept, so these can replace its templates.
 - **What's added:** neither source has UX gates, user evidence or accessibility. This pack adds them, following NN/g's "The Role of UX in Agentic Software Factories" (October 2026).
