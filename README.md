@@ -85,6 +85,7 @@ strategy/    problem framing, the design strategy that answers it, the experienc
              (images in strategy/assets/)
 decisions/   decision log: decided and open
 watch/       weekly watch and monthly rescore files, the watchlist, entry points and the researcher contract
+design-harness/  a separate, generic playbook, research and spec pack for running a design harness with AI agents (not part of the SC-IA research or scores)
 .agents/     repository-level Agent Skills for Codex
 .claude/     Claude Code project agents, commands and skills
 CLAUDE.md    rules for any session in this repo: vocabulary, claims, scores, source tags, the watch
