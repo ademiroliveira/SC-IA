@@ -34,6 +34,8 @@ Research, competitive analysis, problem framing and product design strategy for 
 | 10 | [Competitive analysis, round 2](research/10-competitive-analysis-round-2.md) | What changed since round 1, a rescored C1–C5 scorecard with new entrants, a revised category matrix, the trust layer by lens, candidate new claims (C5′ to C9) and unanswered competitor claims, price benchmarks, naming and eligibility, regulation, demand and user voice |
 | 11 | [Account abstraction design brief](research/11-account-abstraction-design-brief.md) | Smart accounts, EIP-7702, permissions and native AA as of November 2026, from a product experience view: what changes for people, where risk moves, principles, components, language, the execution-model options for this product, agents, research questions and a watchlist |
 | 12 | [Account abstraction deep dive](research/12-account-abstraction-deep-dive.md) | The evidence behind 11: where smart accounts, EIP-7702 upgrades, permissions, fee payment and passkeys stand in November 2026, what shipping wallets do, the security record, native account abstraction timing, and what it means for the execution model, guardrails, recovery and one-tap revoke |
+| 13 | [Account abstraction frameworks and delegates](research/13-account-abstraction-frameworks.md) | Which open implementations an existing account can safely delegate to and which full smart accounts suit automated execution: set-up, upgrade paths, audits, what shipping wallets and hardware wallets use, incidents, and what it means for pinning one version |
+| 14 | [Account abstraction: experience opportunities and limits](research/14-account-abstraction-experience.md) | What account abstraction changes at each of the experience map's seven stages and what it doesn't, limits paired with design responses, what is known about people, added patterns, and research questions AA9 to AA14 |
 
 Numbers are the reading order, and each doc builds on the ones before it, with one exception: strategy v2 (04) was revised after 07, 08 and 09 and draws on them. New docs continue the sequence (05, 06, …) in the folder that fits: `research/` for evidence, `strategy/` for framing and direction. The decision log is unnumbered because it runs alongside all of them.
 
@@ -81,7 +83,7 @@ All specialist skills use a common handoff packet covering the intended decision
 ## Repository layout
 
 ```
-research/    evidence: market research, competitive analysis (rounds 1 and 2), the outcome-led design deep dive, and the account abstraction design brief and deep dive
+research/    evidence: market research, competitive analysis (rounds 1 and 2), the outcome-led design deep dive, and the account abstraction design brief, deep dive, frameworks review and experience review
 strategy/    problem framing, the design strategy that answers it, the experience map, the assumption map and the critical research questions
              (images in strategy/assets/)
 decisions/   decision log: decided and open
