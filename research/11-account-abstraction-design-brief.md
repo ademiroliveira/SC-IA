@@ -1,10 +1,10 @@
 # Account Abstraction: A Product Experience Design Brief
 
-As of November 6, 2026 · Builds on [market research](01-market-and-opportunity-research.md) (section 5, technology enablers), [competitive analysis round 2](10-competitive-analysis-round-2.md) and the [wallet evolution research](../time-machine-workshop/wallet-evolution-research.md)
+As of November 6, 2026; section 3.4 updated November 18 · Builds on [market research](01-market-and-opportunity-research.md) (section 5, technology enablers), [competitive analysis round 2](10-competitive-analysis-round-2.md) and the [wallet evolution research](../time-machine-workshop/wallet-evolution-research.md)
 
-> **Provenance.** Desk research run on November 6, 2026, combining web sources with earlier docs in this repo. It is not a competitive-watch file and was not checked claim by claim under the source rules in `CLAUDE.md`. Sources were found by web search; ethereum.org's builder guidance was read in full, and the rest were read from search excerpts. Every figure, date and name in the text appears in the cited source as found. Adoption figures conflict across sources and are flagged where used. Individuals are referred to by role. A second pass the same day fetched and checked the additions on what the seed can still do, usage figures, Base's latest docs, revocation fees, delegation conflicts, passkey recovery attacks and Solana; their sources are marked "Checked November 6" in section 14.
+> **Provenance.** Desk research run on November 6, 2026, combining web sources with earlier docs in this repo. It is not a competitive-watch file and was not checked claim by claim under the source rules in `CLAUDE.md`. Sources were found by web search; ethereum.org's builder guidance was read in full, and the rest were read from search excerpts. Every figure, date and name in the text appears in the cited source as found. Adoption figures conflict across sources and are flagged where used. Individuals are referred to by role. A second pass the same day fetched and checked the additions on what the seed can still do, usage figures, Base's latest docs, revocation fees, delegation conflicts, passkey recovery attacks and Solana; their sources are marked "Checked November 6" in section 14. A third pass on November 18 fetched and checked section 3.4's additions on Avalanche, Solana smart wallets and Bitcoin timelocked recovery; their sources are marked "Checked November 18".
 
-**Scope:** Ethereum and EVM layer 2s. Solana and Bitcoin use different account models; section 3.4 notes the two points that matter for this product.
+**Scope:** Ethereum and EVM layer 2s. Section 3.4 compares Avalanche's C-Chain, Solana and Bitcoin, where the same outcomes need different mechanisms or are not available.
 **For:** product experience design on self-custody wallets, this product, and agentic or conversational interfaces.
 
 Vocabulary follows the current terms: the user **defines** a **plan**, made of **rules**; **guardrails** are spending and exit limits. Lines marked **Design implication** or **Inference** are interpretation, offered for discussion.
@@ -107,10 +107,50 @@ A plain account (an "externally owned account", or EOA) is one private key. Whoe
 
 **Design implication.** Programmable accounts are becoming the default for new users of major wallets, often without the user choosing. A product should assume that a user's account may already be delegated, possibly to code the user doesn't recognize.
 
-### 3.4 Outside EVM, for reference
+### 3.4 Other networks: Avalanche C-Chain, Solana and Bitcoin
 
-- **Solana** separates the fee payer from the sender. Kora, documented on solana.com, is a fee abstraction layer whose operators co-sign as fee payer and accept fees in SPL tokens such as USDC. Solana has verified P-256 (passkey) signatures onchain since June 2025, but transactions still need Ed25519 signatures that passkeys cannot produce, so a passkey authorizes a session or a smart-wallet program rather than signing directly.
-- **Bitcoin** has no account code. Delays and limits come from multisig with a provider key, as at Bitkey and Casa ([round 2](10-competitive-analysis-round-2.md)).
+An EVM chain doesn't necessarily support EIP-7702, and outside the EVM the same outcomes come from different mechanisms. A multichain product makes one promise, delivered by several mechanisms.
+
+| What the person experiences | Ethereum and EVM layer 2s with 7702 | Avalanche C-Chain | Solana | Bitcoin |
+| --- | --- | --- | --- | --- |
+| The fee is paid in a token they hold, or by someone else | A paymaster, on a 7702-upgraded or ERC-4337 account | Only on an ERC-4337 account, at a new address | A separate fee payer (Kora); the account doesn't change | Not available |
+| Several steps in one approval | Batching | Only on an ERC-4337 account | Native: one transaction holds several instructions | Partly: one transaction can pay many outputs |
+| Limits on apps and agents | Smart-account code; under 7702 the seed can override them | An ERC-4337 account | Smart-wallet programs (Squads, Swig) | Multisig and timelocks, fixed when the address is created |
+| Approval with a passkey | EIP-7951 and RIP-7212 | ACP-204, live since November 19, 2025 | A passkey authorizes a session or a program; transactions still need Ed25519 | Not available |
+| Replace a key without moving funds | Full smart account only | Full smart account only | Through a smart-wallet program | Not available: funds move to a new script |
+
+- **Avalanche's C-Chain has no EIP-7702 yet.**
+  - ACP-209, its EIP-7702-style proposal, is still Proposed. It has no reference implementation, and it needs a network upgrade that has no date.
+  - As written, it differs from Ethereum's version so that it stays compatible with Avalanche's streaming asynchronous execution proposal (ACP-194):
+    - a delegated account must keep a reserved AVAX balance that covers worst-case fees and transfers for its pending transactions;
+    - with no reserved balance, it can't send;
+    - to send its whole balance, it must first move it into the reserved balance.
+  - The proposal leaves open whether delegate code may spend AVAX at all.
+  - ERC-4337 works today; MetaMask's bundler service lists Avalanche mainnet.
+  - Passkey verification arrived with the Granite upgrade (ACP-204), live on mainnet since November 19, 2025.
+- **Solana** separates the fee payer from the sender.
+  - Kora, documented on solana.com, is a fee abstraction layer whose operators co-sign as fee payer and accept fees in SPL tokens such as USDC.
+  - Batching is native.
+  - Limits, time locks and passkeys come from smart-wallet programs:
+    - **Squads' Smart Account Program** is live on mainnet, audited by OtterSec and formally verified by Certora. It offers permissions, caps and time locks, and Squads' API accepts passkeys as signers.
+    - **Swig** is an open-source toolkit from Anagram with roles and permissions. A passkey can be an authority, and there is a paymaster.
+  - Solana has verified P-256 (passkey) signatures onchain since June 2025. Transactions still need Ed25519 signatures that passkeys cannot produce, so a passkey authorizes a session or a smart-wallet program rather than signing directly.
+- **Bitcoin** has no account code. Rules come from script and are fixed when the address is created. Two patterns:
+  - **Multisig with a provider key**, as at Bitkey and Casa ([round 2](10-competitive-analysis-round-2.md)).
+  - **Timelocked recovery.**
+    - Liana, an open-source Miniscript wallet, pairs a primary key that can spend at any time with a recovery key that becomes usable after a set period.
+    - The timelock is relative and starts when each coin arrives. Each coin must be spent at least once per period to keep the recovery path closed.
+    - Liana's app offers shortcuts that "refresh" coins near the limit with a payment to yourself.
+
+**Inference.** Squads and Swig describe the smart account as something the person's keys control, not as the keys themselves. That suggests funds move into it, as with ERC-4337, rather than the existing account being upgraded in place.
+
+**Design implications:**
+
+- **Avalanche.** Smart features mean a new ERC-4337 address until an in-place upgrade ships. If ACP-209 ships as written, balances need a line for AVAX set aside for fees, and "send all" has to account for it.
+- **Bitcoin.** Guardrails and recovery are a kind of account chosen when it's created, not a setting turned on later. Timelocked recovery also needs upkeep: the time left, a refresh action with its network fee, and a reminder well before the deadline.
+- **Every network.**
+  - Show capability per network (research question AA7), with one line of why and the nearest alternative where a feature is missing.
+  - Name the outcome, not the mechanism. "Pay this fee in USDC" can read the same on Base and Solana, even though only Base's first use changes the account.
 
 ---
 
@@ -297,6 +337,7 @@ These extend the [critical research questions](../strategy/09-critical-research-
 | 7702 revocation and hardware-wallet support | Whether "remove access" can be promised | Wallet release notes |
 | ERC-7730 coverage of target vaults | Whether readable signing covers this product's flows | Registry entries for the chosen venues |
 | Regulatory reading of pre-granted permissions | Decides option B | Counsel; SEC statements |
+| ACP-209 on Avalanche | Whether existing Avalanche accounts can be upgraded in place, and under which balance rules | A status change in the ACP repository; a network upgrade that includes it |
 
 The first four are candidates for [watch/watchlist.md](../watch/watchlist.md); adding them is the owner's call.
 
@@ -319,6 +360,8 @@ The first four are candidates for [watch/watchlist.md](../watch/watchlist.md); a
 | **Native AA** | Account abstraction built into the protocol itself, so no extra infrastructure is needed |
 | **Frame transaction (EIP-8141)** | Ethereum's proposed native AA: a transaction split into steps for validation, payment and execution |
 | **Glamsterdam / Hegotá** | Ethereum's next two network upgrades; native AA is planned for Hegotá |
+| **Fee payer (Solana)** | The account that pays a transaction's fee, which need not be the sender |
+| **Timelocked recovery (Bitcoin)** | A backup key that can spend only after coins have sat unmoved for a set time |
 
 ---
 
@@ -339,6 +382,11 @@ Found by web search on November 6, 2026. Tags follow `CLAUDE.md`. Protocol docum
 - [Coinbase: Base account spend permissions](https://help.coinbase.com/en-gb/wallet/getting-started/smart-wallet-permissions) [Help doc], undated: amount, frequency and dates shown; revoking needs a network fee. Checked November 6.
 - [Etherscan: what you need to know about EIP-7702](https://info.etherscan.com/what-you-need-to-know-about-eip-7702-smart-account) [Help doc], June 13, 2025: one delegation per address; the latest replaces earlier ones. Checked November 6.
 - [Solana: Kora](https://solana.com/docs/tools/kora/getting-started) [Help doc], undated: fee payer co-signing; fees in SPL tokens. Checked November 6.
+- [ACP-209: EIP-7702-style account abstraction](https://docs.avax.network/docs/acps/209-eip7702-style-account-abstraction) [Help doc], undated: Proposed; no reference implementation; a network upgrade required; reserved balances for delegated accounts. Checked November 18.
+- [Avalanche Granite upgrade](https://docs.avax.network/blog/granite-upgrade) [Help doc], November 5, 2025, updated for mainnet: ACP-204 secp256r1 verification; mainnet activation November 19, 2025. Checked November 18.
+- [MetaMask Services: bundler methods (ERC-4337)](https://docs.metamask.io/services/concepts/bundler) [Help doc], undated: Avalanche mainnet and Fuji among supported networks. Checked November 18.
+- [Squads API: passkeys](https://developers.squads.so/squads-api/passkeys/introduction) [Help doc], undated: passkeys as signers for smart-account transactions. Checked November 18.
+- [Swig developer docs](https://build.onswig.com) [Help doc], undated: roles and permissions; a wallet key, passkey or participant set as authority; a paymaster guide. Checked November 18.
 - [Base Cobalt upgrade overview](https://docs.base.org/base-chain/specs/upgrades/cobalt/overview.md) [Help doc].
 - [MetaMask Advanced Permissions (ERC-7715)](https://docs.metamask.io/smart-accounts-kit/concepts/advanced-permissions/) [Help doc].
 - [MetaMask: switch to or revert from a smart account](https://support.metamask.io/configure/accounts/switch-to-or-revert-from-a-smart-account) [Help doc]: auto-enabled for new users; offered only inside the wallet.
@@ -371,6 +419,7 @@ Found by web search on November 6, 2026. Tags follow `CLAUDE.md`. Protocol docum
 - [Base Cobalt upgrade explained](https://www.bitrue.com/blog/base-cobalt-upgrade-explained) [Press], Bitrue: EIP-8130 not in Cobalt.
 - [Wintermute warns Pectra upgrade leaves Ethereum users at risk of automated attacks](https://www.theblock.co/post/356481) [Press], The Block, June 1, 2025: more than 80% of delegations to sweeper contracts; SlowMist's advice to show the target contract. Checked November 6.
 - [Base to implement native account abstraction (EIP-8130)](https://www.kucoin.com/news/flash/base-to-implement-native-account-abstraction-eip-8130-in-september-cobalt-upgrade) [Press], KuCoin News: gas comparison with ERC-4337.
+- [Solana Compass: Swig](https://solanacompass.com/projects/swig) [Press], undated directory page: open-source toolkit (AGPL v3.0) from Anagram; introduced March 2025. Checked November 18.
 
 **Vendor and security firms (lower confidence for figures)**
 
@@ -386,6 +435,8 @@ Found by web search on November 6, 2026. Tags follow `CLAUDE.md`. Protocol docum
 - [Trust Wallet: FlexGas](https://trustwallet.com/blog/company/flexgas-pague-o-gas-com-twt-usdt-e-usdc) [Vendor], published May 26, 2025, updated August 19, 2026: networks, fee tokens, delegation to its own infrastructure only. Checked November 6.
 - [Corbado: synced passkey attacks](https://www.corbado.com/blog/synced-passkey-attacks-threat-models.md) [Vendor], October 29, 2026: iCloud Keychain recovery phishing, from Palo Alto Networks research. Checked November 6.
 - [Helius: Solana passkeys](https://www.helius.dev/blog/solana-passkeys) [Vendor], June 24, 2025: P-256 verification since June 2025; transactions still need Ed25519. Checked November 6.
+- [Squads: Smart Account Program live on mainnet](https://squads.xyz/blog/squads-smart-account-program-live-on-mainnet) [Vendor], undated: audited by OtterSec, formally verified by Certora; permissions, caps and time locks. Checked November 18.
+- [Liana README](https://docs.rs/crate/liana/latest) [Vendor], crate v5.0.0, April 4, 2024: relative timelock starts when a coin arrives; each coin must be spent once per period to keep the recovery path closed; refresh shortcuts. Checked November 18.
 - ERC-4337 adoption figures, which conflict: [Zelcore](https://zelcore.io/newsroom/erc-4337-architecture-explained) [Vendor], [Eco](https://eco.com/support/en/articles/14797813) [Vendor], [Cobo](https://www.cobo.com/post/what-is-erc-4337) [Vendor].
 
 **This repo**
